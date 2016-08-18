@@ -523,8 +523,6 @@ fieldset[disabled] .btn-success.active {
   display: none;
 }
 
-
-
 .section-title {
   text-transform: uppercase;
   font-size: 20px;
@@ -532,7 +530,7 @@ fieldset[disabled] .btn-success.active {
   color: #2196F3;
   position: relative;
   margin-top: 0;
-  margin-bottom: 5px;
+  margin-bottom: 10px;
 }
 
 .section-title .fa {
@@ -560,6 +558,13 @@ fieldset[disabled] .btn-success.active {
 .item-container {
   margin-bottom: 30px;
 }
+
+.coursework-list-title p {
+    color: #2C3E50;
+    font-weight: bold;
+    font-size: 15px;
+}
+
 .upper-row {
   position: relative;
   overflow: hidden;
@@ -595,6 +600,7 @@ fieldset[disabled] .btn-success.active {
   font-size: 14px;
   margin-top: 0;
   margin-bottom: 12px;
+  color: #2C3E50;
 }
 .skillset .level-bar {
   height: 12px;
@@ -602,5 +608,43 @@ fieldset[disabled] .btn-success.active {
 }
 .skillset .level-bar-inner {
   height: 12px;
-  background: #7bc2d3;
+  background: #2196F3;
 }
+
+/* Extra small devices (phones, less than 768px) */
+@media (max-width: 767px) {
+  .sidebar-wrapper {
+    position: static;
+    width: inherit;
+  }
+  .main-wrapper {
+    padding: 30px;
+  }
+  .main-wrapper .time {
+    position: static;
+    display: block;
+    margin-top: 5px;
+  }
+  .main-wrapper .upper-row {
+    margin-bottom: 0;
+  }
+}
+/* Small devices (tablets, 768px and up) */
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  .skillset .level-title {
+    display: inline-block;
+    float: left;
+    width: 30%;
+    margin-bottom: 0;
+  }
+  .skillset .level-bar {
+    display: inline-block;
+    width: 70%;
+    float: left;
+    position: relative;
+    top: 1px;
+  }
+}
+/* Large devices (large desktops, 1200px and up) */
+/* Ex-Large devices (large desktops, 1200px and up) */
