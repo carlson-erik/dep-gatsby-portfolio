@@ -7,6 +7,10 @@ body {
   font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   overflow-x: hidden;
 }
+#header-image{
+    height:384px;
+    width:384px;
+}
 p {
   font-size: 20px;
 }
