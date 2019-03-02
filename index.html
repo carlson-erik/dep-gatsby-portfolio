@@ -12,27 +12,63 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
-    <title>Erik Carlson Portfolio</title>
+    <title>Erik Carlson</title>
 </head>
 
 <body >    
     <div class="sidePanel">
         <nav>
-            <a class="navItem" href="/html/">
+            <a class="navItem" id="active" data-id="greeting">
                 <i class="fas fa-home navItemText"></i>
             </a>
-            <a class="navItem" href="/css/">
+            <a class="navItem" data-id="bio">
                 <i class="fas fa-user navItemText"></i>
             </a>
-            <a class="navItem" href="/js/">
+            <a class="navItem" data-id="projects">
                 <i class="fas fa-hard-hat navItemText"></i>
             </a>
-            <a class="navItem" href="/jquery/">
+            <a class="navItem" data-id="contact">
                 <i class="fas fa-envelope navItemText"></i>
             </a>
         </nav>
     </div>
-    <div class="content"></div>
+    <div class="content">
+        <div class="greeting">
+            <div class="splitLeft">
+                <div class="greetingWrapper">
+                    <h2 class="greetingTitle">
+                        Hi,<br>
+                        I'm Erik.
+                    </h2>
+                    <h4 class="greetingSubTitle">
+                        Web Developer | Full Stack Enthusiast
+                    </h4>
+                </div>
+            </div>
+            <div class="splitRight">
+                <img class="portfolioPicture" src="./img/portfolio.jpg"/>
+            </div>
+        </div>
+        <div class="hidden bio">
+            <div class="splitLeft">
+                <h1>About Me</h1>
+            </div>
+            <div class="splitRight">
+                <img class="portfolioPicture" src="./img/portfolio.jpg"/>
+            </div>
+            
+        </div>
+        <div class="hidden projects">
+            <div class="splitLeft">
+                <h1>PROJECTS CONTENT</h1>
+            </div>
+            <div class="splitRight"></div>
+        </div>
+        <div class="hidden contact">
+            <h1>CONTACT CONTENT</h1>
+        </div>
+
+    </div>
     <!-- Custom JS -->
     <script src="js/portfolio.js"></script>
 </body>

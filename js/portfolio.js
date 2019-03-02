@@ -1,42 +1,60 @@
-(function($) {
-    "use strict"; // Start of use strict
+var currentContentClass = 'greeting';
 
-    // jQuery for page scrolling feature - requires jQuery Easing plugin
-    $('.page-scroll a').bind('click', function(event) {
-        var $anchor = $(this);
-        $('html, body').stop().animate({
-            scrollTop: ($($anchor.attr('href')).offset().top - 50)
-        }, 1250, 'easeInOutExpo');
-        event.preventDefault();
-    });
 
-    // Highlight the top nav as scrolling occurs
-    $('body').scrollspy({
-        target: '.navbar-fixed-top',
-        offset: 51
-    });
+// This function hides the first element with the passed class
+function hideContent(contentClass){
+    document.getElementsByClassName(contentClass)[0].classList.add('hidden');
+}
 
-    // Closes the Responsive Menu on Menu Item Click
-    $('.navbar-collapse ul li a:not(.dropdown-toggle)').click(function() {
-        $('.navbar-toggle:visible').click();
-    });
+// This function shows the first element with the passed class
+function showContent(contentClass){
+    document.getElementsByClassName("hidden " + contentClass)[0].classList.remove('hidden');
+}
 
-    // Offset for Main Navigation
-    $('#mainNav').affix({
-        offset: {
-            top: 100
+// This function handles which of the content elements should be shown/hidden
+function handleContent(newClass){
+    if( newClass !== currentContentClass){
+        // hide old content
+        hideContent(currentContentClass);
+        // assign new current content class
+        currentContentClass = newClass;
+        // show new content
+        showContent(currentContentClass);
+    }
+}
+
+//
+function onNavItemClick(event){
+    var linkElement = null;
+    if(event.target && event.target.parentElement ){
+        // get the target element
+        linkElement = event.target;
+        // if the target element is the icon, we'll be editing the parent element
+        if( linkElement.classList && linkElement.classList[0] === 'fas'){
+            linkElement = event.target.parentElement;
         }
-    })
+        // Get the current active nav element and remove the active id
+        var currentActive = document.getElementById('active');
+        if (currentActive) {
+            currentActive.id = '';
+        }
 
-    // Floating label headings for the contact form
-    $(function() {
-        $("body").on("input propertychange", ".floating-label-form-group", function(e) {
-            $(this).toggleClass("floating-label-form-group-with-value", !!$(e.target).val());
-        }).on("focus", ".floating-label-form-group", function() {
-            $(this).addClass("floating-label-form-group-with-focus");
-        }).on("blur", ".floating-label-form-group", function() {
-            $(this).removeClass("floating-label-form-group-with-focus");
-        });
-    });
+        // Add active id to clicked element
+        linkElement.id = 'active';
 
-})(jQuery); // End of use strict
+        // show the correct content
+        handleContent(linkElement.attributes['data-id'].value);
+    }
+}
+
+// This function attaches all needed event listeners
+function attachListeners(){
+    // Get reference to navigation bar
+    var navBar = document.getElementsByTagName("nav")[0];
+    // Add click event for navigation handling 
+    navBar.addEventListener("click", onNavItemClick, false);
+}
+
+
+// On load of page, attach all event listeners
+document.addEventListener('DOMContentLoaded', attachListeners, false);
