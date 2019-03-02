@@ -6,31 +6,14 @@ body {
   font-size: 14px;
 }
 
-
 body .content {
   flex:1;
-  background-color: blue;
+  background-color: #444;
 }
 
 body .sidePanel {
-  min-width: 7em;
-}
-
-.topPanel,
-.botPanel{
-  height: 25%;
-}
-
-.midPanel {
-  height: 50%;
-}
-
-.sidePanelName{
-  margin:1em;
-}
-
-.sidePanelName h2 {
-  margin: 0;
+  min-width: 4em;
+  background-color: #181818;
 }
 
 body .sidePanel,
@@ -39,9 +22,11 @@ body .sidePanel,
   flex-direction: column; 
 }
 
+nav {
+  margin: auto;
+}
+
 nav .navItem {
-  background-color: red;
-  border: 1px black solid;
   text-decoration: none;
   min-height: 4em;
   display: flex;
@@ -51,5 +36,10 @@ nav .navItem {
 
 .navItem .navItemText {
   color: white;
-  
+  font-size: 20px;
+  transition: all .2s ease-out;
+}
+
+.navItem:hover .navItemText {
+  color: rgb(0, 183, 255);
 }
