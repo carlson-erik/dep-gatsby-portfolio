@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,69 +8,145 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <!-- Custom CSS -->
-    <link href="css/portfolio.css" rel="stylesheet">
+    <link href="css/index.css" rel="stylesheet">
+    <link href="css/fontawesome_all.css" rel="stylesheet">
     <!-- Custom Fonts -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
     <title>Erik Carlson</title>
 </head>
 
-<body >    
-    <div class="sidePanel">
-        <nav>
-            <a class="navItem" id="active" data-id="greeting">
-                <i class="fas fa-home navItemText"></i>
-            </a>
-            <a class="navItem" data-id="bio">
-                <i class="fas fa-user navItemText"></i>
-            </a>
-            <a class="navItem" data-id="projects">
-                <i class="fas fa-hard-hat navItemText"></i>
-            </a>
-            <a class="navItem" data-id="contact">
-                <i class="fas fa-envelope navItemText"></i>
-            </a>
-        </nav>
-    </div>
-    <div class="content">
-        <div class="greeting">
-            <div class="splitLeft">
-                <div class="greetingWrapper">
-                    <h2 class="greetingTitle">
-                        Hi,<br>
-                        I'm Erik.
-                    </h2>
-                    <h4 class="greetingSubTitle">
-                        Web Developer | Full Stack Enthusiast
-                    </h4>
+<body>
+    <div class="container">
+        <header class="">
+            <div class="leftColumn">
+                <img src="./img/portfolio.jpg" alt="Profile Picture">
+            </div>
+            <div class="rightColumn">
+                <div class="rightColumn_content">
+                    <h1 class="name">Erik Carlson</h1>
+                    <div class="social">
+                        <div class="icons">
+                            <i class="fab fa-github-square fa-2x"></i>
+                            <i class="fab fa-dev fa-2x"></i>
+                            <i class="fab fa-twitter-square fa-2x"></i>
+                            <i class="fab fa-discord fa-2x"></i>
+                        </div>
+                    </div>
+                    <p class="description">
+                        Donec ac tincidunt nunc, et pretium tellus. Nullam velit arcu, varius lacinia risus non, viverra
+                        ornare ligula. Vivamus mauris tellus, lobortis eu fringilla sed, ultricies nec quam. Cras dolor
+                        libero, viverra et consectetur eget, feugiat non augue. Sed semper lobortis neque, quis
+                        ultricies lacus vulputate in. Donec sapien risus, aliquam id purus quis, varius iaculis eros. Ut
+                        massa lorem, gravida at metus eget, porta condimentum odio.Donec ac tincidunt nunc, et pretium
+                        tellus. Nullam velit arcu, varius lacinia risus non, viverra ornare ligula. Vivamus mauris
+                        tellus, lobortis eu fringilla sed, ultricies nec quam.
+                    </p>
                 </div>
             </div>
-            <div class="splitRight">
-                <img class="portfolioPicture" src="./img/portfolio.jpg"/>
-            </div>
-        </div>
-        <div class="hidden bio">
-            <div class="splitLeft">
-                <h1>About Me</h1>
-            </div>
-            <div class="splitRight">
-                <img class="portfolioPicture" src="./img/portfolio.jpg"/>
-            </div>
-            
-        </div>
-        <div class="hidden projects">
-            <div class="splitLeft">
-                <h1>PROJECTS CONTENT</h1>
-            </div>
-            <div class="splitRight"></div>
-        </div>
-        <div class="hidden contact">
-            <h1>CONTACT CONTENT</h1>
-        </div>
+        </header>
+        <main>
+            <section class="about">
+                <div class="row aboutMe">
+                    <div class="rowContainer">
+                        <div class="leftColumn">
+                            <div class="title">
+                                <h2 class="titleText">About Me</h2>
+                            </div>
+                        </div>
+                        <div class="rightColumn">
+                            <p id='aboutMeText'>
+                                Donec ac tincidunt nunc, et pretium tellus. Nullam velit arcu, varius lacinia risus non,
+                                viverra ornare ligula. Vivamus mauris tellus, lobortis eu fringilla sed, ultricies nec
+                                quam. Cras dolor libero, viverra et consectetur eget, feugiat non augue. Sed semper
+                                lobortis neque, quis ultricies lacus vulputate in. Donec sapien risus, aliquam id purus
+                                quis, varius iaculis eros.Vivamus mauris tellus, lobortis eu fringilla sed, ultricies nec quam. 
+                            </p>
+                            <p id='aboutMeText'>
+                                Donec ac tincidunt nunc, et pretium tellus. Nullam velit arcu, varius lacinia risus non,
+                                viverra ornare ligula. Vivamus mauris tellus, lobortis eu fringilla sed, ultricies nec
+                                quam. Cras dolor libero, viverra et consectetur eget, feugiat non augue. Sed semper
+                                lobortis neque, quis ultricies lacus vulputate in. Donec sapien risus, aliquam id purus
+                                quis, varius iaculis eros.Vivamus mauris tellus, lobortis eu fringilla sed, ultricies nec quam. 
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row techUsed">
+                    <div class="rowContainer">
+                        <div class="leftColumn">
+                            <div class="title">
+                                <h2 class="titleText">Technologies I Use</h2>
+                            </div>
+                        </div>
+                        <div class="rightColumn">
+                            <div class="row">
+                                <div class="rowContainer">
+                                    <div class="leftColumn progTitle">
+                                        <h4 class="progTitleText">Frontend</h4>
+                                    </div>
+                                    <div class="rightColumn progList">
+                                        <div class="iconRow">
+                                            <i class="devicon-html5-plain" title="HTML5"></i>
+                                            <i class="devicon-css3-plain" title="CSS3"></i>
+                                            <i class="devicon-javascript-plain" title="JavaScript"></i>
+                                            <i class="devicon-coffeescript-original" title="CoffeeScript"></i>
+                                            <i class="devicon-d3js-plain" title="D3.js"></i>
+                                        </div>
+                                        <div class="iconRow">
+                                            <i class="devicon-react-plain" title="React.js"></i>
+                                            <i class="devicon-angularjs-plain" title="Angular.js"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="rowContainer">
+                                    <div class="leftColumn progTitle">
+                                        <h4 class="progTitleText">Backend</h4>
+                                    </div>
+                                    <div class="rightColumn progList">
+                                        <div class="iconRow">
+                                            <i class="devicon-nodejs-plain" title="NodeJS"></i>
+                                            <i class="devicon-java-plain" title="Java"></i>
+                                            <i class="devicon-python-plain" title="Python"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="rowContainer">
+                                    <div class="leftColumn progTitle">
+                                        <h4 class="progTitleText">Other</h4>
+                                    </div>
+                                    <div class="rightColumn progList">
+                                        <div class="iconRow">
+                                            <i class="devicon-git-plain" title="Git"></i>
+                                            <i class="devicon-github-plain" title="Github"></i>
+                                            <i class="devicon-visualstudio-plain" title="Visual Studio Code"></i>
+                                            <i class="devicon-heroku-plain" title="Heroku"></i>
+                                            <i class="devicon-linux-plain"title="Linux"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
+            </section>
+            <section class="projects">
+                <div>Project section</div>
+            </section>
+        </main>
+        <footer>
+            <div>Footer</div>
+        </footer>
     </div>
     <!-- Custom JS -->
-    <script src="js/portfolio.js"></script>
+    <script src="js/index.js"></script>
 </body>
+
 </html>

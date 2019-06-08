@@ -1,0 +1,162 @@
+body {
+    margin: 0;
+    font-size: 16px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.container {
+    width: 1100px;
+    height: 100vh;
+    margin: 0 auto;
+}
+
+header, .projects {
+    height: 400px;
+    width: 100%;
+}
+
+header, .about {
+    padding-bottom: 1em;
+    margin-bottom: 1em;
+}
+
+footer {
+    height: 75px;
+    background-color: #f2f2f2;
+}
+
+
+header,
+section, 
+.about > .row > .rowContainer > .leftColumn,
+.about .row > .rowContainer{
+    display: flex;
+    position: relative;
+}
+
+header::after, 
+.about::after {
+    content : "";
+    position: absolute;
+    left    : 0;
+    bottom  : 0;
+    height  : 1px;
+    width: 90%;
+    margin-left: 5%;
+    border-bottom:1px solid #a5a5a5;
+}
+
+.about > .row .rowContainer > .leftColumn:after {
+    content : "";
+    position: absolute;
+    right    : 0;
+    top  : 0;
+    margin-top: 4%;
+    height  : 90%;
+    width: 1px;
+    border-right:1px solid #a5a5a5;
+}
+
+.about,
+.techLearning .rightColumn,
+.techUsed .rightColumn{
+    display: block;
+}
+.about .row {
+    width: 100%;
+    margin-bottom: 0.5em; 
+}
+
+.about .row:last-child { 
+    margin-bottom: 0em;
+}
+
+.leftColumn, 
+.rightColumn {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header .leftColumn img {
+    width: 60%;
+    border-radius: 2%;
+}
+
+.rightColumn_content {
+    width: 90%;
+}
+
+.about .progTitle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about .title .titleText {
+    font-size: 1.75em;
+    font-weight: bold;
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+
+.about .progTitle h4.progTitleText {
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+.rightColumn_content .name {
+    margin-top: 0;
+    font-size: 4em;
+    margin-bottom: 0.05em;
+}
+
+.progList > .iconRow > *, 
+.rightColumn_content .social > .icons > * {
+    text-align: center;
+    margin-left: 0.15em;
+    margin-right: 0.15em;
+}
+
+.rightColumn_content .social > .icons > *:hover {
+    color: lightblue;
+}
+
+.rightColumn_content .description {
+    margin-top: 0.75em;
+    margin-bottom: 0;
+}
+
+.leftColumn.progTitle {
+    width: 30%;
+}
+
+.leftColumn.progTitle::after {
+    border: none !important;
+    height: 0;
+    width: 0;
+}
+
+.rightColumn.progList {
+    width: 70%;
+}
+
+.progList > .iconRow >  *:first-child {
+    margin-left: 0;
+}
+
+#aboutMeText {
+    padding-left: 1.5em;
+    padding-right: 1.5em;
+}
+
+.iconRow {
+    font-size: 2em;
+    margin-top: 0.1em;
+    margin-bottom: 0.1em;
+}
+
+.aboutMe .rightColumn{
+    display: block;
+}
