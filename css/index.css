@@ -77,11 +77,9 @@ header .rightColumn_content .social > .icons > *:hover {
     display: flex;
     align-items: center;
 }
-.social > * {
-    width: 48%;
-}
+
 header .social .separator {
-    border-left: 6px solid green;
+    border-left: 4px solid black;
     height: 4em;
     width: 1px;
 }
@@ -90,6 +88,7 @@ header .social .desription {
     background-color: red;
     height: 4em;
     position:relative;
+    width: 60%;
 }
 header .social .desription .role {
     position: absolute;
@@ -98,8 +97,15 @@ header .social .desription .role {
     height: 100%;
 }
 
-.roleText {
-    
+h3.roleText {
+    margin: 0;
+    padding-top:0.4em;
+    padding-left:0.6em;
+    font-size: 1.7em;
+}
+
+.icons{
+    padding-right:0.8em;
 }
 /* --------------------------- END OF header --------------------------- */
 
