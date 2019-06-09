@@ -13,7 +13,7 @@ body {
 
 
 /* --------------------------- START OF header --------------------------- */
-header, .projects {
+header {
     height: 400px;
     width: 100%;
 }
@@ -139,8 +139,8 @@ h3.roleText {
     position: absolute;
     right    : 0;
     top  : 0;
-    margin-top: 4%;
-    height  : 90%;
+    margin-top: 10%;
+    height: 70%;
     width: 1px;
     border-right:1px solid #a5a5a5;
 }
@@ -169,9 +169,9 @@ h3.roleText {
     margin-bottom: 2em;
 }
 
-.about #aboutMeText {
-    padding-left: 1.5em;
-    padding-right: 1.5em;
+.about .aboutMeText {
+    padding-left: 3em;
+    padding-right: 3em;
 }
 
 .about .aboutMe .rightColumn {
@@ -237,6 +237,7 @@ h3.roleText {
     align-items: center;
 }
 
+.resume #resumeDownload,
 .resume .progTitle,
 .resume .jobTitle {
     display: flex;
@@ -305,24 +306,99 @@ h3.roleText {
 .resume > .row:first-child {
     margin-bottom: 2em;
 }
+
+#resumeDownload {
+    width: 100%;
+}
+
+#resumeButton {
+    background-color: #4CAF50;
+    border: none;
+    padding: 8px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 4px 2px;
+    cursor: pointer; 
+    border-radius: 4px;
+    box-shadow: 5px 3px 10px #888888;
+}
+
+#downloadText {
+    font-size: 16px;
+    color: white;
+}
 /* --------------------------- END OF resume --------------------------- */
 
 /* --------------------------- START OF projects --------------------------- */
+.projects {
+    padding-bottom: 2em;
+    margin-bottom: 1em;
+}
+
+.projects .row > .rowContainer,
+.projects > .row > .rowContainer > .leftColumn {
+    display: flex;
+    position: relative;
+}
+
+.projects > .row > .rowContainer {
+    justify-content: center;
+    align-items: center;
+}
+
+.projects::after {
+    content : "";
+    position: absolute;
+    left    : 0;
+    bottom  : 0;
+    height  : 1px;
+    width: 90%;
+    margin-left: 5%;
+    border-bottom:1px solid #a5a5a5;
+}
+
+.projects,
+.projects .employment .rightColumn,
+.projects .techUsed .rightColumn {
+    display: block;
+}
+
 .projects .row {
     width: 100%;
     margin-bottom: 0.5em; 
 }
 
-.projects .row { 
+.projects .row:last-child { 
     margin-bottom: 0;
+}
+
+.projects #projectsHeader {
+    font-size: 1.75em;
+    font-weight: bold;
+    margin: 0;
+    margin-bottom: 0.5em;
 }
 
 .projects .leftColumn, 
 .projects .rightColumn {
     width: 50%;
+    height: 450px;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.projectImage {
+    border-radius: 2%;
+    width: 90%;
+    width: 90%;
+}
+
+.projectInformation {
+    height: 90%;
+    width: 90%;
+    background: blue;
 }
 /* --------------------------- END OF projects --------------------------- */
 
@@ -330,6 +406,5 @@ h3.roleText {
 /* --------------------------- START OF footer --------------------------- */
 footer {
     height: 75px;
-    background-color: #f2f2f2;
 }
 /* --------------------------- END OF footer --------------------------- */
