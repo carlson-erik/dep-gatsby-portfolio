@@ -79,7 +79,7 @@ header .rightColumn_content .social > .icons > *:hover {
 }
 
 header .social .separator {
-    border-left: 4px solid black;
+    border-left: 3px solid black;
     height: 4em;
     width: 1px;
 }
@@ -113,11 +113,12 @@ h3.roleText {
 /* --------------------------- START OF about me --------------------------- */
 .about {
     padding-bottom: 1em;
-    margin-bottom: 2em;
+    margin-bottom: 1em;
+    display: block;
 }
 
 .about > .row > .rowContainer > .leftColumn,
-.about .row > .rowContainer{
+.about .row > .rowContainer {
     display: flex;
     position: relative;
 }
@@ -144,12 +145,6 @@ h3.roleText {
     border-right:1px solid #a5a5a5;
 }
 
-.about,
-.about .techLearning .rightColumn,
-.about .techUsed .rightColumn{
-    display: block;
-}
-
 .about .row {
     width: 100%;
     margin-bottom: 0.5em; 
@@ -167,17 +162,6 @@ h3.roleText {
     align-items: center;
 }
 
-.about .progTitle {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.about .progTitle h4.progTitleText {
-    margin-top: 1em;
-    margin-bottom: 1em;
-}
-
 .about .title .titleText {
     font-size: 1.75em;
     font-weight: bold;
@@ -190,41 +174,138 @@ h3.roleText {
     padding-right: 1.5em;
 }
 
-.about .progList > .iconRow > * {
+.about .aboutMe .rightColumn {
+    display: block;
+}
+/* --------------------------- END OF about me --------------------------- */
+
+
+/* --------------------------- START OF resume --------------------------- */
+.resume {
+    padding-bottom: 2em;
+    margin-bottom: 1em;
+}
+
+.resume .row > .rowContainer,
+.resume > .row > .rowContainer > .leftColumn {
+    display: flex;
+    position: relative;
+}
+
+.resume::after {
+    content : "";
+    position: absolute;
+    left    : 0;
+    bottom  : 0;
+    height  : 1px;
+    width: 90%;
+    margin-left: 5%;
+    border-bottom:1px solid #a5a5a5;
+}
+
+.resume > .row .rowContainer > .leftColumn:after {
+    content : "";
+    position: absolute;
+    right    : 0;
+    top  : 0;
+    margin-top: 4%;
+    height  : 90%;
+    width: 1px;
+    border-right:1px solid #a5a5a5;
+}
+
+.resume,
+.resume .employment .rightColumn,
+.resume .techUsed .rightColumn {
+    display: block;
+}
+
+.resume .row {
+    width: 100%;
+    margin-bottom: 0.5em; 
+}
+
+.resume .row:last-child { 
+    margin-bottom: 0;
+}
+
+.resume .leftColumn, 
+.resume .rightColumn {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.resume .progTitle,
+.resume .jobTitle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.resume .progTitle h4.progTitleText,
+.resume .jobTitle h4.jobTitleText {
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+.resume .title .titleText {
+    font-size: 1.75em;
+    font-weight: bold;
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+
+.resume .progList > .iconRow > * {
     text-align: center;
     margin-left: 0.15em;
     margin-right: 0.15em;
 }
 
-.about .leftColumn.progTitle {
-    width: 30%;
+.resume .leftColumn.progTitle {
+    width: 35%;
 }
 
-.about .leftColumn.progTitle::after {
+.resume .leftColumn.jobTitle {
+    width: 45%;
+}
+
+.resume .leftColumn.progTitle::after,
+.resume .leftColumn.jobTitle::after {
     border: none !important;
     height: 0;
     width: 0;
 }
 
-.about .rightColumn.progList {
+.resume .rightColumn.progList {
     width: 70%;
 }
 
-.about .progList > .iconRow >  *:first-child {
+.resume .progList > .iconRow >  *:first-child {
     margin-left: 0;
 }
 
-.about .iconRow {
+.resume .iconRow {
     font-size: 2em;
     margin-top: 0.2em;
     margin-bottom: 0.2em;
 }
 
-.about .aboutMe .rightColumn{
+.resume .companyDescription > * {
     display: block;
 }
-/* --------------------------- END OF about me --------------------------- */
 
+.resume .companyDescription > .timePeriod {
+    margin-top: 0.25em;
+    font-size: 14px;
+    font-style: italic;
+}
+
+.resume > .row:first-child {
+    margin-bottom: 2em;
+}
+/* --------------------------- END OF resume --------------------------- */
 
 /* --------------------------- START OF projects --------------------------- */
 .projects .row {
