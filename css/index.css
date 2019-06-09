@@ -156,10 +156,14 @@ h3.roleText {
 
 .about .leftColumn, 
 .about .rightColumn {
-    width: 50%;
+    width: 60%;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.about .leftColumn {
+    width: 40%;
 }
 
 .about .title .titleText {
@@ -398,13 +402,40 @@ h3.roleText {
 .projectInformation {
     height: 90%;
     width: 90%;
-    background: blue;
+}
+
+.projectInformation .projectLabel .rowContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.projectLabel {
+    margin-bottom: 1em;
+}
+
+.projectLabel .projectLabelText {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.projectInformation .projectDetails .rowContainer {
+    display: block !important;
+}
+
+.detailsLabel{
+    font-weight: bold;
+    margin: 0;
+}
+
+.projectInformation .projectDetails .rowContainer  > p {
+    margin: 0;
 }
 /* --------------------------- END OF projects --------------------------- */
 
 
 /* --------------------------- START OF footer --------------------------- */
 footer {
-    height: 75px;
+    height: 25px;
 }
 /* --------------------------- END OF footer --------------------------- */
