@@ -2,8 +2,11 @@
 body {
     margin: 0;
     font-size: 16px;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Montserrat', sans-serif;
 }
+
+* {-webkit-font-smoothing: antialiased;}
+
 .container {
     width: 1100px;
     height: 100vh;
@@ -69,8 +72,17 @@ header .rightColumn_content .social > .icons > * {
     margin-right: 0.15em;
 }
 
-header .rightColumn_content .social > .icons > *:hover {
-    color: lightblue;
+.socialLink {
+    text-decoration: none;
+}
+header .rightColumn_content .social > .icons > i,
+a:not(:visited) {
+    color: #476de1;
+}
+
+a:hover,
+a:visited{
+    color: #17348c;
 }
 
 .social {
@@ -79,8 +91,8 @@ header .rightColumn_content .social > .icons > *:hover {
 }
 
 header .social .separator {
-    border-left: 3px solid black;
-    height: 4em;
+    border-left: 1px solid #a5a5a5;
+    height: 3em;
     width: 1px;
 }
 
@@ -99,13 +111,13 @@ header .social .desription .role {
 
 h3.roleText {
     margin: 0;
-    padding-top:0.4em;
+    padding-top:0.5em;
     padding-left:0.6em;
     font-size: 1.7em;
 }
 
-.icons{
-    padding-right:0.8em;
+.icons {
+    padding-right:1em;
 }
 /* --------------------------- END OF header --------------------------- */
 
@@ -168,7 +180,7 @@ h3.roleText {
 
 .about .title .titleText {
     font-size: 1.75em;
-    font-weight: bold;
+    font-weight: 900;
     margin-top: 2em;
     margin-bottom: 2em;
 }
@@ -176,6 +188,15 @@ h3.roleText {
 .about .aboutMeText {
     padding-left: 3em;
     padding-right: 3em;
+}
+
+.about .aboutMeText:last-of-type {
+    margin-block-end: 0.4em;
+}
+
+.about .aboutMeList {
+    padding-left: 4em;
+    margin-block-start: 0;
 }
 
 .about .aboutMe .rightColumn {
@@ -204,7 +225,7 @@ h3.roleText {
     height  : 1px;
     width: 90%;
     margin-left: 5%;
-    border-bottom:1px solid #a5a5a5;
+    /* border-bottom:1px solid #a5a5a5; */
 }
 
 .resume > .row .rowContainer > .leftColumn:after {
@@ -257,7 +278,7 @@ h3.roleText {
 
 .resume .title .titleText {
     font-size: 1.75em;
-    font-weight: bold;
+    font-weight: 900;
     margin-top: 2em;
     margin-bottom: 2em;
 }
@@ -273,7 +294,7 @@ h3.roleText {
 }
 
 .resume .leftColumn.jobTitle {
-    width: 45%;
+    width: 50%;
 }
 
 .resume .leftColumn.progTitle::after,
@@ -316,7 +337,7 @@ h3.roleText {
 }
 
 #resumeButton {
-    background-color: #4CAF50;
+    background-color: #476de1;
     border: none;
     padding: 8px 16px;
     text-align: center;
@@ -325,7 +346,7 @@ h3.roleText {
     margin: 4px 2px;
     cursor: pointer; 
     border-radius: 4px;
-    box-shadow: 5px 3px 10px #888888;
+    box-shadow: 5px 3px 6px #888888
 }
 
 #downloadText {
@@ -336,7 +357,7 @@ h3.roleText {
 
 /* --------------------------- START OF projects --------------------------- */
 .projects {
-    padding-bottom: 2em;
+    padding-bottom: 1em;
     margin-bottom: 1em;
 }
 
@@ -370,7 +391,6 @@ h3.roleText {
 
 .projects .row {
     width: 100%;
-    margin-bottom: 0.5em; 
 }
 
 .projects .row:last-child { 
@@ -379,15 +399,15 @@ h3.roleText {
 
 .projects #projectsHeader {
     font-size: 1.75em;
-    font-weight: bold;
+    font-weight: 900;
     margin: 0;
-    margin-bottom: 0.5em;
+    margin-top: 0.3em;
 }
 
 .projects .leftColumn, 
 .projects .rightColumn {
     width: 50%;
-    height: 450px;
+    min-height: 450px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -395,8 +415,13 @@ h3.roleText {
 
 .projectImage {
     border-radius: 2%;
+    box-shadow: 5px 3px 6px #888888;
     width: 90%;
     width: 90%;
+}
+
+.portfolioGif {
+    border: 1px #a5a5a5 solid;
 }
 
 .projectInformation {
@@ -417,6 +442,9 @@ h3.roleText {
 .projectLabel .projectLabelText {
     font-size: 1.5em;
     font-weight: bold;
+    padding-bottom: 0.3em;
+    margin-bottom: 0.2em;
+    border-bottom: 1px solid #a5a5a5;
 }
 
 .projectInformation .projectDetails .rowContainer {
@@ -428,14 +456,15 @@ h3.roleText {
     margin: 0;
 }
 
-.projectInformation .projectDetails .rowContainer  > p {
+.detail {
+    margin-bottom: 0.7em;
+}
+
+.detail:last-child{
+    margin-bottom: 0;
+}
+
+.projectInformation .projectDetails .rowContainer .detail > p {
     margin: 0;
 }
 /* --------------------------- END OF projects --------------------------- */
-
-
-/* --------------------------- START OF footer --------------------------- */
-footer {
-    height: 25px;
-}
-/* --------------------------- END OF footer --------------------------- */
