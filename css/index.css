@@ -54,6 +54,7 @@ header .rightColumn {
 header .leftColumn img {
     width: 60%;
     border-radius: 2%;
+    border: 1px #a5a5a5 solid
 }
 
 header .rightColumn_content {
