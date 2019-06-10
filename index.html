@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,69 +8,299 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <!-- Custom CSS -->
-    <link href="css/portfolio.css" rel="stylesheet">
+    <link href="css/index.css" rel="stylesheet">
+    <link href="css/vendor/fontawesome_all.css" rel="stylesheet">
     <!-- Custom Fonts -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
     <title>Erik Carlson</title>
 </head>
 
-<body >    
-    <div class="sidePanel">
-        <nav>
-            <a class="navItem" id="active" data-id="greeting">
-                <i class="fas fa-home navItemText"></i>
-            </a>
-            <a class="navItem" data-id="bio">
-                <i class="fas fa-user navItemText"></i>
-            </a>
-            <a class="navItem" data-id="projects">
-                <i class="fas fa-hard-hat navItemText"></i>
-            </a>
-            <a class="navItem" data-id="contact">
-                <i class="fas fa-envelope navItemText"></i>
-            </a>
-        </nav>
-    </div>
-    <div class="content">
-        <div class="greeting">
-            <div class="splitLeft">
-                <div class="greetingWrapper">
-                    <h2 class="greetingTitle">
-                        Hi,<br>
-                        I'm Erik.
-                    </h2>
-                    <h4 class="greetingSubTitle">
-                        Web Developer | Full Stack Enthusiast
-                    </h4>
+<body>
+    <div class="container">
+        <header class="">
+            <div class="leftColumn">
+                <img src="./img/portfolio.jpg" alt="Profile Picture">
+            </div>
+            <div class="rightColumn">
+                <div class="rightColumn_content">
+                    <h1 class="name">Erik Carlson</h1>
+                    <div class="social">
+                        <div class="icons">
+                            <a target="_blank" class="socialLink" href="https://github.com/carlson-erik">
+                                <i class="fab fa-github-square fa-2x"></i>
+                            </a>
+                            <a target="_blank" class="socialLink" href="https://dev.to/carlsonerik">
+                                <i class="fab fa-dev fa-2x"></i>
+                            </a>
+                            <i class="fab fa-twitter-square fa-2x"></i>
+                            <i class="fab fa-discord fa-2x"></i>
+                        </div>
+                        <div class="separator"></div>
+                        <div class="desription">
+                            <div class="role">
+                                <h3 class="roleText">Husband</h3>
+                            </div>
+                            <div class="role">
+                                <h3 class="roleText">Video Game Nerd</h3>
+                            </div>
+                            <div class="role">
+                                <h3 class="roleText">React Fan</h3>
+                            </div>
+                            <div class="role">
+                                <h3 class="roleText">Software Engineer</h3>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="splitRight">
-                <img class="portfolioPicture" src="./img/portfolio.jpg"/>
-            </div>
-        </div>
-        <div class="hidden bio">
-            <div class="splitLeft">
-                <h1>About Me</h1>
-            </div>
-            <div class="splitRight">
-                <img class="portfolioPicture" src="./img/portfolio.jpg"/>
-            </div>
-            
-        </div>
-        <div class="hidden projects">
-            <div class="splitLeft">
-                <h1>PROJECTS CONTENT</h1>
-            </div>
-            <div class="splitRight"></div>
-        </div>
-        <div class="hidden contact">
-            <h1>CONTACT CONTENT</h1>
-        </div>
+        </header>
+        <main>
+            <section class="about">
+                <div class="row aboutMe">
+                    <div class="rowContainer">
+                        <div class="leftColumn">
+                            <div class="title">
+                                <h2 class="titleText">About Me</h2>
+                            </div>
+                        </div>
+                        <div class="rightColumn">
+                            <p class='aboutMeText'>
+                                Hi! Thanks for checking out my site! My name is <b>Erik Carlson</b>. I'm currently a <b>Frontend Engineer</b> at <b>Pegasystems</b> in Bedford, NH. My job involves working with <a href="https://en.wikipedia.org/wiki/Data_visualization" target="_blank">Data Visualizations</a>!
+                            </p>
+                            <p class='aboutMeText'>
+                                I'm really interested in <b>React</b> and <b>Redux</b>. If you have a project you would like to collaborate on, get in touch! 
+                            </p>
+                            <p class='aboutMeText'>
+                                In my spare time, I:
+                            </p>
+                            <ul class='aboutMeList'>
+                                <li>
+                                    Spend time on making side projects. Check them out below!
+                                </li>
+                                <li>
+                                    Own a 2004 Subaru WRX that I'm quite proud of!
+                                </li>
+                                <li>
+                                    Tinker with Mechnical Keyboards, Nintedo Switches, and more.
+                                </li>
+                                <li>
+                                    Listen to bands like <a target="_blank" href="http://knockedloosehc.com/">Knocked Loose</a>, <a target="_blank" href="http://www.fearlessrecords.com/artists/varials/">Varials</a>, and <a target="_blank" href="https://kaonashipa.bandcamp.com/">Kaonashi</a>.
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="projects">
+                <div class="row">
+                    <div class="rowContainer">
+                        <h2 id="projectsHeader">What I've Made</h2>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="rowContainer">
+                        <div class="leftColumn">
+                            <img class="projectImage" src="./img/projects/coddit.png" />
+                        </div>
+                        <div class="rightColumn">
+                            <div class="projectInformation">
+                                <div class="row projectLabel">
+                                    <div class="rowContainer">
+                                        <h3 class="projectLabelText">Coddit</h3>
+                                    </div>
+                                </div>
+                                <div class="row projectDetails">
+                                    <div class="rowContainer">
+                                        <div class="detail">
+                                            <span class="detailsLabel">Live Link:</span> <a href="https://coddit.dev/" target="_blank">https://coddit.dev</a>
+                                        </div>
+                                        <div class="detail">
+                                            <span class="detailsLabel">Repository Link:</span> <a href="https://github.com/carlson-erik/coddit" target="_blank">https://github.com/carlson-erik/coddit</a>
+                                        </div>
+                                        <div class="detail">
+                                            <span class="detailsLabel">Tech Used:</span> React.js, Redux, Reddit API
+                                        </div>
+                                        <div class="detail">
+                                            <span class="detailsLabel">Description:</span>
+                                            <p>
+                                                Coddit is a completely client side web application that renders Reddit as if it was code. Coddit allows users to take advantage of features such as previewing posts, rendering in different programming languages (JavaScript, Python and C#), as well as theming in different color schemes. The user has the ability to browse reddit in coddit as they would normally browse subreddits and posts.
+                                            </p>
+                                        </div>
+                                        <div class="detail">
+                                            <span class="detailsLabel">Why Did I Build This?</span>
+                                            <p>
+                                                Like most redditors, I spend a fair amount of time on reddit. I built coddit so that I could browse reddit in a out-of-the-norm way and so that I could learn ES6, React.js and related technologies.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
+                <div class="row">
+                    <div class="rowContainer">
+                        <div class="leftColumn">
+                            <div class="projectInformation">
+                                <div class="row projectLabel">
+                                    <div class="rowContainer">
+                                        <h3 class="projectLabelText">Portfolio</h3>
+                                    </div>
+                                </div>
+                                <div class="row projectDetails">
+                                    <div class="rowContainer">
+                                        <div class="detail">
+                                            <span class="detailsLabel">Live Link:</span> You're already <a href="http://carlson-erik.github.io/" target="_blank">here!</a>
+                                        </div>
+                                        <div class="detail">
+                                            <span class="detailsLabel">Repository Link:</span> <a href="https://github.com/carlson-erik/carlson-erik.github.io" target="_blank">https://github.com/carlson-erik/carlson...</a>
+                                        </div>
+                                        <div class="detail">
+                                            <span class="detailsLabel">Tech Used:</span> HTML5, CSS3, JavaScript
+                                        </div>
+                                        <div class="detail">
+                                            <span class="detailsLabel">Why Did I Build This?</span>
+                                            <p>
+                                                I built my portfolio so that I can continue to build side projects and then share them all in one place! It was also built to demonstrate that I can build websites with no help from frameworks or libraries. 
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="rightColumn">
+                            <img class="projectImage portfolioGif" src="./img/projects/portfolio.gif" alt="loading" title="Loading" />
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="resume">
+                <div class="row employment">
+                    <div class="rowContainer">
+                        <div class="leftColumn">
+                            <div class="title">
+                                <h2 class="titleText">Places I've worked</h2>
+                            </div>
+                        </div>
+                        <div class="rightColumn">
+                            <div class="row">
+                                <div class="rowContainer">
+                                    <div class="leftColumn jobTitle">
+                                        <h4 class="jobTitleText">Front End Engineer</h4>
+                                    </div>
+                                    <div class="rightColumn companyDescription">
+                                        <span class="companyName">Pegasystems</span>
+                                        <span class="timePeriod"> June 2017 - Present</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="rowContainer">
+                                    <div class="leftColumn jobTitle">
+                                        <h4 class="jobTitleText">Engineering Intern</h4>
+                                    </div>
+                                    <div class="rightColumn companyDescription">
+                                        <span class="companyName">Pegasystems</span>
+                                        <span class="timePeriod">May 2016 - August 2016</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="rowContainer">
+                                    <div class="leftColumn jobTitle">
+                                        <h4 class="jobTitleText">IPsec & IKEv2 Technician</h4>
+                                    </div>
+                                    <div class="rightColumn companyDescription">
+                                        <span class="companyName">UNH Interoperability Lab</span>
+                                        <span class="timePeriod">Nay 2014 - May 2016</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="rowContainer">
+                                    <div id="resumeDownload">
+                                        <a target="_blank" href="./doc/Erik-Carlson-Resume.pdf" download="proposed_file_name">
+                                            <button type="submit" id="resumeButton">
+                                                <span id="downloadText">Download Full Resume</span>
+                                            </button>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row techUsed">
+                    <div class="rowContainer">
+                        <div class="leftColumn">
+                            <div class="title">
+                                <h2 class="titleText">Technologies I Use</h2>
+                            </div>
+                        </div>
+                        <div class="rightColumn">
+                            <div class="row">
+                                <div class="rowContainer">
+                                    <div class="leftColumn progTitle">
+                                        <h4 class="progTitleText">Frontend</h4>
+                                    </div>
+                                    <div class="rightColumn progList">
+                                        <div class="iconRow">
+                                            <i class="devicon-html5-plain colored" title="HTML5"></i>
+                                            <i class="devicon-css3-plain colored" title="CSS3"></i>
+                                            <i class="devicon-javascript-plain colored" title="JavaScript"></i>
+                                            <i class="devicon-react-plain colored" title="React.js"></i>
+                                            <i class="devicon-angularjs-plain colored" title="Angular.js"></i>
+                                        </div>
+                                        <div class="iconRow">
+                                            <i class="devicon-coffeescript-plain colored" title="CoffeeScript"></i>
+                                            <i class="devicon-d3js-plain colored" title="D3.js"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="rowContainer">
+                                    <div class="leftColumn progTitle">
+                                        <h4 class="progTitleText">Backend</h4>
+                                    </div>
+                                    <div class="rightColumn progList">
+                                        <div class="iconRow">
+                                            <i class="devicon-nodejs-plain colored" title="NodeJS"></i>
+                                            <i class="devicon-java-plain colored" title="Java"></i>
+                                            <i class="devicon-python-plain colored" title="Python"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="rowContainer">
+                                    <div class="leftColumn progTitle">
+                                        <h4 class="progTitleText">Other</h4>
+                                    </div>
+                                    <div class="rightColumn progList">
+                                        <div class="iconRow">
+                                            <i class="devicon-git-plain colored" title="Git"></i>
+                                            <i class="devicon-github-plain colored" title="Github"></i>
+                                            <i class="devicon-visualstudio-plain colored" title="Visual Studio Code"></i>
+                                            <i class="devicon-heroku-plain colored" title="Heroku"></i>
+                                            <i class="devicon-linux-plain colored" title="Linux"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
     </div>
     <!-- Custom JS -->
-    <script src="js/portfolio.js"></script>
+    <script src="js/index.js"></script>
 </body>
+
 </html>
