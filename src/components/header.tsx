@@ -22,7 +22,7 @@ const TitleContainer = styled.div`
     border-radius: 3rem;
   }
 
-  @media only screen and (max-width: 425px) {
+  @media only screen and (max-width: 475px) {
     & .gatsby-image-wrapper {
       display: none !important;
     }
@@ -33,7 +33,7 @@ const Title = styled.h1`
   font-size: 2.5rem;
   padding-left: 1rem;
 
-  @media only screen and (max-width: 425px) {
+  @media only screen and (max-width: 475px) {
     padding: 0;
     font-size: 2rem;
   }
