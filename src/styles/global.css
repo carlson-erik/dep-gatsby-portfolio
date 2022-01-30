@@ -11,3 +11,14 @@ body #___gatsby,
 body #___gatsby > div {
   width: 100%;
 }
+
+body #___gatsby > div {
+  display: flex;
+  justify-content: center;
+}
+
+@media only screen and (max-width: 950px) {
+  body { 
+    padding: 1rem;
+  }
+}

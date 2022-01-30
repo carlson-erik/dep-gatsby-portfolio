@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { StaticImage } from 'gatsby-plugin-image';
+import { Link } from 'gatsby';
 
 const Container = styled.header`
   width: 100%;
@@ -8,11 +9,16 @@ const Container = styled.header`
   border-bottom: 1px solid #dadada;
   margin-bottom: 1rem;
 
-  @media only screen and (max-width: 625px) {
+  @media only screen and (max-width: 700px) {
     display: flex;
     align-items: center;
   }
 `;
+
+const StyledTitleLink = styled(Link)`
+  text-decoration: none;
+  color: black;
+`
 
 const TitleContainer = styled.div`
   display: flex;
@@ -22,7 +28,7 @@ const TitleContainer = styled.div`
     border-radius: 3rem;
   }
 
-  @media only screen and (max-width: 475px) {
+  @media only screen and (max-width: 350px) {
     & .gatsby-image-wrapper {
       display: none !important;
     }
@@ -32,10 +38,14 @@ const TitleContainer = styled.div`
 const Title = styled.h1`
   font-size: 2.5rem;
   padding-left: 1rem;
+  text-decoration: none;
 
-  @media only screen and (max-width: 475px) {
-    padding: 0;
+  @media only screen and (max-width: 400px) {
     font-size: 2rem;
+  }
+
+  @media only screen and (max-width: 350px) {
+    padding: 0;
   }
 `;
 
@@ -44,11 +54,11 @@ const NavigationContainer = styled.div`
   margin-left: 5rem;
   padding-top: 0.5rem;
 
-  @media only screen and (max-width: 900px) { 
+  @media only screen and (max-width: 950px) {
     margin: 0;
   }
 
-  @media only screen and (max-width: 625px) {
+  @media only screen and (max-width: 700px) {
     flex-grow: 1;
     display: flex;
     justify-content: flex-end;
@@ -60,12 +70,12 @@ const Navigation = styled.nav`
   margin: 0;
   padding: 0;
 
-  @media only screen and (max-width: 625px) {
+  @media only screen and (max-width: 700px) {
     display: none;
   }
 `;
 
-const NavigationLink = styled.a`
+const NavigationLink = styled(Link)`
   font-size: 0.75rem;
   letter-spacing: 0.1rem;
   font-weight: bold;
@@ -94,7 +104,7 @@ const SocialContainer = styled.div`
   justify-content: flex-end;
   gap: 0.5rem;
 
-  @media only screen and (max-width: 625px) {
+  @media only screen and (max-width: 700px) {
     display: none;
   }
 `;
@@ -114,7 +124,7 @@ const SocialIcon = styled.svg`
 
 const MobileMenu = styled.div`
   display: none;
-  @media only screen and (max-width: 625px) {
+  @media only screen and (max-width: 700px) {
     display: flex;
   }
 `;
@@ -127,24 +137,26 @@ const MenuIcon = styled.svg`
 const Header = () => {
   return (
     <Container>
-        <TitleContainer>
-          <StaticImage 
-            src='../images/portfolio.jpg'
-            width={64}
-            height={64}
-            alt='erik carlson portfolio picture'
-          />
-          <Title>Erik Carlson</Title>
-        </TitleContainer>
+        <StyledTitleLink to='/'>
+          <TitleContainer>
+            <StaticImage 
+              src='../images/portfolio.jpg'
+              width={64}
+              height={64}
+              alt='erik carlson portfolio picture'
+            />
+            <Title>Erik Carlson</Title>
+          </TitleContainer>
+        </StyledTitleLink>
         <NavigationContainer>
           <Navigation>
-            <NavigationLink href="#projects">
+            <NavigationLink to="/projects">
               Projects
             </NavigationLink>
-            <NavigationLink href="#experience">
+            <NavigationLink to="/experience">
               Experience
             </NavigationLink>
-            <NavigationLink href="#blog">
+            <NavigationLink to="/blog">
               Blog
             </NavigationLink>
           </Navigation>

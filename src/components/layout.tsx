@@ -16,9 +16,9 @@ import Header from './header';
 const Container = styled.div`
   padding: 0 2rem 0 2rem;
   width: 100%;
-  max-width:1000px;
+  max-width:1100px;
 
-  @media only screen and (max-width: 625px) { 
+  @media only screen and (max-width: 700px) { 
     padding: 0;
   }
 `;
@@ -27,7 +27,7 @@ const MainContent = styled.main`
   padding: 0 5rem 0 5rem;
   width: 100%;
 
-  @media only screen and (max-width: 900px) { 
+  @media only screen and (max-width: 950px) { 
     padding: 0;
   }
 

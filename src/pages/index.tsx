@@ -38,7 +38,7 @@ const LandingPage = () => {
         <Link href="#projects">rest of my projects.</Link>
       </Paragraph>
       <Paragraph>
-        I recently started blogging. <Link href="#blog">Check it out!</Link>
+        I recently started a blog. <Link href="#blog">Check it out!</Link>
       </Paragraph>
     </Layout>
   );
