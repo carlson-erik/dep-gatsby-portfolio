@@ -2,15 +2,11 @@ import React from "react";
 import styled from 'styled-components';
 /* ------------------ Components ------------------ */
 import Layout from "../components/layout";
-import { GLink, Link } from "../components/styled";
+import { Heading, GLink, Link } from "../components/styled";
 
 const Paragraph = styled.p`
   font-size: 1.25rem;
   line-height: 2rem;
-`;
-
-const Heading = styled.h2`
-  font-size: 1.75rem;
 `;
 
 const LandingPage = () => {

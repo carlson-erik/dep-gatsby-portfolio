@@ -1,6 +1,9 @@
 import styled from "styled-components";
-
 import { Link as GatsbyLink } from "gatsby";
+
+const Heading = styled.h2`
+  font-size: 1.75rem;
+`;
 
 const GLink = styled(GatsbyLink)`
   color: #1f5aff;
@@ -28,4 +31,8 @@ const Link = styled.a<{ hasIcon?: boolean }>`
       : ""}
 `;
 
-export { GLink, Link };
+const Paragraph = styled.p`
+  line-height: 1.5rem;
+`;
+
+export { Heading, GLink, Link, Paragraph };

@@ -3,17 +3,9 @@ import styled from "styled-components";
 import { StaticImage } from "gatsby-plugin-image";
 /* ------------------ Components ------------------ */
 import Layout from "../components/layout";
-import { Link } from "../components/styled";
+import { Heading, Link, Paragraph } from "../components/styled";
 import IconList from "../components/icon-list";
 import Github from "../images/icons/alt/github";
-
-const Paragraph = styled.p`
-  line-height: 1.5rem;
-`;
-
-const Heading = styled.h2`
-  font-size: 1.75rem;
-`;
 
 const ProjectRow = styled.div<{ reversed?: boolean }>`
   width: 100%;
