@@ -2,17 +2,11 @@ import React from "react";
 import styled from 'styled-components';
 /* ------------------ Components ------------------ */
 import Layout from "../components/layout";
+import { GLink, Link } from "../components/styled";
 
 const Paragraph = styled.p`
   font-size: 1.25rem;
   line-height: 2rem;
-`;
-
-const Link = styled.a`
-  color: #1f5aff;
-  &:hover {
-    color: #0036CC;
-  }
 `;
 
 const Heading = styled.h2`
@@ -33,12 +27,12 @@ const LandingPage = () => {
         React.js, and TypeScript.
       </Paragraph>
       <Paragraph>
-        I'm currently working on <Link href="#rt-editor">RT-Editor</Link>. If you
+        I'm currently working on <GLink to="/projects#revision-editor">Revision Editor</GLink>. If you
         would like to see more of my work, check out the{" "}
-        <Link href="#projects">rest of my projects.</Link>
+        <GLink to="/projects">rest of my projects.</GLink>
       </Paragraph>
       <Paragraph>
-        I recently started a blog. <Link href="#blog">Check it out!</Link>
+        I recently started a blog. <GLink to="/blog">Check it out!</GLink>
       </Paragraph>
     </Layout>
   );

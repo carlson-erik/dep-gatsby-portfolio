@@ -27,12 +27,12 @@ const MainContent = styled.main`
   padding: 0 5rem 0 5rem;
   width: 100%;
 
-  @media only screen and (max-width: 950px) { 
+  @media only screen and (max-width: 1100px) { 
     padding: 0;
   }
 
   & > * {
-    margin-bottom: 0.5rem;
+    margin-bottom: 1rem;
   }
 `;
 
