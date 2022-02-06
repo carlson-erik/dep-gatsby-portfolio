@@ -88,32 +88,33 @@ const ProjectsPage = () => {
           <ProjectName>Revision Editor</ProjectName>
           <DetailContainer largeContent>
             <Paragraph>
-              Project Description content here. Lorem ipsum dolor sit amet,
-              consectetur adipiscing elit. Ut in sollicitudin elit, faucibus
-              egestas lacus. Vivamus cursus nunc vel ipsum scelerisque
-              porttitor. Aenean a consectetur dolor, sed sodales purus. Donec
-              vel ornare nunc.
+              Revision Editor is a rich text Editor React Component that handles
+              all the rendering and editing for rich text content represented as
+              JSON. The goal for this project is to make a component that a user
+              can plug into their application with little to no configuration
+              and have a powerful RTE experience.
             </Paragraph>
           </DetailContainer>
           <DetailContainer largeContent>
             <DetailLabel>Why Did I Build This?</DetailLabel>
             <Paragraph>
-              Motivation for project content here. Lorem ipsum dolor sit amet,
-              consectetur adipiscing elit. Ut in sollicitudin elit, faucibus
-              egestas lacus. Vivamus cursus nunc vel ipsum scelerisque
-              porttitor. Aenean a consectetur dolor, sed sodales purus. Donec
-              vel ornare nunc.
+              While working on other projects, I've bumped into the complex
+              problem that is rich text. From editing to storing to rendering
+              it, rich text content is a difficult problem for all Web
+              Developers. Some solutions involve editing the DOM and storing
+              HTML in the database. I wanted to solve this in React and make it
+              easy for React Developers to enable their users to create rich
+              text content.
             </Paragraph>
           </DetailContainer>
           <DetailContainer>
-            <DetailLabel>Live link:</DetailLabel>
-            <Link href="https://github.com/carlson-erik/rt-editor">
-              revision-editor.io
-            </Link>
-          </DetailContainer>
-          <DetailContainer>
             <DetailLabel>Repository:</DetailLabel>
-            <Link hasIcon href="https://github.com/carlson-erik/rt-editor">
+            <Link
+              target="_blank"
+              rel="noopener noreferrer"
+              hasIcon
+              href="https://github.com/carlson-erik/rt-editor"
+            >
               <Github type="social" />
               Github
             </Link>
@@ -162,11 +163,22 @@ const ProjectsPage = () => {
           </DetailContainer>
           <DetailContainer>
             <DetailLabel>Live link:</DetailLabel>
-            <Link href="http://coddit.dev/">Coddit.dev</Link>
+            <Link
+              target="_blank"
+              rel="noopener noreferrer"
+              href="http://coddit.dev/"
+            >
+              Coddit.dev
+            </Link>
           </DetailContainer>
           <DetailContainer>
             <DetailLabel>Repository:</DetailLabel>
-            <Link hasIcon href="https://github.com/carlson-erik/coddit">
+            <Link
+              target="_blank"
+              rel="noopener noreferrer"
+              hasIcon
+              href="https://github.com/carlson-erik/coddit"
+            >
               <Github type="social" />
               Github
             </Link>
@@ -188,7 +200,7 @@ const ProjectsPage = () => {
       <ProjectRow id="portfolio">
         <PictureContainer>
           <StaticImage
-            src="../images/projects/project-temporary.png"
+            src="../images/projects/portfolio.png"
             alt="project template image"
           />
         </PictureContainer>
@@ -196,31 +208,27 @@ const ProjectsPage = () => {
           <ProjectName>This Portfolio!</ProjectName>
           <DetailContainer largeContent>
             <Paragraph>
-              Project Description content here. Lorem ipsum dolor sit amet,
-              consectetur adipiscing elit. Ut in sollicitudin elit, faucibus
-              egestas lacus. Vivamus cursus nunc vel ipsum scelerisque
-              porttitor. Aenean a consectetur dolor, sed sodales purus. Donec
-              vel ornare nunc.
-            </Paragraph>
-          </DetailContainer>
-          <DetailContainer largeContent>
-            <DetailLabel>Why Did I Build This?</DetailLabel>
-            <Paragraph>
-              Motivation for project content here. Lorem ipsum dolor sit amet,
-              consectetur adipiscing elit. Ut in sollicitudin elit, faucibus
-              egestas lacus. Vivamus cursus nunc vel ipsum scelerisque
-              porttitor. Aenean a consectetur dolor, sed sodales purus. Donec
-              vel ornare nunc.
+              Using Gatsby and TypeScript, I built the very site you're using now.
+              With this site, I want to show off the cool projects that I've
+              built and document my learning journey in a blog!
             </Paragraph>
           </DetailContainer>
           <DetailContainer>
             <DetailLabel>Live link:</DetailLabel>
-            <Link href="http://erikcarlson.dev">ErikCarlson.dev</Link>
+            <Link
+              target="_blank"
+              rel="noopener noreferrer"
+              href="http://erikcarlson.dev"
+            >
+              ErikCarlson.dev
+            </Link>
           </DetailContainer>
           <DetailContainer>
             <DetailLabel>Repository:</DetailLabel>
             <Link
               hasIcon
+              target="_blank"
+              rel="noopener noreferrer"
               href="https://github.com/carlson-erik/carlson-erik.github.io"
             >
               <Github type="social" />

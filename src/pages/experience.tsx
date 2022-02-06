@@ -14,6 +14,10 @@ const Container = styled.div`
 
 const DetailContainer = styled.div`
   padding-bottom: 1rem;
+
+  &:last-child {
+    padding: 0;
+  }
 `;
 
 const InformationContainer = styled.div<{ flipFlexDirection: boolean }>`

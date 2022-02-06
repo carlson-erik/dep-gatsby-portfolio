@@ -3,6 +3,7 @@ import { Link as GatsbyLink } from "gatsby";
 
 const Heading = styled.h2`
   font-size: 1.75rem;
+  margin-block: 0;
 `;
 
 const GLink = styled(GatsbyLink)`
