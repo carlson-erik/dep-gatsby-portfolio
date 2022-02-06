@@ -64,7 +64,7 @@ const ExperiencePage = () => {
         <Heading>Experience</Heading>
         <DetailContainer>
           <InformationContainer>
-            <Title>Front-end Software Engineer</Title>
+            <Title>Front-End Software Engineer</Title>
             <Duration>2021-Present</Duration>
           </InformationContainer>
           <InformationContainer>
@@ -74,8 +74,18 @@ const ExperiencePage = () => {
           <InformationContainer flipFlexDirection>
             <div>This role included responsbilities such as the following:</div>
             <BulletList>
-              <li>something</li>
-              <li>something</li>
+              <li>
+                Architect and implement new features for Data Visualization
+                software using React, TypeScript and D3.
+              </li>
+              <li>
+                Interact with customers to remediate issues they're facing with
+                a focus on accuracy and efficiency.
+              </li>
+              <li>
+                Lead team design/architecture discussions, user story refinement,
+                and other re-occuring Agile planning meetings.
+              </li>
             </BulletList>
           </InformationContainer>
         </DetailContainer>
@@ -91,8 +101,18 @@ const ExperiencePage = () => {
           <InformationContainer flipFlexDirection>
             <div>This role included responsbilities such as the following:</div>
             <BulletList>
-              <li>something</li>
-              <li>something</li>
+              <li>
+                Participate in team design discussions, user story refinement,
+                and other re-occuring Agile planning meetings.
+              </li>
+              <li>
+                Maintain and contribute to company codebase through additional
+                features and bug fixes.
+              </li>
+              <li>
+                Design and implement Front-End features to be used in Customer
+                Relatonship Managmenet and Business Process Management.
+              </li>
             </BulletList>
           </InformationContainer>
         </DetailContainer>
@@ -113,11 +133,11 @@ const ExperiencePage = () => {
                 and amongst other re-occuring Agile planning meetings.
               </li>
               <li>
-                Debug, maintain and contribute to existing codebase, including
-                customer facing bug fixes.
+                Maintain and contribute to company codebase through additional
+                features and bug fixes.
               </li>
               <li>
-                Design and implement Front-end features to be used in Customer
+                Design and implement Front-End features to be used in Customer
                 Relatonship Managmenet and Business Process Management.
               </li>
             </BulletList>

@@ -36,12 +36,12 @@ const LandingPage = () => {
       <Heading>Hey there!</Heading>
       <Paragraph>
         I'm a Full Stack Developer based in New Hampshire, US. I work at{" "}
-        <Link href="https://pega.com/">Pegasystems</Link> as a Front-end
-        Software Engineer. My job involves working with and building{" "}
+        <Link href="https://pega.com/">Pegasystems</Link> as a Front-End
+        Software Engineer. My job involves building and maintaining{" "}
         <Link href="https://en.wikipedia.org/wiki/Data_visualization">
-          Data Visualizations
-        </Link>
-        .
+          Data Visualization
+        </Link>{" "}
+        Software.
       </Paragraph>
       <Paragraph>
         I specialize in designing and creating Front-end solutions with

@@ -17,7 +17,7 @@ const BlogPage = () => {
     <Layout>
       <Heading>Blog</Heading>
       <Paragraph>
-        Some blog stuff here
+        No new posts yet!
       </Paragraph>
     </Layout>
   );

@@ -80,8 +80,8 @@ const ProjectsPage = () => {
       <ProjectRow id="revision-editor">
         <PictureContainer>
           <StaticImage
-            src="../images/projects/project-temporary-green.png"
-            alt=""
+            src="../images/projects/project-temporary.png"
+            alt="project template image"
           />
         </PictureContainer>
         <ContentContainer>
@@ -188,8 +188,8 @@ const ProjectsPage = () => {
       <ProjectRow id="portfolio">
         <PictureContainer>
           <StaticImage
-            src="../images/projects/project-temporary-blue.png"
-            alt="blue project template image"
+            src="../images/projects/project-temporary.png"
+            alt="project template image"
           />
         </PictureContainer>
         <ContentContainer>
@@ -219,7 +219,10 @@ const ProjectsPage = () => {
           </DetailContainer>
           <DetailContainer>
             <DetailLabel>Repository:</DetailLabel>
-            <Link hasIcon href="https://github.com/carlson-erik/carlson-erik.github.io">
+            <Link
+              hasIcon
+              href="https://github.com/carlson-erik/carlson-erik.github.io"
+            >
               <Github type="social" />
               Github
             </Link>
