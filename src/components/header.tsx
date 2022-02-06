@@ -10,7 +10,7 @@ import Dev from "../images/icons/simple/dev";
 
 const Container = styled.header`
   width: 100%;
-  padding-bottom: 1rem;
+  padding: 1rem 0 1rem 0;
   border-bottom: 1px solid #dadada;
   margin-bottom: 1rem;
 
@@ -29,6 +29,7 @@ const StyledTitleLink = styled(Link)`
 const TitleRowContainer = styled.div`
   width: 100%;
   display: flex;
+  padding-bottom: 0.5rem;
 `;
 
 const TitleContainer = styled.div`
@@ -72,6 +73,7 @@ const NavigationContainer = styled.div<{ showMobileMenu: boolean }>`
   @media only screen and (max-width: 700px) {
     flex-direction: column;
     width: 100%;
+    padding-top: 0;
     padding-left: 5rem;
   }
 
@@ -140,6 +142,7 @@ const SocialContainer = styled.div`
   display: flex;
   gap: 0.5rem;
   justify-content: flex-end;
+  padding-bottom: 0.5rem;
 
   @media only screen and (max-width: 700px) {
     flex-direction: row;
@@ -150,7 +153,9 @@ const SocialContainer = styled.div`
 const SocialLink = styled.a`
   display: flex;
   align-items: center;
-  padding: 4px;
+  justify-content: center;
+  height: 2rem;
+  width: 2rem;
   border-radius: 4px;
 `;
 
@@ -178,7 +183,7 @@ const Header = () => {
         <StyledTitleLink to="/">
           <TitleContainer>
             <StaticImage
-              src="../images/portfolio.jpg"
+              src="../images/header/portfolio.jpg"
               width={64}
               height={64}
               alt="erik carlson portfolio picture"
