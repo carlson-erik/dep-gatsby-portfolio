@@ -68,7 +68,7 @@ const ExperiencePage = () => {
         <Heading>Experience</Heading>
         <DetailContainer>
           <InformationContainer>
-            <Title>Front-End Software Engineer</Title>
+            <Title>Senior Software Engineer</Title>
             <Duration>2021-Present</Duration>
           </InformationContainer>
           <InformationContainer>
@@ -95,7 +95,7 @@ const ExperiencePage = () => {
         </DetailContainer>
         <DetailContainer>
           <InformationContainer>
-            <Title>Associate Software Engineer</Title>
+            <Title>Software Engineer</Title>
             <Duration>2017-2020</Duration>
           </InformationContainer>
           <InformationContainer>

@@ -15,12 +15,13 @@ const PicturesContainer = styled.div`
   width: 100%;
   gap: 1rem;
   justify-content: center;
+  flex-wrap: wrap;
 
   & .gatsby-image-wrapper {
     width: 45%;
   }
 
-  @media only screen and (max-width: 700px) {
+  @media only screen and (max-width: 650px) {
     flex-direction: column;
     align-items: center;
 
@@ -54,17 +55,21 @@ const LandingPage = () => {
         <GLink to="/projects">rest of my projects.</GLink>
       </Paragraph>
       <Paragraph>
-        My wife and I have 3 cats, and a dog. Enjoy a couple of pictures of
-        them:
+        My wife and I have 3 cats, and a dog that fill our lives with joy.
+        Here's a couple of pictures of them:
       </Paragraph>
       <PicturesContainer>
         <StaticImage
           src="../images/personal/elliot.png"
-          alt="erik carlon's dog, elliot"
+          alt="erik's dog, elliot"
         />
         <StaticImage
-          src="../images/personal/bandit.jpg"
-          alt="erik carlon's cat, bandit"
+          src="../images/personal/macy.jpg"
+          alt="erik's cat, macy"
+        />
+        <StaticImage
+          src="../images/personal/bandit-nathaniel.jpg"
+          alt="erik's cats, bandit and nathaniel"
         />
       </PicturesContainer>
     </Layout>
