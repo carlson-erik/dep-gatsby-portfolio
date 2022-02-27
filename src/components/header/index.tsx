@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import styled from "styled-components";
 import { StaticImage } from "gatsby-plugin-image";
 import { Link } from "gatsby";
@@ -8,6 +8,8 @@ import Github from "../../images/icons/alt/github";
 import Discord from "../../images/icons/simple/discord";
 import Gmail from "../../images/icons/simple/gmail";
 import Dev from "../../images/icons/simple/dev";
+import { Theme } from "../../theme/types";
+import { ThemeContext } from "../../theme/context";
 
 const Container = styled.header`
   width: 100%;
@@ -22,9 +24,9 @@ const Container = styled.header`
   }
 `;
 
-const StyledTitleLink = styled(Link)`
+const StyledTitleLink = styled(Link)<{theme: Theme}>`
   text-decoration: none;
-  color: black;
+  color: ${props => props.theme.colors.text};
 `;
 
 const TitleRowContainer = styled.div`
@@ -78,7 +80,7 @@ const NavigationContainer = styled.div<{ showMobileMenu: boolean }>`
     padding-left: 5rem;
   }
 
-  @media only screen and (max-width: 350px) {
+  @media only screen and (max-width: 400px) {
     padding-left: 0;
   }
 
@@ -183,10 +185,11 @@ const MenuIcon = styled.svg`
 
 const Header = () => {
   const [showMobileMenu, setShowMobileMenu] = useState<boolean>(false);
+  const { theme } = useContext(ThemeContext);
   return (
     <Container>
       <TitleRowContainer>
-        <StyledTitleLink to="/">
+        <StyledTitleLink to="/" theme={theme}>
           <TitleContainer>
             <StaticImage
               src="../../images/header/portfolio.jpg"
@@ -204,7 +207,7 @@ const Header = () => {
               xmlns="http://www.w3.org/2000/svg"
               viewBox="-5 -7 24 24"
               width="32"
-              fill="black"
+              fill={theme.colors.text}
             >
               <path d="M1 0h5a1 1 0 1 1 0 2H1a1 1 0 1 1 0-2zm7 8h5a1 1 0 0 1 0 2H8a1 1 0 1 1 0-2zM1 4h12a1 1 0 0 1 0 2H1a1 1 0 1 1 0-2z" />
             </MenuIcon>

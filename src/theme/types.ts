@@ -1,7 +1,14 @@
 export type Theme = {
-    id: string;
     name: string;
-    colors: {}
+    colors: {
+      backgroundColor: string;
+      borderLine: string;
+      text: string;
+      link: {
+        text: string;
+        textHover: string;
+      }
+    }
   }
   
   export enum ThemeNames {

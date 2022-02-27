@@ -52,8 +52,10 @@ export default function ThemeSwitch() {
   const handleThemeChange = (nextChecked: boolean) => {
     if(nextChecked){
       setTheme(DarkTheme);
+      window.sessionStorage.setItem('ERIKCARLSON-THEME-NAME', DarkTheme.name);
     } else {
       setTheme(LightTheme);
+      window.sessionStorage.setItem('ERIKCARLSON-THEME-NAME', LightTheme.name);
     }
   }
   return (

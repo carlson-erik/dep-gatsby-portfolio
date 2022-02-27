@@ -1,34 +1,60 @@
-import React, { ReactNode, useState, createContext } from 'react';
-import LightTheme from './light-theme';
-import { Theme, ThemeContextType } from './types'
-
+import React, { useState, createContext, useEffect } from "react";
+import LightTheme from "./light-theme";
+import DarkTheme from "./dark-theme";
+import { Theme, ThemeContextType, ThemeNames } from "./types";
 
 const ThemeContext = createContext<ThemeContextType>({
   theme: LightTheme,
-  setTheme: () => {}
+  setTheme: () => {},
 });
 
 interface ThemeProviderProps {
-  children: ReactNode;
+  children?: React.ReactNode;
+}
+
+function getTimeAwareTheme(): Theme {
+  const currentHour = new Date().getHours();
+  if( currentHour < 7 || currentHour > 17) {
+    return DarkTheme;
+  }
+  return LightTheme;
 }
 
 const ThemeProvider = (props: ThemeProviderProps) => {
   const { children } = props;
-  const [activeTheme, setActiveTheme] = useState<Theme>(LightTheme);
+  const [activeTheme, setActiveTheme] = useState<Theme>(null);
+
+  useEffect(() => {
+    if (!activeTheme) {
+      const storedThemeName = window.sessionStorage.getItem(
+        "ERIKCARLSON-THEME-NAME"
+      );
+      if (storedThemeName) {
+        if (storedThemeName === ThemeNames.LIGHT) {
+          setActiveTheme(LightTheme);
+        } else {
+          setActiveTheme(DarkTheme);
+        }
+      } else {
+        const theme = getTimeAwareTheme();
+        setActiveTheme(theme);
+        window.sessionStorage.setItem("ERIKCARLSON-THEME-NAME", theme.name);
+      }
+    }
+  }, [activeTheme]);
+
+  if (!activeTheme) return null;
 
   return (
-    <ThemeContext.Provider 
+    <ThemeContext.Provider
       value={{
-        theme:activeTheme,
-        setTheme: setActiveTheme
+        theme: activeTheme,
+        setTheme: setActiveTheme,
       }}
     >
       {children}
     </ThemeContext.Provider>
-  )
-}
+  );
+};
 
-export {
-  ThemeContext,
-  ThemeProvider
-}
+export { ThemeContext, ThemeProvider };
