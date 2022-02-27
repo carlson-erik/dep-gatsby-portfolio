@@ -2,11 +2,12 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import { StaticImage } from "gatsby-plugin-image";
 import { Link } from "gatsby";
+import ThemeSwitch from "./theme-switch";
 /* ------------------ Icons ------------------ */
-import Github from "../images/icons/alt/github";
-import Discord from "../images/icons/simple/discord";
-import Gmail from "../images/icons/simple/gmail";
-import Dev from "../images/icons/simple/dev";
+import Github from "../../images/icons/alt/github";
+import Discord from "../../images/icons/simple/discord";
+import Gmail from "../../images/icons/simple/gmail";
+import Dev from "../../images/icons/simple/dev";
 
 const Container = styled.header`
   width: 100%;
@@ -40,7 +41,7 @@ const TitleContainer = styled.div`
     border-radius: 3rem;
   }
 
-  @media only screen and (max-width: 350px) {
+  @media only screen and (max-width: 400px) {
     & .gatsby-image-wrapper {
       display: none !important;
     }
@@ -52,11 +53,11 @@ const Title = styled.h1`
   padding-left: 1rem;
   text-decoration: none;
 
-  @media only screen and (max-width: 400px) {
+  @media only screen and (max-width: 500px) {
     font-size: 2rem;
   }
 
-  @media only screen and (max-width: 350px) {
+  @media only screen and (max-width: 400px) {
     padding: 0;
   }
 `;
@@ -137,6 +138,13 @@ const NavigationLink = styled(Link)`
   }
 `;
 
+const ActionContainer = styled.div`
+  flex-grow: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+`;
+
 const SocialContainer = styled.div`
   flex-grow: 1;
   display: flex;
@@ -163,10 +171,8 @@ const MenuIconContainer = styled.div`
   display: none;
 
   @media only screen and (max-width: 700px) {
-    flex-grow: 1;
     display: flex;
-    justify-content: flex-end;
-    align-items: center;
+    padding: 0 0.5rem 0 0.5rem;
   }
 `;
 
@@ -183,7 +189,7 @@ const Header = () => {
         <StyledTitleLink to="/">
           <TitleContainer>
             <StaticImage
-              src="../images/header/portfolio.jpg"
+              src="../../images/header/portfolio.jpg"
               width={64}
               height={64}
               alt="erik carlson portfolio picture"
@@ -191,28 +197,25 @@ const Header = () => {
             <Title>Erik Carlson</Title>
           </TitleContainer>
         </StyledTitleLink>
-        <MenuIconContainer onClick={() => setShowMobileMenu(!showMobileMenu)}>
-          <MenuIcon
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="-5 -7 24 24"
-            width="32"
-            fill="black"
-          >
-            <path d="M1 0h5a1 1 0 1 1 0 2H1a1 1 0 1 1 0-2zm7 8h5a1 1 0 0 1 0 2H8a1 1 0 1 1 0-2zM1 4h12a1 1 0 0 1 0 2H1a1 1 0 1 1 0-2z" />
-          </MenuIcon>
-        </MenuIconContainer>
+        <ActionContainer>
+          <ThemeSwitch />
+          <MenuIconContainer onClick={() => setShowMobileMenu(!showMobileMenu)}>
+            <MenuIcon
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="-5 -7 24 24"
+              width="32"
+              fill="black"
+            >
+              <path d="M1 0h5a1 1 0 1 1 0 2H1a1 1 0 1 1 0-2zm7 8h5a1 1 0 0 1 0 2H8a1 1 0 1 1 0-2zM1 4h12a1 1 0 0 1 0 2H1a1 1 0 1 1 0-2z" />
+            </MenuIcon>
+          </MenuIconContainer>
+        </ActionContainer>
       </TitleRowContainer>
       <NavigationContainer showMobileMenu={showMobileMenu}>
         <Navigation showMobileMenu={showMobileMenu}>
-          <NavigationLink to="/projects">
-            Projects
-          </NavigationLink>
-          <NavigationLink to="/experience">
-            Experience
-          </NavigationLink>
-          <NavigationLink to="/blog">
-            Blog
-          </NavigationLink>
+          <NavigationLink to="/projects">Projects</NavigationLink>
+          <NavigationLink to="/experience">Experience</NavigationLink>
+          <NavigationLink to="/blog">Blog</NavigationLink>
         </Navigation>
         <SocialContainer>
           <SocialLink
@@ -245,7 +248,7 @@ const Header = () => {
             rel="noopener noreferrer"
             style={{ backgroundColor: "#0a0a0a" }}
           >
-            <Dev color="#FFFFFF" type="social"/>
+            <Dev color="#FFFFFF" type="social" />
           </SocialLink>
         </SocialContainer>
       </NavigationContainer>

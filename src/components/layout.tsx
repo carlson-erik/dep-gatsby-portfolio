@@ -1,5 +1,5 @@
-import React from 'react';
-import styled from 'styled-components';
+import React from "react";
+import styled from "styled-components";
 /* ------------------ Fonts ------------------ */
 import "@fontsource/dm-sans/400.css";
 import "@fontsource/dm-sans/400-italic.css";
@@ -8,17 +8,19 @@ import "@fontsource/dm-sans/500-italic.css";
 import "@fontsource/dm-sans/700.css";
 import "@fontsource/dm-sans/700-italic.css";
 /* ------------------ Global CSS Styles ------------------ */
-import '../styles/global.css';
-import '../styles/reset.css';
+import "../styles/global.css";
+import "../styles/reset.css";
 /* ------------------ Components ------------------ */
-import Header from './header';
+import Header from "./header";
+/* ------------------ Theme ------------------ */
+import { ThemeProvider } from "../theme/context";
 
 const Container = styled.div`
   padding: 0 2rem 0 2rem;
   width: 100%;
-  max-width:1100px;
+  max-width: 1100px;
 
-  @media only screen and (max-width: 700px) { 
+  @media only screen and (max-width: 700px) {
     padding: 0;
   }
 `;
@@ -27,7 +29,7 @@ const MainContent = styled.main`
   padding: 0 5rem 0 5rem;
   width: 100%;
 
-  @media only screen and (max-width: 1100px) { 
+  @media only screen and (max-width: 1100px) {
     padding: 0;
   }
 
@@ -43,13 +45,13 @@ interface LayoutProps {
 const Layout = (props: LayoutProps) => {
   const { children } = props;
   return (
-    <Container>
-      <Header />
-      <MainContent>
-        {children}
-      </MainContent>
-    </Container>
-  )
+    <ThemeProvider>
+      <Container>
+        <Header />
+        <MainContent>{children}</MainContent>
+      </Container>
+    </ThemeProvider>
+  );
 };
 
 export default Layout;
