@@ -13,7 +13,7 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-manifest',
       options: {
-        "icon": "src/images/tab-icon.png"
+        "icon": "src/images/name-tab-icon.png"
       }
     },
     {
