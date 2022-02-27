@@ -1,8 +1,9 @@
 import React from "react";
+import Helmet from "react-helmet";
 import styled from "styled-components";
 /* ------------------ Components ------------------ */
 import Layout from "../components/layout";
-import { Heading as DefaultHeading, Paragraph } from "../components/styled";
+import { Heading as DefaultHeading } from "../components/styled";
 
 const Heading = styled(DefaultHeading)`
   padding-bottom: 0.5rem;
@@ -51,6 +52,10 @@ const BulletList = styled.ul`
 const ExperiencePage = () => {
   return (
     <Layout>
+      <Helmet>
+          <title>Experience | Erik Carlson</title>
+          <meta name="description" content="Software Engineer Erik Carlson's Job Experience" />
+      </Helmet>
       <Container>
         <Heading>Education</Heading>
         <DetailContainer>

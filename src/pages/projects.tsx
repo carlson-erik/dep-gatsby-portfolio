@@ -1,4 +1,5 @@
 import React from "react";
+import Helmet from "react-helmet";
 import styled from "styled-components";
 import { StaticImage } from "gatsby-plugin-image";
 /* ------------------ Components ------------------ */
@@ -76,6 +77,10 @@ const DetailLabel = styled.span`
 const ProjectsPage = () => {
   return (
     <Layout>
+      <Helmet>
+          <title>Projects | Erik Carlson</title>
+          <meta name="description" content="Software Engineer Erik Carlson's Personal Projects" />
+      </Helmet>
       <Heading>What I'm Working On</Heading>
       <ProjectRow id="revision-editor">
         <PictureContainer>

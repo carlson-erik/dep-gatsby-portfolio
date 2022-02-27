@@ -1,6 +1,7 @@
 import { StaticImage } from "gatsby-plugin-image";
 import React from "react";
 import styled from "styled-components";
+import Helmet from "react-helmet";
 /* ------------------ Components ------------------ */
 import Layout from "../components/layout";
 import { Heading, GLink, Link } from "../components/styled";
@@ -34,6 +35,10 @@ const PicturesContainer = styled.div`
 const LandingPage = () => {
   return (
     <Layout>
+      <Helmet>
+          <title>Home | Erik Carlson</title>
+          <meta name="description" content="Software Engineer Erik Carlson's Portfolio Home Page" />
+      </Helmet>
       <Heading>Hey there!</Heading>
       <Paragraph>
         I'm a Full Stack Developer based in New Hampshire, US. I work at{" "}

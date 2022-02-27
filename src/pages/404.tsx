@@ -1,4 +1,5 @@
 import React from "react";
+import Helmet from "react-helmet";
 import styled from "styled-components";
 import Layout from "../components/layout";
 import { Heading } from "../components/styled";
@@ -28,6 +29,10 @@ const ErrorMessage = styled(Heading)`
 const NotFoundPage = () => {
   return (
     <Layout>
+      <Helmet>
+          <title>404: Uh oh! | Erik Carlson</title>
+          <meta name="description" content="Software Engineer Erik Carlson's Portfolio 404" />
+      </Helmet>
       <Container>
         <ErrorMessage>
           <Rocket color='black' type='dev'/>

@@ -1,4 +1,5 @@
 import React from "react";
+import Helmet from "react-helmet";
 import styled from 'styled-components';
 /* ------------------ Components ------------------ */
 import Layout from "../components/layout";
@@ -15,6 +16,10 @@ const Heading = styled.h2`
 const BlogPage = () => {
   return (
     <Layout>
+      <Helmet>
+          <title>Blog | Erik Carlson</title>
+          <meta name="description" content="Software Engineer Erik Carlson's Blog" />
+      </Helmet>
       <Heading>Blog</Heading>
       <Paragraph>
         No new posts yet!
