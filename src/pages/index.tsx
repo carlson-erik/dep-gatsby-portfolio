@@ -1,10 +1,12 @@
 import { StaticImage } from "gatsby-plugin-image";
-import React from "react";
+import React, { useContext } from "react";
 import styled from "styled-components";
 import Helmet from "react-helmet";
 /* ------------------ Components ------------------ */
 import Layout from "../components/layout";
-import { Heading, GLink, Link } from "../components/styled";
+import { Heading, Link } from "../components/styled";
+import { Link as GLink } from "gatsby";
+import { ThemeProvider } from "../theme/context";
 
 const Paragraph = styled.p`
   font-size: 1.25rem;
@@ -34,50 +36,55 @@ const PicturesContainer = styled.div`
 
 const LandingPage = () => {
   return (
-    <Layout>
-      <Helmet>
+    <ThemeProvider>
+      <Layout>
+        <Helmet>
           <title>Home | Erik Carlson</title>
-          <meta name="description" content="Software Engineer Erik Carlson's Portfolio Home Page" />
-      </Helmet>
-      <Heading>Hey there!</Heading>
-      <Paragraph>
-        I'm a Full Stack Developer based in New Hampshire, US. I work at{" "}
-        <Link href="https://pega.com/">Pegasystems</Link> as a Front-End
-        Software Engineer. My job involves building and maintaining{" "}
-        <Link href="https://en.wikipedia.org/wiki/Data_visualization">
-          Data Visualization
-        </Link>{" "}
-        Software.
-      </Paragraph>
-      <Paragraph>
-        I specialize in designing and creating Front-end solutions with
-        React.js, and TypeScript.
-      </Paragraph>
-      <Paragraph>
-        I'm currently working on{" "}
-        <GLink to="/projects#revision-editor">Revision Editor</GLink>. If you
-        would like to see more of my work, check out the{" "}
-        <GLink to="/projects">rest of my projects.</GLink>
-      </Paragraph>
-      <Paragraph>
-        My wife and I have 3 cats, and a dog that fill our lives with joy.
-        Here's a couple of pictures of them:
-      </Paragraph>
-      <PicturesContainer>
-        <StaticImage
-          src="../images/personal/elliot.png"
-          alt="erik's dog, elliot"
-        />
-        <StaticImage
-          src="../images/personal/macy.jpg"
-          alt="erik's cat, macy"
-        />
-        <StaticImage
-          src="../images/personal/bandit-nathaniel.jpg"
-          alt="erik's cats, bandit and nathaniel"
-        />
-      </PicturesContainer>
-    </Layout>
+          <meta
+            name="description"
+            content="Software Engineer Erik Carlson's Portfolio Home Page"
+          />
+        </Helmet>
+        <Heading>Hey there!</Heading>
+        <Paragraph>
+          I'm a Full Stack Developer based in New Hampshire, US. I work at{" "}
+          <Link href="https://pega.com/">Pegasystems</Link> as a Senior Front
+          End Software Engineer. My job involves building and maintaining{" "}
+          <Link href="https://en.wikipedia.org/wiki/Data_visualization">
+            Data Visualization
+          </Link>{" "}
+          Software.
+        </Paragraph>
+        <Paragraph>
+          I specialize in designing and creating Front-end solutions with
+          React.js, and TypeScript.
+        </Paragraph>
+        <Paragraph>
+          I'm currently working on{" "}
+          <GLink to="/projects#revision-editor">Revision Editor</GLink>. If you
+          would like to see more of my work, check out the{" "}
+          <GLink to="/projects">rest of my projects.</GLink>
+        </Paragraph>
+        <Paragraph>
+          My wife and I have 3 cats, and a dog that fill our lives with joy.
+          Here's a couple of pictures of them:
+        </Paragraph>
+        <PicturesContainer>
+          <StaticImage
+            src="../images/personal/elliot.png"
+            alt="erik's dog, elliot"
+          />
+          <StaticImage
+            src="../images/personal/macy.jpg"
+            alt="erik's cat, macy"
+          />
+          <StaticImage
+            src="../images/personal/bandit-nathaniel.jpg"
+            alt="erik's cats, bandit and nathaniel"
+          />
+        </PicturesContainer>
+      </Layout>
+    </ThemeProvider>
   );
 };
 
