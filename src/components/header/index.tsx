@@ -11,10 +11,21 @@ import Dev from "../../images/icons/simple/dev";
 import { Theme } from "../../theme/types";
 import { ThemeContext } from "../../theme/context";
 
-const Container = styled.header`
+const Interactions = styled.div`
+  display: flexbox;
+  flex-grow: 1;
+  justify-content: flex-end;
+
+  @media only screen and (max-width: 700px) {
+    flex-direction: row;
+    justify-content: unset;
+  }
+`;
+
+const Container = styled.header<{theme:Theme}>`
   width: 100%;
   padding: 1rem 0 1rem 0;
-  border-bottom: 1px solid #dadada;
+  border-bottom: 1px solid ${props => props.theme.colors.borderLine};
   margin-bottom: 1rem;
 
   @media only screen and (max-width: 700px) {
@@ -24,9 +35,9 @@ const Container = styled.header`
   }
 `;
 
-const StyledTitleLink = styled(Link)<{theme: Theme}>`
+const StyledTitleLink = styled(Link)<{ theme: Theme }>`
   text-decoration: none;
-  color: ${props => props.theme.colors.text};
+  color: ${(props) => props.theme.colors.text};
 `;
 
 const TitleRowContainer = styled.div`
@@ -43,7 +54,7 @@ const TitleContainer = styled.div`
     border-radius: 3rem;
   }
 
-  @media only screen and (max-width: 400px) {
+  @media only screen and (max-width: 350px) {
     & .gatsby-image-wrapper {
       display: none !important;
     }
@@ -59,7 +70,7 @@ const Title = styled.h1`
     font-size: 2rem;
   }
 
-  @media only screen and (max-width: 400px) {
+  @media only screen and (max-width: 350px) {
     padding: 0;
   }
 `;
@@ -80,24 +91,25 @@ const NavigationContainer = styled.div<{ showMobileMenu: boolean }>`
     padding-left: 5rem;
   }
 
-  @media only screen and (max-width: 400px) {
+  @media only screen and (max-width: 350px) {
     padding-left: 0;
   }
 
-  ${(props) =>
-    props.showMobileMenu
-      ? `
-        @media only screen and (max-width: 700px) {
-          gap: 1rem;
-        }
-      `
-      : ""}
 `;
 
-const Navigation = styled.nav<{ showMobileMenu: boolean }>`
+const Navigation = styled.nav<{ showMobileMenu: boolean, theme: Theme }>`
   display: flex;
   margin: 0;
   padding: 0;
+
+  & > a,
+  & > a:visited {
+    color: ${props => props.theme.colors.link.text};
+  }
+
+  & > a:hover {
+    color: ${props => props.theme.colors.link.textHover};
+  }
 
   ${(props) =>
     !props.showMobileMenu
@@ -109,6 +121,10 @@ const Navigation = styled.nav<{ showMobileMenu: boolean }>`
       : `
         @media only screen and (max-width: 700px) {
           flex-direction: column;
+          border-top: 1px solid ${props.theme.colors.borderLine};
+          border-bottom: 1px solid ${props.theme.colors.borderLine};
+          padding: 0.5rem 0 0.5rem 0;
+          margin-bottom: 1rem;
 
           & > a {
             padding: 1rem 1rem 1rem 0;
@@ -124,20 +140,6 @@ const NavigationLink = styled(Link)`
   text-transform: uppercase;
   text-decoration: none;
   padding: 0.5rem;
-
-  color: #1f5aff;
-
-  &:visited {
-    color: #1f5aff;
-  }
-
-  &:first-child {
-    padding: 0.5rem 0.5rem 0.5rem 0;
-  }
-
-  &:hover {
-    color: #0036cc;
-  }
 `;
 
 const ActionContainer = styled.div`
@@ -148,16 +150,9 @@ const ActionContainer = styled.div`
 `;
 
 const SocialContainer = styled.div`
-  flex-grow: 1;
   display: flex;
   gap: 0.5rem;
-  justify-content: flex-end;
-  padding-bottom: 0.5rem;
-
-  @media only screen and (max-width: 700px) {
-    flex-direction: row;
-    justify-content: unset;
-  }
+  padding-right: 0.5rem;
 `;
 
 const SocialLink = styled.a`
@@ -187,7 +182,7 @@ const Header = () => {
   const [showMobileMenu, setShowMobileMenu] = useState<boolean>(false);
   const { theme } = useContext(ThemeContext);
   return (
-    <Container>
+    <Container theme={theme}>
       <TitleRowContainer>
         <StyledTitleLink to="/" theme={theme}>
           <TitleContainer>
@@ -201,7 +196,6 @@ const Header = () => {
           </TitleContainer>
         </StyledTitleLink>
         <ActionContainer>
-          <ThemeSwitch />
           <MenuIconContainer onClick={() => setShowMobileMenu(!showMobileMenu)}>
             <MenuIcon
               xmlns="http://www.w3.org/2000/svg"
@@ -215,45 +209,40 @@ const Header = () => {
         </ActionContainer>
       </TitleRowContainer>
       <NavigationContainer showMobileMenu={showMobileMenu}>
-        <Navigation showMobileMenu={showMobileMenu}>
+        <Navigation theme={theme} showMobileMenu={showMobileMenu}>
           <NavigationLink to="/projects">Projects</NavigationLink>
           <NavigationLink to="/experience">Experience</NavigationLink>
           <NavigationLink to="/blog">Blog</NavigationLink>
         </Navigation>
-        <SocialContainer>
-          <SocialLink
-            href="#email"
-            target="_blank"
-            rel="noopener noreferrer"
-            style={{ backgroundColor: "#FFFFFF" }}
-          >
-            <Gmail type="social" />
-          </SocialLink>
-          <SocialLink
-            href="https://github.com/carlson-erik/"
-            target="_blank"
-            rel="noopener noreferrer"
-            style={{ backgroundColor: "#151013" }}
-          >
-            <Github color="#FFFFFF" type="social" />
-          </SocialLink>
-          <SocialLink
-            href="https://discordapp.com/users/154788114953535488"
-            target="_blank"
-            rel="noopener noreferrer"
-            style={{ backgroundColor: "#5865F2" }}
-          >
-            <Discord color="#FFFFFF" type="social" />
-          </SocialLink>
-          <SocialLink
-            href="https://dev.to/br0sidan"
-            target="_blank"
-            rel="noopener noreferrer"
-            style={{ backgroundColor: "#0a0a0a" }}
-          >
-            <Dev color="#FFFFFF" type="social" />
-          </SocialLink>
-        </SocialContainer>
+        <Interactions>
+          <SocialContainer>
+            <SocialLink
+              href="#email"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ backgroundColor: "#FFFFFF" }}
+            >
+              <Gmail type="social" />
+            </SocialLink>
+            <SocialLink
+              href="https://github.com/carlson-erik/"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ backgroundColor: "#151013" }}
+            >
+              <Github color="#FFFFFF" type="social" />
+            </SocialLink>
+            <SocialLink
+              href="https://dev.to/br0sidan"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ backgroundColor: "#0a0a0a" }}
+            >
+              <Dev color="#FFFFFF" type="social" />
+            </SocialLink>
+          </SocialContainer>
+          <ThemeSwitch />
+        </Interactions>
       </NavigationContainer>
     </Container>
   );

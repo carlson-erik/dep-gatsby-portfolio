@@ -1,14 +1,26 @@
 import { StaticImage } from "gatsby-plugin-image";
-import React from "react";
+import React, { useContext } from "react";
 import styled from "styled-components";
 import Helmet from "react-helmet";
 /* ------------------ Components ------------------ */
 import Layout from "../components/layout";
-import { Heading, GLink, Link } from "../components/styled";
+import { Heading, Link } from "../components/styled";
+import { Link as GLink } from "gatsby";
+import { Theme } from "../theme/types";
+import { ThemeContext } from "../theme/context";
 
-const Paragraph = styled.p`
+const Paragraph = styled.p<{theme:Theme}>`
   font-size: 1.25rem;
   line-height: 2rem;
+
+  & a,
+  & a:visited {
+    color: ${props => props.theme.colors.link.text} !important;
+  }
+
+  & a:hover {
+    color: ${props => props.theme.colors.link.textHover} !important;
+  }
 `;
 
 const PicturesContainer = styled.div`
@@ -33,6 +45,7 @@ const PicturesContainer = styled.div`
 `;
 
 const LandingPage = () => {
+  const { theme } = useContext(ThemeContext);
   return (
     <Layout>
       <Helmet>
@@ -40,7 +53,7 @@ const LandingPage = () => {
           <meta name="description" content="Software Engineer Erik Carlson's Portfolio Home Page" />
       </Helmet>
       <Heading>Hey there!</Heading>
-      <Paragraph>
+      <Paragraph theme={theme}>
         I'm a Full Stack Developer based in New Hampshire, US. I work at{" "}
         <Link href="https://pega.com/">Pegasystems</Link> as a Front-End
         Software Engineer. My job involves building and maintaining{" "}
@@ -49,17 +62,17 @@ const LandingPage = () => {
         </Link>{" "}
         Software.
       </Paragraph>
-      <Paragraph>
+      <Paragraph theme={theme}>
         I specialize in designing and creating Front-end solutions with
         React.js, and TypeScript.
       </Paragraph>
-      <Paragraph>
+      <Paragraph theme={theme}>
         I'm currently working on{" "}
         <GLink to="/projects#revision-editor">Revision Editor</GLink>. If you
         would like to see more of my work, check out the{" "}
         <GLink to="/projects">rest of my projects.</GLink>
       </Paragraph>
-      <Paragraph>
+      <Paragraph theme={theme}>
         My wife and I have 3 cats, and a dog that fill our lives with joy.
         Here's a couple of pictures of them:
       </Paragraph>
