@@ -15,7 +15,7 @@ const Container = styled.div`
 `;
 
 const DetailContainer = styled.div`
-  padding-bottom: 1rem;
+  padding-bottom: 1.5rem;
 
   &:last-child {
     padding: 0;
@@ -26,10 +26,11 @@ const InformationContainer = styled.div<{ flipFlexDirection: boolean }>`
   display: flex;
   width: 100%;
   flex-direction: ${(props) => (props.flipFlexDirection ? "column" : "row")};
+  padding-top: ${props => props.flipFlexDirection ? '0.5rem' : '0'};
 `;
 
 const Title = styled.span`
-  font-weight: 500;
+  font-weight: 600;
 `;
 
 const Duration = styled.span`
@@ -78,7 +79,7 @@ const ExperiencePage = () => {
           <Heading>Experience</Heading>
           <DetailContainer>
             <InformationContainer>
-              <Title>Senior Software Engineer</Title>
+              <Title>Senior Front End Software Engineer</Title>
               <Duration>2021-Present</Duration>
             </InformationContainer>
             <InformationContainer>

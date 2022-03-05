@@ -149,7 +149,7 @@ const ProjectsPage = () => {
             />
           </PictureContainer>
           <ContentContainer>
-            <ProjectName>Coddit</ProjectName>
+            <ProjectName>coddit</ProjectName>
             <DetailContainer largeContent>
               <Paragraph>
                 Coddit is a web application that renders Reddit as if it were
@@ -176,7 +176,7 @@ const ProjectsPage = () => {
                 rel="noopener noreferrer"
                 href="http://coddit.dev/"
               >
-                Coddit.dev
+                coddit.dev
               </Link>
             </DetailContainer>
             <DetailContainer>
@@ -227,7 +227,7 @@ const ProjectsPage = () => {
                 rel="noopener noreferrer"
                 href="http://erikcarlson.dev"
               >
-                ErikCarlson.dev
+                erikcarlson.dev
               </Link>
             </DetailContainer>
             <DetailContainer>

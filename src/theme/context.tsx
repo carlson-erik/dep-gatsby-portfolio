@@ -27,7 +27,7 @@ const ThemeProvider = (props: ThemeProviderProps) => {
   useEffect(() => {
     if (!activeTheme) {
       const storedThemeName = window.sessionStorage.getItem(
-        "ERIKCARLSON-THEME-NAME"
+        "erikcarlson.dev-theme-name"
       );
       if (storedThemeName) {
         if (storedThemeName === ThemeNames.LIGHT) {
@@ -38,7 +38,7 @@ const ThemeProvider = (props: ThemeProviderProps) => {
       } else {
         const theme = getTimeAwareTheme();
         setActiveTheme(theme);
-        window.sessionStorage.setItem("ERIKCARLSON-THEME-NAME", theme.name);
+        window.sessionStorage.setItem("erikcarlson.dev-theme-name", theme.name);
       }
     }
   }, [activeTheme]);

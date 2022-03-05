@@ -66,7 +66,7 @@ const Title = styled.h1`
   padding-left: 1rem;
   text-decoration: none;
 
-  @media only screen and (max-width: 500px) {
+  @media only screen and (max-width: 400px) {
     font-size: 2rem;
   }
 
