@@ -16,7 +16,7 @@ const Interactions = styled.div`
   flex-grow: 1;
   justify-content: flex-end;
 
-  @media only screen and (max-width: 700px) {
+  @media only screen and (max-width: 625px) {
     flex-direction: row;
     justify-content: unset;
   }
@@ -28,7 +28,7 @@ const Container = styled.header<{theme:Theme}>`
   border-bottom: 1px solid ${props => props.theme.colors.borderLine};
   margin-bottom: 1rem;
 
-  @media only screen and (max-width: 700px) {
+  @media only screen and (max-width: 625px) {
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -37,7 +37,7 @@ const Container = styled.header<{theme:Theme}>`
 
 const StyledTitleLink = styled(Link)<{ theme: Theme }>`
   text-decoration: none;
-  color: ${(props) => props.theme.colors.text};
+  color: ${(props) => props.theme.colors.text} !important;
 `;
 
 const TitleRowContainer = styled.div`
@@ -84,7 +84,7 @@ const NavigationContainer = styled.div<{ showMobileMenu: boolean }>`
     margin: 0;
   }
 
-  @media only screen and (max-width: 700px) {
+  @media only screen and (max-width: 625px) {
     flex-direction: column;
     width: 100%;
     padding-top: 0;
@@ -114,12 +114,12 @@ const Navigation = styled.nav<{ showMobileMenu: boolean, theme: Theme }>`
   ${(props) =>
     !props.showMobileMenu
       ? `
-        @media only screen and (max-width: 700px) {
+        @media only screen and (max-width: 625px) {
           display: none;
         }
       `
       : `
-        @media only screen and (max-width: 700px) {
+        @media only screen and (max-width: 625px) {
           flex-direction: column;
           border-top: 1px solid ${props.theme.colors.borderLine};
           border-bottom: 1px solid ${props.theme.colors.borderLine};
@@ -149,6 +149,15 @@ const ActionContainer = styled.div`
   align-items: center;
 `;
 
+const ThemeSwitchContainer = styled.div`
+  @media only screen and (max-width: 625px) {
+    flex-grow: 1;
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+  }
+`;
+
 const SocialContainer = styled.div`
   display: flex;
   gap: 0.5rem;
@@ -167,7 +176,7 @@ const SocialLink = styled.a`
 const MenuIconContainer = styled.div`
   display: none;
 
-  @media only screen and (max-width: 700px) {
+  @media only screen and (max-width: 625px) {
     display: flex;
     padding: 0 0.5rem 0 0.5rem;
   }
@@ -241,7 +250,9 @@ const Header = () => {
               <Dev color="#FFFFFF" type="social" />
             </SocialLink>
           </SocialContainer>
-          <ThemeSwitch />
+          <ThemeSwitchContainer>
+            <ThemeSwitch />
+          </ThemeSwitchContainer>
         </Interactions>
       </NavigationContainer>
     </Container>

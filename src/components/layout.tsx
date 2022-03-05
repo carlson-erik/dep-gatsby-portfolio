@@ -16,13 +16,22 @@ import Header from "./header";
 import { ThemeProvider, ThemeContext } from "../theme/context";
 import { Theme } from '../theme/types';
 
-const Container = styled.div`
+const Container = styled.div<{theme: Theme}>`
   padding: 0 2rem 0 2rem;
   width: 100%;
   max-width: 1100px;
 
-  @media only screen and (max-width: 700px) {
+  @media only screen and (max-width: 625px) {
     padding: 0;
+  }
+
+  & a,
+  & a:visited {
+    color: ${(props) => props.theme.colors.link.text};
+  }
+
+  & a:hover {
+    color: ${(props) => props.theme.colors.link.textHover};
   }
 `;
 
@@ -50,28 +59,17 @@ interface LayoutProps {
   children?: React.ReactNode;
 }
 
-const LayoutContent = (props: LayoutProps) => {
+const Layout = (props: LayoutProps) => {
   const { children } = props;
   const { theme } = useContext(ThemeContext);
   return (
     <>
       <GlobalStyle theme={theme} />
-      <Container>
+      <Container theme={theme}>
         <Header />
         <MainContent>{children}</MainContent>
       </Container>
     </>
-  );
-};
-
-const Layout = (props: LayoutProps) => {
-  const { children } = props;
-  return (
-    <ThemeProvider>
-      <LayoutContent>
-        {children}
-      </LayoutContent>
-    </ThemeProvider>
   );
 };
 

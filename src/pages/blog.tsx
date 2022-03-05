@@ -1,8 +1,9 @@
 import React from "react";
 import Helmet from "react-helmet";
-import styled from 'styled-components';
+import styled from "styled-components";
 /* ------------------ Components ------------------ */
 import Layout from "../components/layout";
+import { ThemeProvider } from "../theme/context";
 
 const Paragraph = styled.p`
   font-size: 1.25rem;
@@ -15,16 +16,19 @@ const Heading = styled.h2`
 
 const BlogPage = () => {
   return (
-    <Layout>
-      <Helmet>
+    <ThemeProvider>
+      <Layout>
+        <Helmet>
           <title>Blog | Erik Carlson</title>
-          <meta name="description" content="Software Engineer Erik Carlson's Blog" />
-      </Helmet>
-      <Heading>Blog</Heading>
-      <Paragraph>
-        No new posts yet!
-      </Paragraph>
-    </Layout>
+          <meta
+            name="description"
+            content="Software Engineer Erik Carlson's Blog"
+          />
+        </Helmet>
+        <Heading>Blog</Heading>
+        <Paragraph>No new posts yet!</Paragraph>
+      </Layout>
+    </ThemeProvider>
   );
 };
 

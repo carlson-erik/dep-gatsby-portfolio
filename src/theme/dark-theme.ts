@@ -7,8 +7,8 @@ const DarkTheme: Theme = {
     borderLine: '#343740',
     text: '#D1D4D9',
     link: {
-      text: '#1f5aff',
-      textHover: '#0036cc'
+      text: '#70A7F5',
+      textHover: '#0F62D7'
     }
   }
 }
