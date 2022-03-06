@@ -13,10 +13,10 @@ import "../styles/reset.css";
 /* ------------------ Components ------------------ */
 import Header from "./header";
 /* ------------------ Theme ------------------ */
-import { ThemeProvider, ThemeContext } from "../theme/context";
-import { Theme } from '../theme/types';
+import { ThemeContext } from "../theme/context";
+import { Theme } from "../theme/types";
 
-const Container = styled.div<{theme: Theme}>`
+const Container = styled.div<{ theme: Theme }>`
   padding: 0 2rem 0 2rem;
   width: 100%;
   max-width: 1100px;
@@ -48,10 +48,6 @@ const MainContent = styled.main`
 
   @media only screen and (max-width: 1100px) {
     padding: 0;
-  }
-
-  & > * {
-    margin-bottom: 1rem;
   }
 `;
 

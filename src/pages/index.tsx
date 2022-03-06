@@ -11,6 +11,11 @@ import { ThemeProvider } from "../theme/context";
 const Paragraph = styled.p`
   font-size: 1.25rem;
   line-height: 2rem;
+  padding-bottom: 1rem;
+
+  &:last-child {
+    padding-bottom: 0;
+  }
 `;
 
 const PicturesContainer = styled.div`
@@ -45,11 +50,11 @@ const LandingPage = () => {
             content="Software Engineer Erik Carlson's Portfolio Home Page"
           />
         </Helmet>
-        <Heading>Hey there!</Heading>
+        <Heading>Hi there!</Heading>
         <Paragraph>
           I'm a Full Stack Developer based in New Hampshire, US. I work at{" "}
-          <Link href="https://pega.com/">Pegasystems</Link> as a Senior Front
-          End Software Engineer. My job involves building and maintaining{" "}
+          <Link href="https://pega.com/">Pegasystems</Link> as a Senior Software
+          Engineer. Here I build and maintain{" "}
           <Link href="https://en.wikipedia.org/wiki/Data_visualization">
             Data Visualization
           </Link>{" "}

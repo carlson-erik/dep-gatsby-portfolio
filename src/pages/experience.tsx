@@ -3,22 +3,24 @@ import Helmet from "react-helmet";
 import styled from "styled-components";
 /* ------------------ Components ------------------ */
 import Layout from "../components/layout";
-import { Heading as DefaultHeading } from "../components/styled";
+import SkillList from "../components/skill-list";
+import { Heading } from "../components/styled";
 import { ThemeProvider } from "../theme/context";
-
-const Heading = styled(DefaultHeading)`
-  padding-bottom: 0.5rem;
-`;
 
 const Container = styled.div`
   width: 100%;
+  padding-bottom: 1rem;
+
+  &:last-child {
+    padding-bottom: 0;
+  }
 `;
 
 const DetailContainer = styled.div`
-  padding-bottom: 1.5rem;
+  padding-bottom: 1rem;
 
   &:last-child {
-    padding: 0;
+    padding-bottom: 0;
   }
 `;
 
@@ -26,17 +28,20 @@ const InformationContainer = styled.div<{ flipFlexDirection: boolean }>`
   display: flex;
   width: 100%;
   flex-direction: ${(props) => (props.flipFlexDirection ? "column" : "row")};
-  padding-top: ${props => props.flipFlexDirection ? '0.5rem' : '0'};
+  ${(props) => (!props.flipFlexDirection ? "align-items: center;" : "")}
 `;
 
-const Title = styled.span`
-  font-weight: 600;
+const Title = styled.div`
+  font-size: 1.25rem;
+  font-weight: bold;
+  flex-basis: 70%;
 `;
 
 const Duration = styled.span`
   flex-grow: 1;
   display: flex;
   flex-direction: row-reverse;
+  flex-basis: 30%;
 `;
 
 const Business = styled.span`
@@ -49,6 +54,15 @@ const Location = styled.span`
 
 const BulletList = styled.ul`
   margin: 0;
+`;
+
+const Label = styled.span`
+  margin-right: 0.5rem;
+  font-weight: 500;
+`;
+
+const SkillListContainer = styled.div`
+  flex-grow: 1;
 `;
 
 const ExperiencePage = () => {
@@ -67,7 +81,7 @@ const ExperiencePage = () => {
           <DetailContainer>
             <InformationContainer>
               <Title>B.S. in Computer Science</Title>
-              <Duration>2013-2017</Duration>
+              <Duration>'13 to '16</Duration>
             </InformationContainer>
             <InformationContainer>
               <Business>University of New Hampshire</Business>
@@ -79,8 +93,8 @@ const ExperiencePage = () => {
           <Heading>Experience</Heading>
           <DetailContainer>
             <InformationContainer>
-              <Title>Senior Front End Software Engineer</Title>
-              <Duration>2021-Present</Duration>
+              <Title>Senior Software Engineer</Title>
+              <Duration>'21 to Now</Duration>
             </InformationContainer>
             <InformationContainer>
               <Business>Pegasystems</Business>
@@ -105,11 +119,24 @@ const ExperiencePage = () => {
                 </li>
               </BulletList>
             </InformationContainer>
+            <InformationContainer>
+              <Label>Relevant skills:</Label>
+              <SkillListContainer>
+                <SkillList
+                  skills={[
+                    { type: "react" },
+                    { type: "typescript" },
+                    { type: "d3" },
+                    { type: "redux" },
+                  ]}
+                />
+              </SkillListContainer>
+            </InformationContainer>
           </DetailContainer>
           <DetailContainer>
             <InformationContainer>
               <Title>Software Engineer</Title>
-              <Duration>2017-2020</Duration>
+              <Duration>'17 to '20</Duration>
             </InformationContainer>
             <InformationContainer>
               <Business>Pegasystems</Business>
@@ -134,11 +161,24 @@ const ExperiencePage = () => {
                 </li>
               </BulletList>
             </InformationContainer>
+            <InformationContainer>
+              <Label>Relevant skills:</Label>
+              <SkillListContainer>
+                <SkillList
+                  skills={[
+                    { type: "react" },
+                    { type: "javascript" },
+                    { type: "d3" },
+                    { type: "redux" },
+                  ]}
+                />
+              </SkillListContainer>
+            </InformationContainer>
           </DetailContainer>
           <DetailContainer>
             <InformationContainer>
               <Title>Software Engineer Intern</Title>
-              <Duration>Summer 2016</Duration>
+              <Duration>Summer '16</Duration>
             </InformationContainer>
             <InformationContainer>
               <Business>Pegasystems</Business>
@@ -163,11 +203,23 @@ const ExperiencePage = () => {
                 </li>
               </BulletList>
             </InformationContainer>
+            <InformationContainer>
+              <Label>Relevant skills:</Label>
+              <SkillListContainer>
+                <SkillList
+                  skills={[
+                    { type: "javascript" },
+                    { type: "css" },
+                    { type: "java" },
+                  ]}
+                />
+              </SkillListContainer>
+            </InformationContainer>
           </DetailContainer>
           <DetailContainer>
             <InformationContainer>
               <Title>IPSec and IKEv2 Technician</Title>
-              <Duration>2014-2016</Duration>
+              <Duration>'14 to '16</Duration>
             </InformationContainer>
             <InformationContainer>
               <Business>UNH Interoperability Lab</Business>

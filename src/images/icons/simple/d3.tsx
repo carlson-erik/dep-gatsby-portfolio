@@ -18,8 +18,8 @@ const D3 = (props: IconProps) => {
         x2="91.053"
         y2="-49.515"
       >
-        <stop offset="0" stop-color={fillColor}></stop>
-        <stop offset="1" stop-color={fillColor}></stop>
+        <stop offset="0" stopColor={fillColor}></stop>
+        <stop offset="1" stopColor={fillColor}></stop>
       </linearGradient>
       <path
         fill="url(#d3js-plain-a)"
@@ -33,8 +33,8 @@ const D3 = (props: IconProps) => {
         x2="39.382"
         y2="-47.925"
       >
-        <stop offset="0" stop-color={fillColor}></stop>
-        <stop offset="1" stop-color={fillColor}></stop>
+        <stop offset="0" stopColor={fillColor}></stop>
+        <stop offset="1" stopColor={fillColor}></stop>
       </linearGradient>
       <path
         fill={fillColor}
