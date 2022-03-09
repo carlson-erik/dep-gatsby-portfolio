@@ -8,7 +8,8 @@ const LightTheme: Theme = {
     text: '#1E2127',
     link: {
       text: '#1f5aff',
-      textHover: '#0036cc'
+      textHover: '#0036cc',
+      iconHover: '#E5E8EC',
     }
   }
 }

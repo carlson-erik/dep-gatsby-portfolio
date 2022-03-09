@@ -7,6 +7,7 @@ export type Theme = {
       link: {
         text: string;
         textHover: string;
+        iconHover: string;
       }
     }
   }

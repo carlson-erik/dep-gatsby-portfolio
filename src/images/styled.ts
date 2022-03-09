@@ -7,8 +7,8 @@ const SocialIcon = styled.svg`
 `;
 
 const DevIcon = styled.svg`
-  height: 2rem;
-  width: 2rem;
+  height: 1.5rem;
+  width: 1.5rem;
 `;
 
 export {

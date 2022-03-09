@@ -1,6 +1,8 @@
-import React from "react";
+import React, { useContext } from "react";
 import styled from "styled-components";
 import { Link } from "./styled";
+import { ThemeContext } from '../theme/context'
+import { Theme } from '../theme/types';
 /* ------------------ Types ------------------ */
 import { AltIconProps, IconProps } from "../images/types";
 /* ------------------ Simple Icons ------------------ */
@@ -22,14 +24,21 @@ import Github from "../images/icons/alt/github";
 const Container = styled.div`
   width: 100%;
   display: flex;
-  gap: 0.75rem;
+  gap: 0.5rem;
   flex-wrap: wrap;
 `;
 
-const IconLink = styled(Link)`
+const IconLink = styled(Link)<{ theme: Theme}>`
   display: flex;
   justify-content: center;
   align-items: center;
+
+  padding: 0.5rem;
+  border-radius: 4px;
+
+  &:hover {
+    background-color: ${props => props.theme.colors.link.iconHover};
+  }
 `;
 
 export type AltIconType = "github" | "nodejs" | "react";
@@ -146,6 +155,7 @@ const ALT_ICON_MAP: Record<AltIconType, SkillLink> = {
 
 const SkillList = (props: SkillListProps) => {
   const { skills } = props;
+  const { theme } = useContext(ThemeContext)
   return (
     <Container>
       {skills.map((skill) => {
@@ -172,6 +182,7 @@ const SkillList = (props: SkillListProps) => {
             target="_blank"
             rel="noopener noreferrer"
             title={SkillCompInfo.title}
+            theme={theme}
           >
             {IconComponent}
           </IconLink>

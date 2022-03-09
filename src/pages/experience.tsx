@@ -9,7 +9,7 @@ import { ThemeProvider } from "../theme/context";
 
 const Container = styled.div`
   width: 100%;
-  padding-bottom: 1rem;
+  padding-bottom: 1.5rem;
 
   &:last-child {
     padding-bottom: 0;
@@ -17,7 +17,7 @@ const Container = styled.div`
 `;
 
 const DetailContainer = styled.div`
-  padding-bottom: 1rem;
+  padding-bottom: 1.5rem;
 
   &:last-child {
     padding-bottom: 0;
@@ -29,6 +29,10 @@ const InformationContainer = styled.div<{ flipFlexDirection: boolean }>`
   width: 100%;
   flex-direction: ${(props) => (props.flipFlexDirection ? "column" : "row")};
   ${(props) => (!props.flipFlexDirection ? "align-items: center;" : "")}
+`;
+
+const SkillsContainer = styled(InformationContainer)`
+  padding-top: 0.5rem;
 `;
 
 const Title = styled.div`
@@ -119,7 +123,7 @@ const ExperiencePage = () => {
                 </li>
               </BulletList>
             </InformationContainer>
-            <InformationContainer>
+            <SkillsContainer>
               <Label>Relevant skills:</Label>
               <SkillListContainer>
                 <SkillList
@@ -131,7 +135,7 @@ const ExperiencePage = () => {
                   ]}
                 />
               </SkillListContainer>
-            </InformationContainer>
+            </SkillsContainer>
           </DetailContainer>
           <DetailContainer>
             <InformationContainer>
@@ -157,11 +161,11 @@ const ExperiencePage = () => {
                 </li>
                 <li>
                   Design and implement Front-End features to be used in Customer
-                  Relatonship Managmenet and Business Process Management.
+                  Relatonship Management and Business Process Management.
                 </li>
               </BulletList>
             </InformationContainer>
-            <InformationContainer>
+            <SkillsContainer>
               <Label>Relevant skills:</Label>
               <SkillListContainer>
                 <SkillList
@@ -173,7 +177,7 @@ const ExperiencePage = () => {
                   ]}
                 />
               </SkillListContainer>
-            </InformationContainer>
+            </SkillsContainer>
           </DetailContainer>
           <DetailContainer>
             <InformationContainer>
@@ -203,7 +207,7 @@ const ExperiencePage = () => {
                 </li>
               </BulletList>
             </InformationContainer>
-            <InformationContainer>
+            <SkillsContainer>
               <Label>Relevant skills:</Label>
               <SkillListContainer>
                 <SkillList
@@ -214,7 +218,7 @@ const ExperiencePage = () => {
                   ]}
                 />
               </SkillListContainer>
-            </InformationContainer>
+            </SkillsContainer>
           </DetailContainer>
           <DetailContainer>
             <InformationContainer>

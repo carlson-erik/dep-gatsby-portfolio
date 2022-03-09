@@ -8,7 +8,8 @@ const DarkTheme: Theme = {
     text: '#D1D4D9',
     link: {
       text: '#70A7F5',
-      textHover: '#0F62D7'
+      textHover: '#0F62D7',
+      iconHover: '#343740',
     }
   }
 }
