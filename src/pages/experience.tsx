@@ -124,7 +124,7 @@ const ExperiencePage = () => {
               </BulletList>
             </InformationContainer>
             <SkillsContainer>
-              <Label>Relevant skills:</Label>
+              <Label>Relevant tech:</Label>
               <SkillListContainer>
                 <SkillList
                   skills={[
@@ -166,7 +166,7 @@ const ExperiencePage = () => {
               </BulletList>
             </InformationContainer>
             <SkillsContainer>
-              <Label>Relevant skills:</Label>
+              <Label>Relevant tech:</Label>
               <SkillListContainer>
                 <SkillList
                   skills={[
@@ -208,7 +208,7 @@ const ExperiencePage = () => {
               </BulletList>
             </InformationContainer>
             <SkillsContainer>
-              <Label>Relevant skills:</Label>
+              <Label>Relevant tech:</Label>
               <SkillListContainer>
                 <SkillList
                   skills={[

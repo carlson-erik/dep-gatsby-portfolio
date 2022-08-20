@@ -109,7 +109,7 @@ const Content = () => {
               and often involves lots of hacky solutions. I found myself
               presented with two different solutions:
             </Paragraph>
-            <ol>
+            <ul>
               <li>
                 <DetailLabel>Solution A</DetailLabel>
                 <ul>
@@ -128,7 +128,7 @@ const Content = () => {
                   <li>Forces you to solve a project you don't need to</li>
                 </ul>
               </li>
-            </ol>
+            </ul>
             <Paragraph>
               Given these options, I decided that it would be difficult to work
               on creating a complex API.This is something that a large company
@@ -158,7 +158,7 @@ const Content = () => {
             </Link>
           </DetailContainer>
           <DetailContainer>
-            <DetailLabel>Skills utilized:</DetailLabel>
+            <DetailLabel>Relevant tech:</DetailLabel>
             <SkillListContainer>
               <SkillList skills={[{ type: "react" }, { type: "typescript" }]} />
             </SkillListContainer>
@@ -216,7 +216,7 @@ const Content = () => {
             </Link>
           </DetailContainer>
           <DetailContainer>
-            <DetailLabel>Skills utilized:</DetailLabel>
+            <DetailLabel>Relevant tech:</DetailLabel>
             <SkillListContainer>
               <SkillList
                 skills={[
@@ -267,7 +267,7 @@ const Content = () => {
             </Link>
           </DetailContainer>
           <DetailContainer>
-            <DetailLabel>Skills utilized:</DetailLabel>
+            <DetailLabel>Relevant tech:</DetailLabel>
             <SkillListContainer>
               <SkillList
                 skills={[

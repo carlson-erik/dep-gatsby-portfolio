@@ -22,10 +22,10 @@ const Interactions = styled.div`
   }
 `;
 
-const Container = styled.header<{theme:Theme}>`
+const Container = styled.header<{ theme: Theme }>`
   width: 100%;
   padding: 1rem 0 1rem 0;
-  border-bottom: 1px solid ${props => props.theme.colors.borderLine};
+  border-bottom: 1px solid ${(props) => props.theme.colors.borderLine};
   margin-bottom: 1rem;
 
   @media only screen and (max-width: 625px) {
@@ -94,21 +94,20 @@ const NavigationContainer = styled.div<{ showMobileMenu: boolean }>`
   @media only screen and (max-width: 350px) {
     padding-left: 0;
   }
-
 `;
 
-const Navigation = styled.nav<{ showMobileMenu: boolean, theme: Theme }>`
+const Navigation = styled.nav<{ showMobileMenu: boolean; theme: Theme }>`
   display: flex;
   margin: 0;
   padding: 0;
 
   & > a,
   & > a:visited {
-    color: ${props => props.theme.colors.link.text};
+    color: ${(props) => props.theme.colors.link.text};
   }
 
   & > a:hover {
-    color: ${props => props.theme.colors.link.textHover};
+    color: ${(props) => props.theme.colors.link.textHover};
   }
 
   ${(props) =>
@@ -196,7 +195,7 @@ const Header = () => {
         <StyledTitleLink to="/" theme={theme}>
           <TitleContainer>
             <StaticImage
-              src="../../images/header/portfolio.jpg"
+              src="../../images/personal/portfolio.png"
               width={64}
               height={64}
               alt="erik carlson portfolio picture"
