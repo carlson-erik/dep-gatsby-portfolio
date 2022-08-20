@@ -1,5 +1,5 @@
 import { StaticImage } from "gatsby-plugin-image";
-import React, { useContext } from "react";
+import React from "react";
 import styled from "styled-components";
 import Helmet from "react-helmet";
 /* ------------------ Components ------------------ */
@@ -66,8 +66,8 @@ const LandingPage = () => {
         </Paragraph>
         <Paragraph>
           I'm currently working on{" "}
-          <GLink to="/projects#revision-editor">Revision Editor</GLink>. If you
-          would like to see more of my work, check out the{" "}
+          <GLink to="/projects#proto-editor">ProtoEditor</GLink>. If you would
+          like to see more of my work, check out the{" "}
           <GLink to="/projects">rest of my projects.</GLink>
         </Paragraph>
         <Paragraph>

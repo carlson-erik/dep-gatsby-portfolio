@@ -8,7 +8,6 @@ import { Heading, Link, Paragraph } from "../components/styled";
 import SkillList from "../components/skill-list";
 import { ThemeContext, ThemeProvider } from "../theme/context";
 import { Theme } from "../theme/types";
-import TemplateImage from "../components/template-image";
 
 const ProjectRow = styled.div<{ reversed?: boolean }>`
   width: 100%;
@@ -32,12 +31,6 @@ const PictureContainer = styled.div<{ theme: Theme }>`
       ${(props) => props.theme.colors?.borderLine || "#888888"};
     border: 1px solid ${(props) => props.theme.colors.borderLine || "#888888"};
     border-radius: 0.25rem;
-  }
-
-  @media only screen and (max-width: 850px) and (min-width: 500px) {
-    & .gatsby-image-wrapper {
-      width: 50%;
-    }
   }
 `;
 
@@ -91,32 +84,67 @@ const Content = () => {
         />
       </Helmet>
       <Heading>What I'm Working On</Heading>
-      <ProjectRow id="revision-editor">
+      <ProjectRow id="proto-editor">
         <PictureContainer theme={theme}>
-          <TemplateImage />
+          <StaticImage
+            src="../images/projects/proto-editor.png"
+            alt="ProtoEditor picture"
+          />
         </PictureContainer>
         <ContentContainer>
-          <ProjectName>Revision Editor</ProjectName>
+          <ProjectName>ProtoEditor</ProjectName>
           <DetailContainer largeContent>
             <Paragraph>
-              Revision Editor is a rich text Editor React Component that handles
-              all the rendering and editing for rich text content represented as
-              JSON. The goal for this project is to make a component that a user
-              can plug into their application with little to no configuration
-              and have a powerful RTE experience.
+              ProtoEditor is a solution for developers that need to include rich
+              content in their React projects. This component makes it easy for
+              someone to add powerful rich content to their React projects
+              without having to adopt complex technical debt.
             </Paragraph>
           </DetailContainer>
           <DetailContainer largeContent>
             <DetailLabel>Why Did I Build This?</DetailLabel>
             <Paragraph>
-              While working on other projects, I've bumped into the complex
-              problem that is rich text. From editing to storing to rendering
-              it, rich text content is a difficult problem for all Web
-              Developers. Some solutions involve editing the DOM and storing
-              HTML in the database. I wanted to solve this in React and make it
-              easy for React Developers to enable their users to create rich
-              text content.
+              Like many others, I was working on a project and I needed to add
+              rich content to it. Rich content isn't an easy problem to solve
+              and often involves lots of hacky solutions. I found myself
+              presented with two different solutions:
             </Paragraph>
+            <ol>
+              <li>
+                <DetailLabel>Solution A</DetailLabel>
+                <ul>
+                  <li>Quick performance (usually)</li>
+                  <li>Easy to implment</li>
+                  <li>
+                    <b>Not</b> feaure rich
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <DetailLabel>Solution B</DetailLabel>
+                <ul>
+                  <li>Incredibly complex, but powerful APIs</li>
+                  <li>Takes much longer to implement</li>
+                  <li>Forces you to solve a project you don't need to</li>
+                </ul>
+              </li>
+            </ol>
+            <Paragraph>
+              Given these options, I decided that it would be difficult to work
+              on creating a complex API.This is something that a large company
+              or group of folks should build. I decided that I would make an
+              impact for folks looking for a feature rich <b>Solution A</b>.
+            </Paragraph>
+          </DetailContainer>
+          <DetailContainer>
+            <DetailLabel>Website:</DetailLabel>
+            <Link
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://protoeditor.com"
+            >
+              ProtoEditor.com
+            </Link>
           </DetailContainer>
           <DetailContainer>
             <DetailLabel>Repository:</DetailLabel>
@@ -124,7 +152,7 @@ const Content = () => {
               target="_blank"
               rel="noopener noreferrer"
               hasIcon
-              href="https://github.com/carlson-erik/rt-editor"
+              href="https://github.com/carlson-erik/ProtoEditor.com"
             >
               Github
             </Link>
@@ -167,11 +195,11 @@ const Content = () => {
             </Paragraph>
           </DetailContainer>
           <DetailContainer>
-            <DetailLabel>Live link:</DetailLabel>
+            <DetailLabel>Website:</DetailLabel>
             <Link
               target="_blank"
               rel="noopener noreferrer"
-              href="http://coddit.dev/"
+              href="https://coddit.dev/"
             >
               coddit.dev
             </Link>
@@ -218,13 +246,13 @@ const Content = () => {
             </Paragraph>
           </DetailContainer>
           <DetailContainer>
-            <DetailLabel>Live link:</DetailLabel>
+            <DetailLabel>Website:</DetailLabel>
             <Link
               target="_blank"
               rel="noopener noreferrer"
-              href="http://erikcarlson.dev"
+              href="https://erikcarlson.dev"
             >
-              erikcarlson.dev
+              ErikCarlson.dev
             </Link>
           </DetailContainer>
           <DetailContainer>
