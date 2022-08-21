@@ -160,7 +160,14 @@ const Content = () => {
           <DetailContainer>
             <DetailLabel>Relevant tech:</DetailLabel>
             <SkillListContainer>
-              <SkillList skills={[{ type: "react" }, { type: "typescript" }]} />
+              <SkillList
+                skills={[
+                  { type: "react" },
+                  { type: "typescript" },
+                  { type: "jest" },
+                  { type: "rollup" },
+                ]}
+              />
             </SkillListContainer>
           </DetailContainer>
         </ContentContainer>

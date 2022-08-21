@@ -1,17 +1,14 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 const SocialIcon = styled.svg`
-  height: 24px;
-  width: 24px;
+  height: 32px;
+  width: 32px;
   color: #ffffff;
 `;
 
 const DevIcon = styled.svg`
-  height: 1.5rem;
-  width: 1.5rem;
+  height: 24px;
+  width: 24px;
 `;
 
-export {
-  SocialIcon,
-  DevIcon
-}
+export { SocialIcon, DevIcon };

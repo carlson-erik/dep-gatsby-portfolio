@@ -8,11 +8,11 @@ import { AltIconProps, IconProps } from "../images/types";
 /* ------------------ Simple Icons ------------------ */
 import D3 from "../images/icons/simple/d3";
 import Dev from "../images/icons/simple/dev";
-import Discord from "../images/icons/simple/discord";
 import Gmail from "../images/icons/simple/gmail";
 import TypeScript from "../images/icons/simple/typescript";
 import Redux from "../images/icons/simple/redux";
 import JavaScript from "../images/icons/simple/javascript";
+import Jest from "../images/icons/simple/jest";
 import CSS from "../images/icons/simple/css";
 import Gatsby from "../images/icons/simple/gatsby";
 import Java from "../images/icons/simple/java";
@@ -20,6 +20,8 @@ import Java from "../images/icons/simple/java";
 import NodeJS from "../images/icons/alt/nodejs";
 import ReactIcon from "../images/icons/alt/react";
 import Github from "../images/icons/alt/github";
+import Rollup from "../images/icons/simple/rollup";
+import Webpack from "../images/icons/simple/webpack";
 
 const Container = styled.div`
   width: 100%;
@@ -47,13 +49,15 @@ export type SimpleIconType =
   | "css"
   | "d3"
   | "dev"
-  | "discord"
   | "gatsby"
   | "gmail"
   | "java"
   | "javascript"
+  | "jest"
   | "typescript"
-  | "redux";
+  | "redux"
+  | "rollup"
+  | "webpack";
 
 export type IconType = AltIconType | SimpleIconType;
 
@@ -98,11 +102,6 @@ const SIMPLE_ICON_MAP: Record<SimpleIconType, SkillLink> = {
     title: "dev.to",
     url: "https://dev.to/",
   },
-  discord: {
-    component: Discord,
-    title: "Discord",
-    url: "https://discord.com/",
-  },
   gatsby: {
     component: Gatsby,
     title: "Gatsby.js",
@@ -123,6 +122,11 @@ const SIMPLE_ICON_MAP: Record<SimpleIconType, SkillLink> = {
     title: "JavaScript",
     url: "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
   },
+  jest: {
+    component: Jest,
+    title: "Jest.js",
+    url: "https://jestjs.io/",
+  },
   typescript: {
     component: TypeScript,
     title: "TypeScript",
@@ -132,6 +136,16 @@ const SIMPLE_ICON_MAP: Record<SimpleIconType, SkillLink> = {
     component: Redux,
     title: "Redux.js",
     url: "https://redux.js.org/",
+  },
+  rollup: {
+    component: Rollup,
+    title: "rollup.js",
+    url: "https://rollupjs.org/",
+  },
+  webpack: {
+    component: Webpack,
+    title: "Webpack",
+    url: "https://webpack.js.org/",
   },
 };
 

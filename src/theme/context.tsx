@@ -14,7 +14,7 @@ interface ThemeProviderProps {
 
 function getTimeAwareTheme(): Theme {
   const currentHour = new Date().getHours();
-  if( currentHour < 7 || currentHour > 17) {
+  if (currentHour < 7 || currentHour > 17) {
     return DarkTheme;
   }
   return LightTheme;
@@ -22,7 +22,7 @@ function getTimeAwareTheme(): Theme {
 
 const ThemeProvider = (props: ThemeProviderProps) => {
   const { children } = props;
-  const [activeTheme, setActiveTheme] = useState<Theme>(null);
+  const [activeTheme, setActiveTheme] = useState<Theme>();
 
   useEffect(() => {
     if (!activeTheme) {
