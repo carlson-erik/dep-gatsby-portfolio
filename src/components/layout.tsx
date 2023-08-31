@@ -19,10 +19,13 @@ import { Theme } from "../theme/types";
 const Container = styled.div<{ theme: Theme }>`
   padding: 0 2rem 0 2rem;
   width: 100%;
-  max-width: 1100px;
+  max-width: 1300px;
+  padding-bottom: 4rem;
 
   @media only screen and (max-width: 625px) {
-    padding: 0;
+    padding-right: 0;
+    padding-left: 0;
+    padding-bottom: 2rem;
   }
 
   & a,

@@ -5,7 +5,6 @@ import { Link } from "gatsby";
 import ThemeSwitch from "./theme-switch";
 /* ------------------ Icons ------------------ */
 import Github from "../../images/icons/alt/github";
-import Discord from "../../images/icons/simple/discord";
 import Gmail from "../../images/icons/simple/gmail";
 import Dev from "../../images/icons/simple/dev";
 import { Theme } from "../../theme/types";
@@ -218,6 +217,7 @@ const Header = () => {
       </TitleRowContainer>
       <NavigationContainer showMobileMenu={showMobileMenu}>
         <Navigation theme={theme} showMobileMenu={showMobileMenu}>
+          <NavigationLink to="/">Home</NavigationLink>
           <NavigationLink to="/projects">Projects</NavigationLink>
           <NavigationLink to="/experience">Experience</NavigationLink>
           <NavigationLink to="/blog">Blog</NavigationLink>

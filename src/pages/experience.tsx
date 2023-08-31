@@ -25,6 +25,7 @@ const DetailContainer = styled.div`
 `;
 
 const InformationContainer = styled.div<{ flipFlexDirection: boolean }>`
+  padding-left: 1.5rem;
   display: flex;
   width: 100%;
   flex-direction: ${(props) => (props.flipFlexDirection ? "column" : "row")};
@@ -80,19 +81,6 @@ const ExperiencePage = () => {
             content="Software Engineer Erik Carlson's Job Experience"
           />
         </Helmet>
-        <Container>
-          <Heading>Education</Heading>
-          <DetailContainer>
-            <InformationContainer>
-              <Title>B.S. in Computer Science</Title>
-              <Duration>'13 to '16</Duration>
-            </InformationContainer>
-            <InformationContainer>
-              <Business>University of New Hampshire</Business>
-              <Location>(Durham, NH)</Location>
-            </InformationContainer>
-          </DetailContainer>
-        </Container>
         <Container>
           <Heading>Experience</Heading>
           <DetailContainer>
@@ -250,6 +238,19 @@ const ExperiencePage = () => {
                   company.
                 </li>
               </BulletList>
+            </InformationContainer>
+          </DetailContainer>
+        </Container>
+        <Container>
+          <Heading>Education</Heading>
+          <DetailContainer>
+            <InformationContainer>
+              <Title>B.S. in Computer Science</Title>
+              <Duration>'13 to '16</Duration>
+            </InformationContainer>
+            <InformationContainer>
+              <Business>University of New Hampshire</Business>
+              <Location>(Durham, NH)</Location>
             </InformationContainer>
           </DetailContainer>
         </Container>

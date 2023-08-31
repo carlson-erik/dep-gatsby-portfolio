@@ -1,5 +1,5 @@
 import { StaticImage } from "gatsby-plugin-image";
-import React from "react";
+import React, { useContext } from "react";
 import styled from "styled-components";
 import Helmet from "react-helmet";
 /* ------------------ Components ------------------ */
@@ -18,27 +18,6 @@ const Paragraph = styled.p`
   }
 `;
 
-const PicturesContainer = styled.div`
-  display: flex;
-  width: 100%;
-  gap: 1rem;
-  justify-content: center;
-  flex-wrap: wrap;
-
-  & .gatsby-image-wrapper {
-    width: 45%;
-  }
-
-  @media only screen and (max-width: 650px) {
-    flex-direction: column;
-    align-items: center;
-
-    & .gatsby-image-wrapper {
-      width: 80%;
-    }
-  }
-`;
-
 const LandingPage = () => {
   return (
     <ThemeProvider>
@@ -53,10 +32,22 @@ const LandingPage = () => {
         <Heading>Hi there!</Heading>
         <Paragraph>
           I'm a Full Stack Developer based in New Hampshire, US. I work at{" "}
-          <Link href="https://pega.com/">Pegasystems</Link> as a Senior Software
-          Engineer. Here I build and maintain{" "}
-          <Link href="https://en.wikipedia.org/wiki/Data_visualization">
+          <Link href="https://pega.com/" target="_blank">
+            Pegasystems
+          </Link>{" "}
+          as a Senior Software Engineer. At Pegasystems, I build{" "}
+          <Link
+            href="https://en.wikipedia.org/wiki/Data_visualization"
+            target="_blank"
+          >
             Data Visualization
+          </Link>{" "}
+          and{" "}
+          <Link
+            href="https://en.wikipedia.org/wiki/Data_reporting"
+            target="_blank"
+          >
+            Data Reporting
           </Link>{" "}
           Software.
         </Paragraph>
@@ -71,23 +62,13 @@ const LandingPage = () => {
           <GLink to="/projects">rest of my projects.</GLink>
         </Paragraph>
         <Paragraph>
-          My wife and I have 3 cats, and a dog that fill our lives with joy.
-          Here's a couple of pictures of them:
+          I have experience as a Software Engineer, you can checkout{" "}
+          <GLink to="/experience">where I've worked!</GLink>
         </Paragraph>
-        <PicturesContainer>
-          <StaticImage
-            src="../images/personal/elliot.png"
-            alt="erik's dog, elliot"
-          />
-          <StaticImage
-            src="../images/personal/macy.jpg"
-            alt="erik's cat, macy"
-          />
-          <StaticImage
-            src="../images/personal/bandit-nathaniel.jpg"
-            alt="erik's cats, bandit and nathaniel"
-          />
-        </PicturesContainer>
+        <Paragraph>
+          My wife and I have a horse, 3 cats, a dog, and 12 chickens that fill
+          our lives! I'm always happy to talk about our pets!
+        </Paragraph>
       </Layout>
     </ThemeProvider>
   );

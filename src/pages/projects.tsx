@@ -20,7 +20,7 @@ const ProjectRow = styled.div<{ reversed?: boolean }>`
 `;
 
 const PictureContainer = styled.div<{ theme: Theme }>`
-  flex-basis: 40%;
+  flex-basis: 60%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -35,7 +35,7 @@ const PictureContainer = styled.div<{ theme: Theme }>`
 `;
 
 const ContentContainer = styled.div`
-  flex-basis: 60%;
+  flex-basis: 40%;
   padding: 1rem;
   display: flex;
   flex-direction: column;
@@ -195,10 +195,11 @@ const Content = () => {
           <DetailContainer largeContent>
             <DetailLabel>Why Did I Build This?</DetailLabel>
             <Paragraph>
-              Like most redditors, I spend a fair amount of time on reddit. I
-              built coddit so that I could browse reddit in a out-of-the-norm
-              way and so that I could learn ES6, React.js and related
-              technologies.
+              I would often browse reddit.com in different ways (mobile apps,
+              RES, etc). This gave me inspiration to build a way to browse
+              reddit in a out-of-the-norm way. This project conveniently allowed
+              me to learn ES6, React.js and related frontend technologies as
+              well!
             </Paragraph>
           </DetailContainer>
           <DetailContainer>
