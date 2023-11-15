@@ -19,7 +19,7 @@ import { Theme } from "../theme/types";
 const Container = styled.div<{ theme: Theme }>`
   padding: 0 2rem 0 2rem;
   width: 100%;
-  max-width: 1300px;
+  max-width: 1000px;
   padding-bottom: 4rem;
 
   @media only screen and (max-width: 625px) {
@@ -46,12 +46,9 @@ const GlobalStyle = createGlobalStyle<{ theme: Theme }>`
 `;
 
 const MainContent = styled.main`
-  padding: 0 5rem 0 5rem;
+
   width: 100%;
 
-  @media only screen and (max-width: 1100px) {
-    padding: 0;
-  }
 `;
 
 interface LayoutProps {

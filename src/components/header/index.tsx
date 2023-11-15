@@ -34,7 +34,7 @@ const Container = styled.header<{ theme: Theme }>`
   }
 `;
 
-const StyledTitleLink = styled(Link)<{ theme: Theme }>`
+const StyledTitleLink = styled(Link) <{ theme: Theme }>`
   text-decoration: none;
   color: ${(props) => props.theme.colors.text} !important;
 `;
@@ -79,7 +79,7 @@ const NavigationContainer = styled.div<{ showMobileMenu: boolean }>`
   margin-left: 5rem;
   padding-top: 0.5rem;
 
-  @media only screen and (max-width: 1100px) {
+  @media only screen and (max-width: 1000px) {
     margin: 0;
   }
 

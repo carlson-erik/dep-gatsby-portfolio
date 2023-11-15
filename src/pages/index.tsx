@@ -31,7 +31,7 @@ const LandingPage = () => {
         </Helmet>
         <Heading>Hi there!</Heading>
         <Paragraph>
-          I'm a Full Stack Developer based in New Hampshire, US. I work at{" "}
+          I'm a Full Stack Developer based out of Maine, US. I work at{" "}
           <Link href="https://pega.com/" target="_blank">
             Pegasystems
           </Link>{" "}
@@ -53,21 +53,17 @@ const LandingPage = () => {
         </Paragraph>
         <Paragraph>
           I specialize in designing and creating Front-end solutions with
-          React.js, and TypeScript.
+          React.js, and TypeScript. I have expertise in backend/server technologies as well.
         </Paragraph>
         <Paragraph>
           I'm currently working on{" "}
-          <GLink to="/projects#proto-editor">ProtoEditor</GLink>. If you would
+          <GLink to="/projects#elastic-editor">ElasticEditor</GLink>. If you would
           like to see more of my work, check out the{" "}
           <GLink to="/projects">rest of my projects.</GLink>
         </Paragraph>
         <Paragraph>
-          I have experience as a Software Engineer, you can checkout{" "}
+          By now you're saying, "Hey, can this guy actually do this?" Well, you can checkout{" "}
           <GLink to="/experience">where I've worked!</GLink>
-        </Paragraph>
-        <Paragraph>
-          My wife and I have a horse, 3 cats, a dog, and 12 chickens that fill
-          our lives! I'm always happy to talk about our pets!
         </Paragraph>
       </Layout>
     </ThemeProvider>

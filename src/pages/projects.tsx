@@ -15,12 +15,12 @@ const ProjectRow = styled.div<{ reversed?: boolean }>`
 
   @media only screen and (max-width: 850px) {
     flex-direction: ${(props) =>
-      props.reversed ? "column-reverse" : "column"};
+    props.reversed ? "column-reverse" : "column"};
   }
 `;
 
 const PictureContainer = styled.div<{ theme: Theme }>`
-  flex-basis: 60%;
+  flex-basis: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -35,7 +35,7 @@ const PictureContainer = styled.div<{ theme: Theme }>`
 `;
 
 const ContentContainer = styled.div`
-  flex-basis: 40%;
+  flex-basis: 50%;
   padding: 1rem;
   display: flex;
   flex-direction: column;
@@ -84,18 +84,18 @@ const Content = () => {
         />
       </Helmet>
       <Heading>What I'm Working On</Heading>
-      <ProjectRow id="proto-editor">
+      <ProjectRow id="elastic-editor">
         <PictureContainer theme={theme}>
           <StaticImage
-            src="../images/projects/proto-editor.png"
-            alt="ProtoEditor picture"
+            src="../images/projects/elastic-editor.png"
+            alt="ElasticEditor picture"
           />
         </PictureContainer>
         <ContentContainer>
-          <ProjectName>ProtoEditor</ProjectName>
+          <ProjectName>ElasticEditor</ProjectName>
           <DetailContainer largeContent>
             <Paragraph>
-              ProtoEditor is a solution for developers that need to include rich
+              ElasticEditor is a solution for developers that need to include rich
               content in their React projects. This component makes it easy for
               someone to add powerful rich content to their React projects
               without having to adopt complex technical debt.
@@ -141,9 +141,9 @@ const Content = () => {
             <Link
               target="_blank"
               rel="noopener noreferrer"
-              href="https://protoeditor.com"
+              href="https://elastic-editor.com"
             >
-              ProtoEditor.com
+              elastic-editor.com
             </Link>
           </DetailContainer>
           <DetailContainer>
@@ -152,7 +152,7 @@ const Content = () => {
               target="_blank"
               rel="noopener noreferrer"
               hasIcon
-              href="https://github.com/carlson-erik/ProtoEditor.com"
+              href="https://github.com/carlson-erik/elastic-editor"
             >
               Github
             </Link>
