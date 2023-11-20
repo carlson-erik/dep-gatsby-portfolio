@@ -3,7 +3,7 @@ import Helmet from "react-helmet";
 import styled from "styled-components";
 import Layout from "../components/layout";
 import { Heading } from "../components/styled";
-import Rocket from '../images/icons/simple/rocket'
+import Rocket from "../images/icons/simple/rocket";
 /* ------------------ CSS Styles ------------------ */
 import "../styles/reset.css";
 
@@ -17,7 +17,7 @@ const ErrorMessage = styled(Heading)`
   display: flex;
   align-items: center;
   font-size: 2.5rem;
-  
+
   margin-bottom: 1rem;
 
   & svg {
@@ -30,12 +30,12 @@ const NotFoundPage = () => {
   return (
     <Layout>
       <Helmet>
-          <title>404: Uh oh! | Erik Carlson</title>
-          <meta name="description" content="Software Engineer Erik Carlson's Portfolio 404" />
+        <title>404: Uh oh! | Erik Carlson</title>
+        <meta name="description" content="404 Page" />
       </Helmet>
       <Container>
         <ErrorMessage>
-          <Rocket color='black' type='dev'/>
+          <Rocket color="black" type="dev" />
           404
         </ErrorMessage>
         <Heading>No content found!</Heading>

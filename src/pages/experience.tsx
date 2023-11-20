@@ -78,7 +78,7 @@ const ExperiencePage = () => {
           <title>Experience | Erik Carlson</title>
           <meta
             name="description"
-            content="Software Engineer Erik Carlson's Job Experience"
+            content="Erik Carlson's Software Engineering Job Experience"
           />
         </Helmet>
         <Container>
