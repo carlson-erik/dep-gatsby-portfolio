@@ -9,6 +9,10 @@ export type Theme = {
       textHover: string;
       iconHover: string;
     };
+    projectList: {
+      background: string;
+      text: string;
+    };
   };
 };
 

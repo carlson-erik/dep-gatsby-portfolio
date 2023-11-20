@@ -11,6 +11,10 @@ const DarkTheme: Theme = {
       textHover: "#0F62D7",
       iconHover: "#343740",
     },
+    projectList: {
+      background: "#343740",
+      text: "#D1D4D9",
+    },
   },
 };
 

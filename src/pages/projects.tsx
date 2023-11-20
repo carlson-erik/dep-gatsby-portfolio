@@ -15,7 +15,7 @@ const ProjectRow = styled.div<{ reversed?: boolean }>`
 
   @media only screen and (max-width: 850px) {
     flex-direction: ${(props) =>
-    props.reversed ? "column-reverse" : "column"};
+      props.reversed ? "column-reverse" : "column"};
   }
 `;
 
@@ -40,6 +40,16 @@ const ContentContainer = styled.div`
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
+`;
+
+const Project = styled.div<{ theme: Theme }>`
+  flex-basis: calc(50% - 1rem);
+  height: fit-content;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  background-color: ${(props) => props.theme.colors.projectList.background};
 `;
 
 const DetailContainer = styled.div<{ largeContent: boolean }>`
@@ -72,6 +82,24 @@ const DetailLabel = styled.span`
   font-weight: bold;
 `;
 
+const ProjectList = styled.div`
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+`;
+
+const Section = styled.section`
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+`;
+
+const ProjectSectionContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+`;
+
 const Content = () => {
   const { theme } = useContext(ThemeContext);
   return (
@@ -83,211 +111,248 @@ const Content = () => {
           content="Software Engineer Erik Carlson's Personal Projects"
         />
       </Helmet>
-      <Heading>What I'm Working On</Heading>
-      <ProjectRow id="elastic-editor">
-        <PictureContainer theme={theme}>
-          <StaticImage
-            src="../images/projects/elastic-editor.png"
-            alt="ElasticEditor picture"
-          />
-        </PictureContainer>
-        <ContentContainer>
-          <ProjectName>ElasticEditor</ProjectName>
-          <DetailContainer largeContent>
-            <Paragraph>
-              ElasticEditor is a solution for developers that need to include rich
-              content in their React projects. This component makes it easy for
-              someone to add powerful rich content to their React projects
-              without having to adopt complex technical debt.
-            </Paragraph>
-          </DetailContainer>
-          <DetailContainer largeContent>
-            <DetailLabel>Why Did I Build This?</DetailLabel>
-            <Paragraph>
-              Like many others, I was working on a project and I needed to add
-              rich content to it. Rich content isn't an easy problem to solve
-              and often involves lots of hacky solutions. I found myself
-              presented with two different solutions:
-            </Paragraph>
-            <ul>
-              <li>
-                <DetailLabel>Solution A</DetailLabel>
-                <ul>
-                  <li>Quick performance (usually)</li>
-                  <li>Easy to implment</li>
-                  <li>
-                    <b>Not</b> feaure rich
-                  </li>
-                </ul>
-              </li>
-              <li>
-                <DetailLabel>Solution B</DetailLabel>
-                <ul>
-                  <li>Incredibly complex, but powerful APIs</li>
-                  <li>Takes much longer to implement</li>
-                  <li>Forces you to solve a project you don't need to</li>
-                </ul>
-              </li>
-            </ul>
-            <Paragraph>
-              Given these options, I decided that it would be difficult to work
-              on creating a complex API.This is something that a large company
-              or group of folks should build. I decided that I would make an
-              impact for folks looking for a feature rich <b>Solution A</b>.
-            </Paragraph>
-          </DetailContainer>
-          <DetailContainer>
-            <DetailLabel>Website:</DetailLabel>
-            <Link
-              target="_blank"
-              rel="noopener noreferrer"
-              href="https://elastic-editor.com"
-            >
-              elastic-editor.com
-            </Link>
-          </DetailContainer>
-          <DetailContainer>
-            <DetailLabel>Repository:</DetailLabel>
-            <Link
-              target="_blank"
-              rel="noopener noreferrer"
-              hasIcon
-              href="https://github.com/carlson-erik/elastic-editor"
-            >
-              Github
-            </Link>
-          </DetailContainer>
-          <DetailContainer>
-            <DetailLabel>Relevant tech:</DetailLabel>
-            <SkillListContainer>
-              <SkillList
-                skills={[
-                  { type: "react" },
-                  { type: "typescript" },
-                  { type: "jest" },
-                  { type: "rollup" },
-                ]}
+      <ProjectSectionContainer>
+        <Section>
+          <Heading>What I'm Working On</Heading>
+          <ProjectRow id="elastic-editor">
+            <PictureContainer theme={theme}>
+              <StaticImage
+                src="../images/projects/elastic-editor.png"
+                alt="ElasticEditor picture"
               />
-            </SkillListContainer>
-          </DetailContainer>
-        </ContentContainer>
-      </ProjectRow>
-      <Heading>Projects I've Built</Heading>
-      <ProjectRow id="coddit">
-        <PictureContainer theme={theme}>
-          <StaticImage
-            src="../images/projects/coddit.png"
-            alt="coddit project picture"
-          />
-        </PictureContainer>
-        <ContentContainer>
-          <ProjectName>coddit</ProjectName>
-          <DetailContainer largeContent>
-            <Paragraph>
-              Coddit is a web application that renders Reddit as if it were
-              code. Coddit allows users to take advantage of features such as
-              previewing posts, rendering in different programming languages
-              (JavaScript, Python and C#), as well as theming in different color
-              schemes. The user has the ability to browse reddit in coddit as
-              they would normally browse subreddits and posts.
-            </Paragraph>
-          </DetailContainer>
-          <DetailContainer largeContent>
-            <DetailLabel>Why Did I Build This?</DetailLabel>
-            <Paragraph>
-              I would often browse reddit.com in different ways (mobile apps,
-              RES, etc). This gave me inspiration to build a way to browse
-              reddit in a out-of-the-norm way. This project conveniently allowed
-              me to learn ES6, React.js and related frontend technologies as
-              well!
-            </Paragraph>
-          </DetailContainer>
-          <DetailContainer>
-            <DetailLabel>Website:</DetailLabel>
-            <Link
-              target="_blank"
-              rel="noopener noreferrer"
-              href="https://coddit.dev/"
-            >
-              coddit.dev
-            </Link>
-          </DetailContainer>
-          <DetailContainer>
-            <DetailLabel>Repository:</DetailLabel>
-            <Link
-              target="_blank"
-              rel="noopener noreferrer"
-              hasIcon
-              href="https://github.com/carlson-erik/coddit"
-            >
-              Github
-            </Link>
-          </DetailContainer>
-          <DetailContainer>
-            <DetailLabel>Relevant tech:</DetailLabel>
-            <SkillListContainer>
-              <SkillList
-                skills={[
-                  { type: "react" },
-                  { type: "javascript" },
-                  { type: "redux" },
-                ]}
-              />
-            </SkillListContainer>
-          </DetailContainer>
-        </ContentContainer>
-      </ProjectRow>
-      <ProjectRow id="portfolio">
-        <PictureContainer theme={theme}>
-          <StaticImage
-            src="../images/projects/portfolio.png"
-            alt="project template image"
-          />
-        </PictureContainer>
-        <ContentContainer>
-          <ProjectName>This Portfolio!</ProjectName>
-          <DetailContainer largeContent>
-            <Paragraph>
-              Using Gatsby and TypeScript, I built the very site you're using
-              now. With this site, I want to show off the cool projects that
-              I've built and document my learning journey in a blog!
-            </Paragraph>
-          </DetailContainer>
-          <DetailContainer>
-            <DetailLabel>Website:</DetailLabel>
-            <Link
-              target="_blank"
-              rel="noopener noreferrer"
-              href="https://erikcarlson.dev"
-            >
-              ErikCarlson.dev
-            </Link>
-          </DetailContainer>
-          <DetailContainer>
-            <DetailLabel>Repository:</DetailLabel>
-            <Link
-              hasIcon
-              target="_blank"
-              rel="noopener noreferrer"
-              href="https://github.com/carlson-erik/carlson-erik.github.io"
-            >
-              Github
-            </Link>
-          </DetailContainer>
-          <DetailContainer>
-            <DetailLabel>Relevant tech:</DetailLabel>
-            <SkillListContainer>
-              <SkillList
-                skills={[
-                  { type: "gatsby" },
-                  { type: "react" },
-                  { type: "typescript" },
-                ]}
-              />
-            </SkillListContainer>
-          </DetailContainer>
-        </ContentContainer>
-      </ProjectRow>
+            </PictureContainer>
+            <ContentContainer>
+              <ProjectName>ElasticEditor</ProjectName>
+              <DetailContainer largeContent>
+                <Paragraph>
+                  ElasticEditor is a solution for developers that need to
+                  include rich content in their React projects. This component
+                  makes it easy for someone to add powerful rich content to
+                  their React projects without having to adopt complex technical
+                  debt.
+                </Paragraph>
+              </DetailContainer>
+              <DetailContainer>
+                <DetailLabel>Website:</DetailLabel>
+                <Link
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href="https://elastic-editor.com"
+                >
+                  elastic-editor.com
+                </Link>
+              </DetailContainer>
+              <DetailContainer>
+                <DetailLabel>Repository:</DetailLabel>
+                <Link
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  hasIcon
+                  href="https://github.com/carlson-erik/elastic-editor"
+                >
+                  Github
+                </Link>
+              </DetailContainer>
+              <DetailContainer>
+                <DetailLabel>Relevant tech:</DetailLabel>
+                <SkillListContainer>
+                  <SkillList
+                    skills={[
+                      { type: "react" },
+                      { type: "typescript" },
+                      { type: "jest" },
+                      { type: "rollup" },
+                    ]}
+                  />
+                </SkillListContainer>
+              </DetailContainer>
+            </ContentContainer>
+          </ProjectRow>
+        </Section>
+        <Section>
+          <Heading>Projects I've Built</Heading>
+          <ProjectList>
+            <Project id="coddit" theme={theme}>
+              <ProjectName>coddit</ProjectName>
+              <DetailContainer largeContent>
+                <Paragraph>
+                  Coddit is a web application that renders Reddit as if it were
+                  code. Coddit allows users to take advantage features such as
+                  previewing posts, rendering in different programming languages
+                  (JavaScript, Python and C#), as well as theming in different
+                  color schemes. The user has the ability to browse reddit in
+                  coddit as they would normally browse subreddits and posts.
+                </Paragraph>
+              </DetailContainer>
+              <DetailContainer>
+                <DetailLabel>Website:</DetailLabel>
+                <Link
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href="https://coddit.dev/"
+                >
+                  coddit.dev
+                </Link>
+              </DetailContainer>
+              <DetailContainer>
+                <DetailLabel>Repository:</DetailLabel>
+                <Link
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  hasIcon
+                  href="https://github.com/carlson-erik/coddit"
+                >
+                  Github
+                </Link>
+              </DetailContainer>
+              <DetailContainer>
+                <DetailLabel>Relevant tech:</DetailLabel>
+                <SkillListContainer>
+                  <SkillList
+                    skills={[
+                      { type: "react" },
+                      { type: "javascript" },
+                      { type: "redux" },
+                    ]}
+                  />
+                </SkillListContainer>
+              </DetailContainer>
+            </Project>
+            <Project id="portfolio1" theme={theme}>
+              <ProjectName>This Portfolio!</ProjectName>
+              <DetailContainer largeContent>
+                <Paragraph>
+                  Using Gatsby and TypeScript, I built the very site you're
+                  using now. With this site, I want to show off the cool
+                  projects that I've built and document my learning journey in a
+                  blog!
+                </Paragraph>
+              </DetailContainer>
+              <DetailContainer>
+                <DetailLabel>Website:</DetailLabel>
+                <Link
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href="https://erikcarlson.dev"
+                >
+                  ErikCarlson.dev
+                </Link>
+              </DetailContainer>
+              <DetailContainer>
+                <DetailLabel>Repository:</DetailLabel>
+                <Link
+                  hasIcon
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href="https://github.com/carlson-erik/carlson-erik.github.io"
+                >
+                  Github
+                </Link>
+              </DetailContainer>
+              <DetailContainer>
+                <DetailLabel>Relevant tech:</DetailLabel>
+                <SkillListContainer>
+                  <SkillList
+                    skills={[
+                      { type: "gatsby" },
+                      { type: "react" },
+                      { type: "typescript" },
+                    ]}
+                  />
+                </SkillListContainer>
+              </DetailContainer>
+            </Project>
+            <Project id="portfolio2" theme={theme}>
+              <ProjectName>This Portfolio!</ProjectName>
+              <DetailContainer largeContent>
+                <Paragraph>
+                  Using Gatsby and TypeScript, I built the very site you're
+                  using now. With this site, I want to show off the cool
+                  projects that I've built and document my learning journey in a
+                  blog!
+                </Paragraph>
+              </DetailContainer>
+              <DetailContainer>
+                <DetailLabel>Website:</DetailLabel>
+                <Link
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href="https://erikcarlson.dev"
+                >
+                  ErikCarlson.dev
+                </Link>
+              </DetailContainer>
+              <DetailContainer>
+                <DetailLabel>Repository:</DetailLabel>
+                <Link
+                  hasIcon
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href="https://github.com/carlson-erik/carlson-erik.github.io"
+                >
+                  Github
+                </Link>
+              </DetailContainer>
+              <DetailContainer>
+                <DetailLabel>Relevant tech:</DetailLabel>
+                <SkillListContainer>
+                  <SkillList
+                    skills={[
+                      { type: "gatsby" },
+                      { type: "react" },
+                      { type: "typescript" },
+                    ]}
+                  />
+                </SkillListContainer>
+              </DetailContainer>
+            </Project>
+            <Project id="portfolio3" theme={theme}>
+              <ProjectName>This Portfolio!</ProjectName>
+              <DetailContainer largeContent>
+                <Paragraph>
+                  Using Gatsby and TypeScript, I built the very site you're
+                  using now. With this site, I want to show off the cool
+                  projects that I've built and document my learning journey in a
+                  blog!
+                </Paragraph>
+              </DetailContainer>
+              <DetailContainer>
+                <DetailLabel>Website:</DetailLabel>
+                <Link
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href="https://erikcarlson.dev"
+                >
+                  ErikCarlson.dev
+                </Link>
+              </DetailContainer>
+              <DetailContainer>
+                <DetailLabel>Repository:</DetailLabel>
+                <Link
+                  hasIcon
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href="https://github.com/carlson-erik/carlson-erik.github.io"
+                >
+                  Github
+                </Link>
+              </DetailContainer>
+              <DetailContainer>
+                <DetailLabel>Relevant tech:</DetailLabel>
+                <SkillListContainer>
+                  <SkillList
+                    skills={[
+                      { type: "gatsby" },
+                      { type: "react" },
+                      { type: "typescript" },
+                    ]}
+                  />
+                </SkillListContainer>
+              </DetailContainer>
+            </Project>
+          </ProjectList>
+        </Section>
+      </ProjectSectionContainer>
     </Layout>
   );
 };
