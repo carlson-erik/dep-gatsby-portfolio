@@ -4,7 +4,7 @@ import { StaticImage } from "gatsby-plugin-image";
 /* ------------------ Components ------------------ */
 import { Heading, Link, Paragraph } from "../components/styled";
 import SkillList, { IconLink } from "../components/skill-list";
-import { ThemeContext, ThemeProvider } from "../theme/context";
+import { ThemeContext } from "../theme/context";
 import { Theme } from "../theme/types";
 import Github from "../images/icons/alt/github";
 import ExternalLink from "../images/icons/simple/external-link";
@@ -15,7 +15,7 @@ const ProjectRow = styled.div<{ reversed?: boolean }>`
 
   @media only screen and (max-width: 850px) {
     flex-direction: ${(props) =>
-    props.reversed ? "column-reverse" : "column"};
+      props.reversed ? "column-reverse" : "column"};
   }
 `;
 
@@ -130,7 +130,7 @@ const ProjectList = () => {
           </PictureContainer>
           <ContentContainer>
             <ProjectHeader>
-              <ProjectName>ElasitcEditor</ProjectName>
+              <ProjectName>ElasticEditor</ProjectName>
               <ProjectLinks>
                 <IconLink
                   key="project-github"
@@ -152,10 +152,11 @@ const ProjectList = () => {
             </ProjectHeader>
             <DetailContainer largeContent>
               <Paragraph>
-                ElasticEditor is a solution for developers that need to include
-                rich content in their React projects. This component makes it
-                easy for someone to add powerful rich content to their React
-                projects without having to adopt complex technical debt.
+                ElasticEditor allows developers to include modifiable rich
+                content in their React projects. At the core of ElasticEditor is
+                a customizable editor that allows users to easily create
+                content. Also included are APIs that allow you to export your
+                content into different forms.
               </Paragraph>
             </DetailContainer>
             <DetailContainer>
@@ -185,7 +186,7 @@ const ProjectList = () => {
         </ProjectRow>
       </Section>
       <Section>
-        <Heading>Projects I've Built</Heading>
+        <Heading>Past Projects</Heading>
         <ProjectContainer>
           <Project id="coddit" theme={theme}>
             <ProjectHeader>
@@ -271,11 +272,10 @@ const ProjectList = () => {
             </ProjectHeader>
             <DetailContainer largeContent>
               <Paragraph>
-                From time to time, I come across interesting, React Component
-                designs on design and web development websites. When I find
-                something that intriques me, I instantly think "I need to build
-                that!" When I actually do build the components, I store them in this
-                project.
+                Often I come across interesting React Component ideas on design
+                websites. When I find something that challenges or inspires me,
+                I instantly think "I need to build that!" When I actually build
+                the component, I store it in this project.
               </Paragraph>
             </DetailContainer>
             <DetailContainer>
@@ -315,10 +315,10 @@ const ProjectList = () => {
             </ProjectHeader>
             <DetailContainer largeContent>
               <Paragraph>
-                From time to time, I come across interesting, Website designs on
-                design & web development websites. When I find something that
-                intriques me, I instantly think "I need to build that!"  When I
-                actually do build the components, I store them in this project.
+                Often I come across interesting Website ideas on design
+                websites. When I find something that challenges or inspires me,
+                I instantly think "I need to build that!" When I actually build
+                the website, I store it in this project.
               </Paragraph>
             </DetailContainer>
             <DetailContainer>

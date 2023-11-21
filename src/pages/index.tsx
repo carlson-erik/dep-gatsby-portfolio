@@ -62,8 +62,10 @@ const LandingPage = () => {
             technologies as well.
           </Paragraph>
           <Paragraph>
-            By now you're saying, "Hey, can this guy actually do this?" Well,
-            you can checkout <GLink to="/experience">where I've worked!</GLink>
+            By now you're saying,{" "}
+            <em>"Hey, can this guy actually do what he says?"</em> My projects
+            below and <GLink to="/experience">past work experience</GLink>{" "}
+            speaks for itself!
           </Paragraph>
         </Introduction>
         <ProjectList />
