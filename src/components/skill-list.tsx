@@ -207,3 +207,5 @@ const SkillList = (props: SkillListProps) => {
 };
 
 export default SkillList;
+
+export { IconLink };

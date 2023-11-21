@@ -22,7 +22,7 @@ const BlogPage = () => {
           <title>Blog | Erik Carlson</title>
           <meta
             name="description"
-            content="Software Engineer Erik Carlson's Blog"
+            content="Erik Carlson's Software Engineering Blog"
           />
         </Helmet>
         <Heading>Blog</Heading>

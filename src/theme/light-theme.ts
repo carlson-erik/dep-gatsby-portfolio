@@ -11,6 +11,13 @@ const LightTheme: Theme = {
       textHover: "#0036cc",
       iconHover: "#E5E8EC",
     },
+    projectList: {
+      background: "#EFF2F4",
+      text: "#1E2127",
+      project: {
+        iconColor: "#707070",
+      },
+    },
   },
 };
 

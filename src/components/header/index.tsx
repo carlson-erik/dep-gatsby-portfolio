@@ -34,7 +34,7 @@ const Container = styled.header<{ theme: Theme }>`
   }
 `;
 
-const StyledTitleLink = styled(Link) <{ theme: Theme }>`
+const StyledTitleLink = styled(Link)<{ theme: Theme }>`
   text-decoration: none;
   color: ${(props) => props.theme.colors.text} !important;
 `;
@@ -218,7 +218,6 @@ const Header = () => {
       <NavigationContainer showMobileMenu={showMobileMenu}>
         <Navigation theme={theme} showMobileMenu={showMobileMenu}>
           <NavigationLink to="/">Home</NavigationLink>
-          <NavigationLink to="/projects">Projects</NavigationLink>
           <NavigationLink to="/experience">Experience</NavigationLink>
           <NavigationLink to="/blog">Blog</NavigationLink>
         </Navigation>

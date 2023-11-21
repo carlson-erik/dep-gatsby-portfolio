@@ -9,7 +9,14 @@ const DarkTheme: Theme = {
     link: {
       text: "#70A7F5",
       textHover: "#0F62D7",
-      iconHover: "#343740",
+      iconHover: "#434651",
+    },
+    projectList: {
+      background: "#343740",
+      text: "#D1D4D9",
+      project: {
+        iconColor: "lightgrey",
+      },
     },
   },
 };
