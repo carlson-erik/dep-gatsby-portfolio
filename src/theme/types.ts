@@ -12,6 +12,9 @@ export type Theme = {
     projectList: {
       background: string;
       text: string;
+      project: {
+        iconColor: string;
+      };
     };
   };
 };

@@ -1,12 +1,13 @@
 import React, { useContext } from "react";
-import Helmet from "react-helmet";
 import styled from "styled-components";
 import { StaticImage } from "gatsby-plugin-image";
 /* ------------------ Components ------------------ */
 import { Heading, Link, Paragraph } from "../components/styled";
-import SkillList from "../components/skill-list";
+import SkillList, { IconLink } from "../components/skill-list";
 import { ThemeContext, ThemeProvider } from "../theme/context";
 import { Theme } from "../theme/types";
+import Github from "../images/icons/alt/github";
+import ExternalLink from "../images/icons/simple/external-link";
 
 const ProjectRow = styled.div<{ reversed?: boolean }>`
   width: 100%;
@@ -49,6 +50,21 @@ const Project = styled.div<{ theme: Theme }>`
   flex-direction: column;
   gap: 0.5rem;
   background-color: ${(props) => props.theme.colors.projectList.background};
+
+  @media only screen and (max-width: 625px) {
+    width: 100%;
+    flex-basis: 100%;
+  }
+`;
+
+const ProjectHeader = styled.div`
+  display: flex;
+`;
+
+const ProjectLinks = styled.div`
+  flex-grow: 1;
+  display: flex;
+  justify-content: flex-end;
 `;
 
 const DetailContainer = styled.div<{ largeContent: boolean }>`
@@ -90,7 +106,7 @@ const ProjectContainer = styled.div`
 const Section = styled.section`
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: 1rem;
 `;
 
 const ProjectSectionContainer = styled.div`
@@ -113,7 +129,27 @@ const ProjectList = () => {
             />
           </PictureContainer>
           <ContentContainer>
-            <ProjectName>ElasticEditor</ProjectName>
+            <ProjectHeader>
+              <ProjectName>ElasitcEditor</ProjectName>
+              <ProjectLinks>
+                <IconLink
+                  key="project-github"
+                  href="https://github.com/carlson-erik/elastic-editor"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  title="ElasticEditor github repo"
+                  theme={theme}
+                >
+                  {
+                    <Github
+                      type="dev"
+                      useAlt={false}
+                      color={theme.colors.projectList.project.iconColor}
+                    />
+                  }
+                </IconLink>
+              </ProjectLinks>
+            </ProjectHeader>
             <DetailContainer largeContent>
               <Paragraph>
                 ElasticEditor is a solution for developers that need to include
@@ -133,18 +169,7 @@ const ProjectList = () => {
               </Link>
             </DetailContainer>
             <DetailContainer>
-              <DetailLabel>Repository:</DetailLabel>
-              <Link
-                target="_blank"
-                rel="noopener noreferrer"
-                hasIcon
-                href="https://github.com/carlson-erik/elastic-editor"
-              >
-                Github
-              </Link>
-            </DetailContainer>
-            <DetailContainer>
-              <DetailLabel>Relevant tech:</DetailLabel>
+              <DetailLabel>Technologies:</DetailLabel>
               <SkillListContainer>
                 <SkillList
                   skills={[
@@ -163,7 +188,42 @@ const ProjectList = () => {
         <Heading>Projects I've Built</Heading>
         <ProjectContainer>
           <Project id="coddit" theme={theme}>
-            <ProjectName>coddit</ProjectName>
+            <ProjectHeader>
+              <ProjectName>coddit</ProjectName>
+              <ProjectLinks>
+                <IconLink
+                  key="project-github"
+                  href="https://github.com/carlson-erik/coddit"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  title="coddit github repo"
+                  theme={theme}
+                >
+                  {
+                    <Github
+                      type="dev"
+                      useAlt={false}
+                      color={theme.colors.projectList.project.iconColor}
+                    />
+                  }
+                </IconLink>
+                <IconLink
+                  key="project-website"
+                  href="https://coddit.dev/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  title="coddit website"
+                  theme={theme}
+                >
+                  {
+                    <ExternalLink
+                      type="dev"
+                      color={theme.colors.projectList.project.iconColor}
+                    />
+                  }
+                </IconLink>
+              </ProjectLinks>
+            </ProjectHeader>
             <DetailContainer largeContent>
               <Paragraph>
                 Coddit is a web application that renders Reddit as if it were
@@ -175,28 +235,7 @@ const ProjectList = () => {
               </Paragraph>
             </DetailContainer>
             <DetailContainer>
-              <DetailLabel>Website:</DetailLabel>
-              <Link
-                target="_blank"
-                rel="noopener noreferrer"
-                href="https://coddit.dev/"
-              >
-                coddit.dev
-              </Link>
-            </DetailContainer>
-            <DetailContainer>
-              <DetailLabel>Repository:</DetailLabel>
-              <Link
-                target="_blank"
-                rel="noopener noreferrer"
-                hasIcon
-                href="https://github.com/carlson-erik/coddit"
-              >
-                Github
-              </Link>
-            </DetailContainer>
-            <DetailContainer>
-              <DetailLabel>Relevant tech:</DetailLabel>
+              <DetailLabel>Technologies:</DetailLabel>
               <SkillListContainer>
                 <SkillList
                   skills={[
@@ -208,94 +247,117 @@ const ProjectList = () => {
               </SkillListContainer>
             </DetailContainer>
           </Project>
-          <Project id="portfolio1" theme={theme}>
-            <ProjectName>This Portfolio!</ProjectName>
+          <Project id="componentry" theme={theme}>
+            <ProjectHeader>
+              <ProjectName>Building React Components</ProjectName>
+              <ProjectLinks>
+                <IconLink
+                  key="project-github"
+                  href="https://github.com/carlson-erik/componentry"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  title="componentry github repo"
+                  theme={theme}
+                >
+                  {
+                    <Github
+                      type="dev"
+                      useAlt={false}
+                      color={theme.colors.projectList.project.iconColor}
+                    />
+                  }
+                </IconLink>
+              </ProjectLinks>
+            </ProjectHeader>
             <DetailContainer largeContent>
               <Paragraph>
-                Using Gatsby and TypeScript, I built the very site you're using
-                now. With this site, I want to show off the cool projects that
-                I've built and document my learning journey in a blog!
+                From time to time, I come across interesting, React Component
+                design on design and web development websites. When I find
+                something that intriques me, I instantly think "I need to build
+                that!" When I actually do build them, they're stored in this
+                project.
               </Paragraph>
             </DetailContainer>
             <DetailContainer>
-              <DetailLabel>Website:</DetailLabel>
-              <Link
-                target="_blank"
-                rel="noopener noreferrer"
-                href="https://erikcarlson.dev"
-              >
-                ErikCarlson.dev
-              </Link>
-            </DetailContainer>
-            <DetailContainer>
-              <DetailLabel>Repository:</DetailLabel>
-              <Link
-                hasIcon
-                target="_blank"
-                rel="noopener noreferrer"
-                href="https://github.com/carlson-erik/carlson-erik.github.io"
-              >
-                Github
-              </Link>
-            </DetailContainer>
-            <DetailContainer>
-              <DetailLabel>Relevant tech:</DetailLabel>
+              <DetailLabel>Technologies:</DetailLabel>
               <SkillListContainer>
                 <SkillList
                   skills={[
-                    { type: "gatsby" },
                     { type: "react" },
+                    { type: "css" },
+                    { type: "javascript" },
                     { type: "typescript" },
                   ]}
                 />
               </SkillListContainer>
             </DetailContainer>
           </Project>
-          <Project id="portfolio2" theme={theme}>
-            <ProjectName>This Portfolio!</ProjectName>
+          <Project id="site-building" theme={theme}>
+            <ProjectHeader>
+              <ProjectName>Building Website Designs</ProjectName>
+              <ProjectLinks>
+                <IconLink
+                  key="project-github"
+                  href="https://github.com/carlson-erik/site-building"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  title="site-building github repo"
+                  theme={theme}
+                >
+                  {
+                    <Github
+                      type="dev"
+                      useAlt={false}
+                      color={theme.colors.projectList.project.iconColor}
+                    />
+                  }
+                </IconLink>
+              </ProjectLinks>
+            </ProjectHeader>
             <DetailContainer largeContent>
               <Paragraph>
-                Using Gatsby and TypeScript, I built the very site you're using
-                now. With this site, I want to show off the cool projects that
-                I've built and document my learning journey in a blog!
+                From time to time, I come across interesting, Website designs on
+                design & web development websites. When I find something that
+                intriques me, I instantly think "I need to build that!" When I
+                actually do build them, they're stored in this project.
               </Paragraph>
             </DetailContainer>
             <DetailContainer>
-              <DetailLabel>Website:</DetailLabel>
-              <Link
-                target="_blank"
-                rel="noopener noreferrer"
-                href="https://erikcarlson.dev"
-              >
-                ErikCarlson.dev
-              </Link>
-            </DetailContainer>
-            <DetailContainer>
-              <DetailLabel>Repository:</DetailLabel>
-              <Link
-                hasIcon
-                target="_blank"
-                rel="noopener noreferrer"
-                href="https://github.com/carlson-erik/carlson-erik.github.io"
-              >
-                Github
-              </Link>
-            </DetailContainer>
-            <DetailContainer>
-              <DetailLabel>Relevant tech:</DetailLabel>
+              <DetailLabel>Technologies:</DetailLabel>
               <SkillListContainer>
                 <SkillList
                   skills={[
-                    { type: "gatsby" },
                     { type: "react" },
+                    { type: "css" },
+                    { type: "javascript" },
                     { type: "typescript" },
                   ]}
                 />
               </SkillListContainer>
             </DetailContainer>
           </Project>
-          <Project id="portfolio3" theme={theme}>
-            <ProjectName>This Portfolio!</ProjectName>
+          <Project id="portfolio" theme={theme}>
+            <ProjectHeader>
+              <ProjectName>This Portfolio!</ProjectName>
+              <ProjectLinks>
+                <IconLink
+                  key="project-github"
+                  href="https://github.com/carlson-erik/carlson-erik.github.io"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  title="componentry github repo"
+                  theme={theme}
+                >
+                  {
+                    <Github
+                      type="dev"
+                      useAlt={false}
+                      color={theme.colors.projectList.project.iconColor}
+                    />
+                  }
+                </IconLink>
+              </ProjectLinks>
+            </ProjectHeader>
             <DetailContainer largeContent>
               <Paragraph>
                 Using Gatsby and TypeScript, I built the very site you're using
@@ -304,28 +366,7 @@ const ProjectList = () => {
               </Paragraph>
             </DetailContainer>
             <DetailContainer>
-              <DetailLabel>Website:</DetailLabel>
-              <Link
-                target="_blank"
-                rel="noopener noreferrer"
-                href="https://erikcarlson.dev"
-              >
-                ErikCarlson.dev
-              </Link>
-            </DetailContainer>
-            <DetailContainer>
-              <DetailLabel>Repository:</DetailLabel>
-              <Link
-                hasIcon
-                target="_blank"
-                rel="noopener noreferrer"
-                href="https://github.com/carlson-erik/carlson-erik.github.io"
-              >
-                Github
-              </Link>
-            </DetailContainer>
-            <DetailContainer>
-              <DetailLabel>Relevant tech:</DetailLabel>
+              <DetailLabel>Technologies:</DetailLabel>
               <SkillListContainer>
                 <SkillList
                   skills={[

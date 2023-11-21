@@ -14,6 +14,9 @@ const LightTheme: Theme = {
     projectList: {
       background: "#EFF2F4",
       text: "#1E2127",
+      project: {
+        iconColor: "darkgrey",
+      },
     },
   },
 };
