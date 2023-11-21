@@ -15,7 +15,7 @@ const ProjectRow = styled.div<{ reversed?: boolean }>`
 
   @media only screen and (max-width: 850px) {
     flex-direction: ${(props) =>
-      props.reversed ? "column-reverse" : "column"};
+    props.reversed ? "column-reverse" : "column"};
   }
 `;
 
@@ -249,7 +249,7 @@ const ProjectList = () => {
           </Project>
           <Project id="componentry" theme={theme}>
             <ProjectHeader>
-              <ProjectName>Building React Components</ProjectName>
+              <ProjectName>Componentry</ProjectName>
               <ProjectLinks>
                 <IconLink
                   key="project-github"
@@ -272,9 +272,9 @@ const ProjectList = () => {
             <DetailContainer largeContent>
               <Paragraph>
                 From time to time, I come across interesting, React Component
-                design on design and web development websites. When I find
+                designs on design and web development websites. When I find
                 something that intriques me, I instantly think "I need to build
-                that!" When I actually do build them, they're stored in this
+                that!" When I actually do build the components, I store them in this
                 project.
               </Paragraph>
             </DetailContainer>
@@ -284,7 +284,6 @@ const ProjectList = () => {
                 <SkillList
                   skills={[
                     { type: "react" },
-                    { type: "css" },
                     { type: "javascript" },
                     { type: "typescript" },
                   ]}
@@ -294,7 +293,7 @@ const ProjectList = () => {
           </Project>
           <Project id="site-building" theme={theme}>
             <ProjectHeader>
-              <ProjectName>Building Website Designs</ProjectName>
+              <ProjectName>Site Building</ProjectName>
               <ProjectLinks>
                 <IconLink
                   key="project-github"
@@ -318,8 +317,8 @@ const ProjectList = () => {
               <Paragraph>
                 From time to time, I come across interesting, Website designs on
                 design & web development websites. When I find something that
-                intriques me, I instantly think "I need to build that!" When I
-                actually do build them, they're stored in this project.
+                intriques me, I instantly think "I need to build that!"  When I
+                actually do build the components, I store them in this project.
               </Paragraph>
             </DetailContainer>
             <DetailContainer>
@@ -328,7 +327,6 @@ const ProjectList = () => {
                 <SkillList
                   skills={[
                     { type: "react" },
-                    { type: "css" },
                     { type: "javascript" },
                     { type: "typescript" },
                   ]}

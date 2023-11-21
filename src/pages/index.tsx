@@ -36,7 +36,7 @@ const LandingPage = () => {
         <Introduction>
           <Heading>Hi there!</Heading>
           <Paragraph>
-            I'm a Full Stack Developer based out of Maine, US. I work at{" "}
+            I'm a Full Stack Software Engineer based out of Maine, US. I work at{" "}
             <Link href="https://pega.com/" target="_blank">
               Pegasystems
             </Link>{" "}
@@ -60,12 +60,6 @@ const LandingPage = () => {
             I specialize in designing and creating Front-end solutions with
             React.js, and TypeScript. I have expertise in backend/server
             technologies as well.
-          </Paragraph>
-          <Paragraph>
-            I'm currently working on{" "}
-            <GLink to="/projects#elastic-editor">ElasticEditor</GLink>. If you
-            would like to see more of my work, check out the{" "}
-            <GLink to="/projects">rest of my projects.</GLink>
           </Paragraph>
           <Paragraph>
             By now you're saying, "Hey, can this guy actually do this?" Well,
