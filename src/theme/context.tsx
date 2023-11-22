@@ -3,9 +3,24 @@ import LightTheme from "./light-theme";
 import DarkTheme from "./dark-theme";
 import { Theme, ThemeContextType, ThemeNames } from "./types";
 
+const useThemeDetector = () => {
+  const getCurrentTheme = () => window.matchMedia("(prefers-color-scheme: dark)").matches;
+  const [isDarkTheme, setIsDarkTheme] = useState(getCurrentTheme());
+  const mqListener = (e => {
+    setIsDarkTheme(e.matches);
+  });
+
+  useEffect(() => {
+    const darkThemeMq = window.matchMedia("(prefers-color-scheme: dark)");
+    darkThemeMq.addEventListener('change', mqListener);
+    return () => darkThemeMq.removeEventListener('change', mqListener);
+  }, []);
+  return isDarkTheme;
+}
+
 const ThemeContext = createContext<ThemeContextType>({
   theme: LightTheme,
-  setTheme: () => {},
+  setTheme: () => { },
 });
 
 interface ThemeProviderProps {
@@ -22,6 +37,7 @@ function getTimeAwareTheme(): Theme {
 
 const ThemeProvider = (props: ThemeProviderProps) => {
   const { children } = props;
+  const isUserOSDarkTheme = useThemeDetector();
   const [activeTheme, setActiveTheme] = useState<Theme>();
 
   useEffect(() => {
@@ -30,18 +46,20 @@ const ThemeProvider = (props: ThemeProviderProps) => {
         "erikcarlson.dev-theme-name"
       );
       if (storedThemeName) {
-        if (storedThemeName === ThemeNames.LIGHT) {
-          setActiveTheme(LightTheme);
-        } else {
-          setActiveTheme(DarkTheme);
-        }
+        // This site has already loaded before and/or the user has changed the theme manually.
+        // Use the stored theme.
+        setActiveTheme(storedThemeName === ThemeNames.LIGHT ? LightTheme : DarkTheme);
+      } else if (isUserOSDarkTheme) {
+        // Match the User's Operating System by setting to Dark mode
+        setActiveTheme(DarkTheme)
+        window.sessionStorage.setItem("erikcarlson.dev-theme-name", DarkTheme.name)
       } else {
-        const theme = getTimeAwareTheme();
-        setActiveTheme(theme);
-        window.sessionStorage.setItem("erikcarlson.dev-theme-name", theme.name);
+        // Default to Light Theme
+        setActiveTheme(LightTheme)
+        window.sessionStorage.setItem("erikcarlson.dev-theme-name", LightTheme.name)
       }
     }
-  }, [activeTheme]);
+  }, [activeTheme, isUserOSDarkTheme]);
 
   if (!activeTheme) return null;
 
