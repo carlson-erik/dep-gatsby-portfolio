@@ -195,7 +195,7 @@ const Header = () => {
         <StyledTitleLink to="/" theme={theme}>
           <TitleContainer>
             <StaticImage
-              src="../../images/personal/portfolio.png"
+              src="../../images/portfolio.png"
               width={64}
               height={64}
               alt="erik carlson portfolio picture"
