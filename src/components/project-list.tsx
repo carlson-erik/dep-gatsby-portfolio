@@ -15,7 +15,7 @@ const ProjectRow = styled.div<{ reversed?: boolean }>`
 
   @media only screen and (max-width: 850px) {
     flex-direction: ${(props) =>
-      props.reversed ? "column-reverse" : "column"};
+    props.reversed ? "column-reverse" : "column"};
   }
 `;
 
@@ -123,10 +123,17 @@ const ProjectList = () => {
         <Heading>What I'm Working On</Heading>
         <ProjectRow id="elastic-editor">
           <PictureContainer theme={theme}>
-            <StaticImage
-              src="../images/projects/elastic-editor.png"
-              alt="ElasticEditor picture"
-            />
+            {theme.name === 'Light' ? (
+              <StaticImage
+                src="../images/projects/elastic-editor-light.png"
+                alt="ElasticEditor picture"
+              />
+            ) : (
+              <StaticImage
+                src="../images/projects/elastic-editor-dark.png"
+                alt="ElasticEditor picture"
+              />
+            )}
           </PictureContainer>
           <ContentContainer>
             <ProjectHeader>
