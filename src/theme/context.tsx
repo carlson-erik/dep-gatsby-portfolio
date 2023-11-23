@@ -4,13 +4,20 @@ import DarkTheme from "./dark-theme";
 import { Theme, ThemeContextType, ThemeNames } from "./types";
 
 const useThemeDetector = () => {
-  const getCurrentTheme = () => window.matchMedia("(prefers-color-scheme: dark)").matches;
+  const getCurrentTheme = () => {
+    if (typeof window === 'undefined') {
+      return false;
+    } else {
+      return window.matchMedia("(prefers-color-scheme: dark)").matches
+    }
+  };
   const [isDarkTheme, setIsDarkTheme] = useState(getCurrentTheme());
   const mqListener = (e => {
     setIsDarkTheme(e.matches);
   });
 
   useEffect(() => {
+    if (typeof window === 'undefined') return;
     const darkThemeMq = window.matchMedia("(prefers-color-scheme: dark)");
     darkThemeMq.addEventListener('change', mqListener);
     return () => darkThemeMq.removeEventListener('change', mqListener);
