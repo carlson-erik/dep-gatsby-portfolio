@@ -26,7 +26,7 @@ const BlogPage = () => {
           />
         </Helmet>
         <Heading>Blog</Heading>
-        <Paragraph>No new posts yet!</Paragraph>
+        <Paragraph>No posts yet!</Paragraph>
       </Layout>
     </ThemeProvider>
   );

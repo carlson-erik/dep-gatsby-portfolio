@@ -64,8 +64,8 @@ const LandingPage = () => {
           <Paragraph>
             By now you're saying,{" "}
             <em>"Hey, can this guy actually do what he says?"</em> My projects
-            below and <GLink to="/experience">past work experience</GLink>{" "}
-            speaks for itself!
+            and <GLink to="/experience">past work experience</GLink>{" "}
+            speak for themselves!
           </Paragraph>
         </Introduction>
         <ProjectList />
