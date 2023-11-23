@@ -34,7 +34,7 @@ const Container = styled.header<{ theme: Theme }>`
   }
 `;
 
-const StyledTitleLink = styled(Link)<{ theme: Theme }>`
+const StyledTitleLink = styled(Link) <{ theme: Theme }>`
   text-decoration: none;
   color: ${(props) => props.theme.colors.text} !important;
 `;
@@ -42,7 +42,6 @@ const StyledTitleLink = styled(Link)<{ theme: Theme }>`
 const TitleRowContainer = styled.div`
   width: 100%;
   display: flex;
-  padding-bottom: 0.5rem;
 `;
 
 const TitleContainer = styled.div`
@@ -77,7 +76,6 @@ const Title = styled.h1`
 const NavigationContainer = styled.div<{ showMobileMenu: boolean }>`
   display: flex;
   margin-left: 5rem;
-  padding-top: 0.5rem;
 
   @media only screen and (max-width: 1000px) {
     margin: 0;
@@ -148,11 +146,14 @@ const ActionContainer = styled.div`
 `;
 
 const ThemeSwitchContainer = styled.div`
+  display: flex;
+  align-items: center;
+
   @media only screen and (max-width: 625px) {
     flex-grow: 1;
     height: 100%;
-    display: flex;
     justify-content: flex-end;
+    align-items: center;
   }
 `;
 

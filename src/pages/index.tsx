@@ -58,14 +58,14 @@ const LandingPage = () => {
           </Paragraph>
           <Paragraph>
             I specialize in designing and creating Front-end solutions with
-            React.js, and TypeScript. I have expertise in backend/server
-            technologies as well.
+            React.js, and TypeScript. I have expertise in building backend/server
+            technologies. I like to build cool things and learn from the experience.
           </Paragraph>
           <Paragraph>
             By now you're saying,{" "}
             <em>"Hey, can this guy actually do what he says?"</em> My projects
-            below and <GLink to="/experience">past work experience</GLink>{" "}
-            speaks for itself!
+            and <GLink to="/experience">past work experience</GLink>{" "}
+            speak for themselves!
           </Paragraph>
         </Introduction>
         <ProjectList />
