@@ -15,7 +15,7 @@ const ProjectRow = styled.div<{ reversed?: boolean }>`
 
   @media only screen and (max-width: 850px) {
     flex-direction: ${(props) =>
-    props.reversed ? "column-reverse" : "column"};
+      props.reversed ? "column-reverse" : "column"};
   }
 `;
 
@@ -123,7 +123,7 @@ const ProjectList = () => {
         <Heading>What I'm Working On</Heading>
         <ProjectRow id="elastic-editor">
           <PictureContainer theme={theme}>
-            {theme.name === 'Light' ? (
+            {theme.name === "Light" ? (
               <StaticImage
                 src="../images/projects/elastic-editor-light.png"
                 alt="ElasticEditor picture"
@@ -165,16 +165,6 @@ const ProjectList = () => {
                 content. Also included are APIs that allow you to export your
                 content into different forms.
               </Paragraph>
-            </DetailContainer>
-            <DetailContainer>
-              <DetailLabel>Website:</DetailLabel>
-              <Link
-                target="_blank"
-                rel="noopener noreferrer"
-                href="https://elastic-editor.com"
-              >
-                elastic-editor.com
-              </Link>
             </DetailContainer>
             <DetailContainer>
               <DetailLabel>Technologies:</DetailLabel>
