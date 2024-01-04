@@ -86,7 +86,7 @@ const ExperiencePage = () => {
           <DetailContainer>
             <InformationContainer>
               <Title>Senior Software Engineer</Title>
-              <Duration>'21 to Now</Duration>
+              <Duration>'21 - Present</Duration>
             </InformationContainer>
             <InformationContainer>
               <Business>Pegasystems</Business>
@@ -112,14 +112,16 @@ const ExperiencePage = () => {
               </BulletList>
             </InformationContainer>
             <SkillsContainer>
-              <Label>Relevant technology:</Label>
+              <Label>Relevant technologies:</Label>
               <SkillListContainer>
                 <SkillList
                   skills={[
-                    { type: "react" },
                     { type: "typescript" },
+                    { type: "javascript" },
+                    { type: "react" },
                     { type: "d3" },
-                    { type: "redux" },
+                    { type: "jest" },
+                    { type: "java" },
                   ]}
                 />
               </SkillListContainer>
@@ -128,7 +130,7 @@ const ExperiencePage = () => {
           <DetailContainer>
             <InformationContainer>
               <Title>Software Engineer</Title>
-              <Duration>'17 to '20</Duration>
+              <Duration>'19 - '20</Duration>
             </InformationContainer>
             <InformationContainer>
               <Business>Pegasystems</Business>
@@ -154,14 +156,57 @@ const ExperiencePage = () => {
               </BulletList>
             </InformationContainer>
             <SkillsContainer>
-              <Label>Relevant technology:</Label>
+              <Label>Relevant technologies:</Label>
               <SkillListContainer>
                 <SkillList
                   skills={[
-                    { type: "react" },
                     { type: "javascript" },
+                    { type: "react" },
                     { type: "d3" },
                     { type: "redux" },
+                    { type: "jest" },
+                    { type: "java" },
+                  ]}
+                />
+              </SkillListContainer>
+            </SkillsContainer>
+          </DetailContainer>
+          <DetailContainer>
+            <InformationContainer>
+              <Title>Junior Software Engineer</Title>
+              <Duration>'17 - '19</Duration>
+            </InformationContainer>
+            <InformationContainer>
+              <Business>Pegasystems</Business>
+              <Location>(Bedford, NH)</Location>
+            </InformationContainer>
+            <InformationContainer flipFlexDirection>
+              <div>
+                This role included responsbilities such as the following:
+              </div>
+              <BulletList>
+                <li>
+                  Participate in team design discussions, user story refinement,
+                  and other re-occuring Agile planning meetings.
+                </li>
+                <li>
+                  Maintain and contribute to company codebase through additional
+                  features and bug fixes.
+                </li>
+                <li>
+                  Design and implement Front-End features to be used in Customer
+                  Relatonship Management and Business Process Management.
+                </li>
+              </BulletList>
+            </InformationContainer>
+            <SkillsContainer>
+              <Label>Relevant technologies:</Label>
+              <SkillListContainer>
+                <SkillList
+                  skills={[
+                    { type: "javascript" },
+                    { type: "css" },
+                    { type: "java" },
                   ]}
                 />
               </SkillListContainer>
@@ -196,7 +241,7 @@ const ExperiencePage = () => {
               </BulletList>
             </InformationContainer>
             <SkillsContainer>
-              <Label>Relevant technology:</Label>
+              <Label>Relevant technologies:</Label>
               <SkillListContainer>
                 <SkillList
                   skills={[
@@ -211,7 +256,7 @@ const ExperiencePage = () => {
           <DetailContainer>
             <InformationContainer>
               <Title>IPSec and IKEv2 Technician</Title>
-              <Duration>'14 to '16</Duration>
+              <Duration>'14 - '16</Duration>
             </InformationContainer>
             <InformationContainer>
               <Business>UNH Interoperability Lab</Business>
@@ -246,7 +291,7 @@ const ExperiencePage = () => {
           <DetailContainer>
             <InformationContainer>
               <Title>B.S. in Computer Science</Title>
-              <Duration>'13 to '16</Duration>
+              <Duration>'13 - '17</Duration>
             </InformationContainer>
             <InformationContainer>
               <Business>University of New Hampshire</Business>

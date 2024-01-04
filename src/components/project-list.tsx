@@ -161,9 +161,9 @@ const ProjectList = () => {
               <Paragraph>
                 ElasticEditor allows developers to include modifiable rich
                 content in their React projects. At the core of ElasticEditor is
-                a customizable editor that allows users to easily create
-                content. Also included are APIs that allow you to export your
-                content into different forms.
+                a customizable editor. This editor allows you to easily create,
+                save, and export your content into other formats for usage
+                elsewhere.
               </Paragraph>
             </DetailContainer>
             <DetailContainer>
