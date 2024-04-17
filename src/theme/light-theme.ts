@@ -12,7 +12,7 @@ const LightTheme: Theme = {
       iconHover: "#E5E8EC",
     },
     projectList: {
-      background: "#EFF2F4",
+      background: "#F3F5F7",
       text: "#1E2127",
       project: {
         iconColor: "#707070",
