@@ -46,9 +46,7 @@ const GlobalStyle = createGlobalStyle<{ theme: Theme }>`
 `;
 
 const MainContent = styled.main`
-
   width: 100%;
-
 `;
 
 interface LayoutProps {
