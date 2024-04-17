@@ -24,21 +24,20 @@ const DetailContainer = styled.div`
   }
 `;
 
-const InformationContainer = styled.div<{ flipFlexDirection: boolean }>`
-  padding-left: 1.5rem;
+const InformationContainer = styled.div<{
+  flipFlexDirection: boolean;
+  noPadding: boolean;
+}>`
+  padding-left: ${(props) => (props.noPadding ? "" : "1.5rem")};
   display: flex;
   width: 100%;
   flex-direction: ${(props) => (props.flipFlexDirection ? "column" : "row")};
   ${(props) => (!props.flipFlexDirection ? "align-items: center;" : "")}
 `;
 
-const SkillsContainer = styled(InformationContainer)`
-  padding-top: 0.5rem;
-`;
-
 const Title = styled.div`
   font-size: 1.25rem;
-  font-weight: bold;
+  font-weight: 700;
   flex-basis: 70%;
 `;
 
@@ -78,40 +77,64 @@ const ExperiencePage = () => {
           <title>Experience | Erik Carlson</title>
           <meta
             name="description"
-            content="Erik Carlson's Software Engineering Job Experience"
+            content="Erik Carlson's Software Engineering Job Experience and Education"
           />
         </Helmet>
         <Container>
-          <Heading>Experience</Heading>
+          <Heading>Job Experience</Heading>
           <DetailContainer>
-            <InformationContainer>
-              <Title>Senior Software Engineer</Title>
-              <Duration>'21 - Present</Duration>
+            <InformationContainer noPadding>
+              <Title>Principal Software Engineer</Title>
+              <Duration>'24 - Present</Duration>
             </InformationContainer>
             <InformationContainer>
               <Business>Pegasystems</Business>
-              <Location>(Salem, NH)</Location>
+              <Location>(Remote)</Location>
             </InformationContainer>
             <InformationContainer flipFlexDirection>
               <div>
-                This role included responsbilities such as the following:
+                This role includes responsbilities such as the following:
               </div>
               <BulletList>
                 <li>
-                  Architect and implement new features for Data Visualization
-                  software using React, TypeScript and D3.
+                  Architect and oversee the implementation of features by a
+                  team.
+                </li>
+                <li>
+                  Plan, implement and write automated tests for features in
+                  Enterprise Data Visualization software.
+                </li>
+                <li>
+                  Mentor teammates in topics ranging from Technical/Engineering
+                  skills to the Software Development Life Cycle process.
+                </li>
+                <li>
+                  Lead team technical/design discussions, user story refinement,
+                  and other re-occuring Agile planning meetings.
                 </li>
                 <li>
                   Interact with customers to remediate issues they're facing
                   with a focus on accuracy and efficiency.
                 </li>
+              </BulletList>
+            </InformationContainer>
+            <InformationContainer flipFlexDirection>
+              <Label>Security Champion</Label>
+              <BulletList>
                 <li>
-                  Lead team design/architecture discussions, user story
-                  refinement, and other re-occuring Agile planning meetings.
+                  Continuing education of modern Security practices and new
+                  vulnerabilities.
+                </li>
+                <li>
+                  Mentor teammates and other teams on security best practices
+                  and related topics.
+                </li>
+                <li>
+                  Investigate and implement fixes for security vulnerabilities.
                 </li>
               </BulletList>
             </InformationContainer>
-            <SkillsContainer>
+            <InformationContainer>
               <Label>Relevant technologies:</Label>
               <SkillListContainer>
                 <SkillList
@@ -125,10 +148,74 @@ const ExperiencePage = () => {
                   ]}
                 />
               </SkillListContainer>
-            </SkillsContainer>
+            </InformationContainer>
           </DetailContainer>
           <DetailContainer>
+            <InformationContainer noPadding>
+              <Title>Senior Software Engineer</Title>
+              <Duration>'21 - '24</Duration>
+            </InformationContainer>
             <InformationContainer>
+              <Business>Pegasystems</Business>
+              <Location>(Remote)</Location>
+            </InformationContainer>
+            <InformationContainer flipFlexDirection>
+              <div>
+                This role included responsbilities such as the following:
+              </div>
+              <BulletList>
+                <li>
+                  Plan, implement and write automated tests for features in
+                  Enterprise Data Visualization software.
+                </li>
+                <li>
+                  Mentor teammates in topics ranging from Technical/Engineering
+                  skills to the Software Development Life Cycle process.
+                </li>
+                <li>
+                  Lead team technical/design discussions, user story refinement,
+                  and other re-occuring Agile planning meetings.
+                </li>
+                <li>
+                  Interact with customers to remediate bugs/issues they're
+                  facing with a focus on accuracy and efficiency.
+                </li>
+              </BulletList>
+            </InformationContainer>
+            <InformationContainer flipFlexDirection>
+              <Label>Security Champion</Label>
+              <BulletList>
+                <li>
+                  Continuing education of modern Security practices and new
+                  vulnerabilities.
+                </li>
+                <li>
+                  Mentor teammates and other teams on security best practices
+                  and related topics.
+                </li>
+                <li>
+                  Investigate and implement fixes for security vulnerabilities.
+                </li>
+              </BulletList>
+            </InformationContainer>
+            <InformationContainer>
+              <Label>Relevant technologies:</Label>
+              <SkillListContainer>
+                <SkillList
+                  skills={[
+                    { type: "typescript" },
+                    { type: "javascript" },
+                    { type: "react" },
+                    { type: "d3" },
+                    { type: "jest" },
+                    { type: "java" },
+                  ]}
+                />
+              </SkillListContainer>
+            </InformationContainer>
+          </DetailContainer>
+          <DetailContainer>
+            <InformationContainer noPadding>
               <Title>Software Engineer</Title>
               <Duration>'19 - '20</Duration>
             </InformationContainer>
@@ -142,20 +229,25 @@ const ExperiencePage = () => {
               </div>
               <BulletList>
                 <li>
-                  Participate in team design discussions, user story refinement,
-                  and other re-occuring Agile planning meetings.
+                  Participate in team technical/design discussions, user story
+                  refinement, and other re-occuring Agile planning meetings.
                 </li>
                 <li>
-                  Maintain and contribute to company codebase through additional
-                  features and bug fixes.
+                  Implement and write automated tests for features in Enterprise
+                  Data Visualization software.
                 </li>
                 <li>
-                  Design and implement Front-End features to be used in Customer
-                  Relatonship Management and Business Process Management.
+                  Implement and write automated tests for features in Customer
+                  Relatonship Management and Business Process Management
+                  software.
+                </li>
+                <li>
+                  Interact with customers to remediate bugs/issues they're
+                  facing with a focus on accuracy and efficiency.
                 </li>
               </BulletList>
             </InformationContainer>
-            <SkillsContainer>
+            <InformationContainer>
               <Label>Relevant technologies:</Label>
               <SkillListContainer>
                 <SkillList
@@ -169,11 +261,11 @@ const ExperiencePage = () => {
                   ]}
                 />
               </SkillListContainer>
-            </SkillsContainer>
+            </InformationContainer>
           </DetailContainer>
           <DetailContainer>
-            <InformationContainer>
-              <Title>Junior Software Engineer</Title>
+            <InformationContainer noPadding>
+              <Title>Associate Software Engineer</Title>
               <Duration>'17 - '19</Duration>
             </InformationContainer>
             <InformationContainer>
@@ -190,16 +282,13 @@ const ExperiencePage = () => {
                   and other re-occuring Agile planning meetings.
                 </li>
                 <li>
-                  Maintain and contribute to company codebase through additional
-                  features and bug fixes.
-                </li>
-                <li>
-                  Design and implement Front-End features to be used in Customer
-                  Relatonship Management and Business Process Management.
+                  Implement and write automated tests for features in Customer
+                  Relatonship Management and Business Process Management
+                  software.
                 </li>
               </BulletList>
             </InformationContainer>
-            <SkillsContainer>
+            <InformationContainer>
               <Label>Relevant technologies:</Label>
               <SkillListContainer>
                 <SkillList
@@ -210,10 +299,10 @@ const ExperiencePage = () => {
                   ]}
                 />
               </SkillListContainer>
-            </SkillsContainer>
+            </InformationContainer>
           </DetailContainer>
           <DetailContainer>
-            <InformationContainer>
+            <InformationContainer noPadding>
               <Title>Software Engineer Intern</Title>
               <Duration>Summer '16</Duration>
             </InformationContainer>
@@ -231,16 +320,12 @@ const ExperiencePage = () => {
                   and amongst other re-occuring Agile planning meetings.
                 </li>
                 <li>
-                  Maintain and contribute to company codebase through additional
-                  features and bug fixes.
-                </li>
-                <li>
-                  Design and implement Front-End features to be used in Customer
-                  Relatonship Managmenet and Business Process Management.
+                  Implement Front-End features in Customer Relatonship
+                  Managmenet and Business Process Management software.
                 </li>
               </BulletList>
             </InformationContainer>
-            <SkillsContainer>
+            <InformationContainer>
               <Label>Relevant technologies:</Label>
               <SkillListContainer>
                 <SkillList
@@ -251,10 +336,10 @@ const ExperiencePage = () => {
                   ]}
                 />
               </SkillListContainer>
-            </SkillsContainer>
+            </InformationContainer>
           </DetailContainer>
           <DetailContainer>
-            <InformationContainer>
+            <InformationContainer noPadding>
               <Title>IPSec and IKEv2 Technician</Title>
               <Duration>'14 - '16</Duration>
             </InformationContainer>
