@@ -41,7 +41,7 @@ const LandingPage = () => {
             <Link href="https://pega.com/" target="_blank">
               Pegasystems
             </Link>{" "}
-            as a Senior Software Engineer. At Pegasystems, I build{" "}
+            as a Principal Software Engineer. At Pegasystems, I build{" "}
             <Link
               href="https://en.wikipedia.org/wiki/Data_visualization"
               target="_blank"
@@ -58,10 +58,10 @@ const LandingPage = () => {
             Software.
           </Paragraph>
           <Paragraph>
-            I specialize in designing and creating Front-end solutions with
-            React.js, and TypeScript. I have expertise in building
-            backend/server technologies. I like to build cool things and learn
-            from the experience.
+            I specialize in designing and creating Frontend solutions with
+            React.js, and TypeScript. I have expertise in building Backend
+            technologies. I like to build cool things and learn from the
+            experience.
           </Paragraph>
           <Paragraph>
             By now you're saying,{" "}
