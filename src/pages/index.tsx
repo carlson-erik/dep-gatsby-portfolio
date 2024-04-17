@@ -55,7 +55,7 @@ const LandingPage = () => {
             >
               Data Reporting
             </Link>{" "}
-            Software.
+            software.
           </Paragraph>
           <Paragraph>
             I specialize in designing and creating Frontend solutions with
